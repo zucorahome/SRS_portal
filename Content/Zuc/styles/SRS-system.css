@@ -1,0 +1,88 @@
+/* variables*/
+/* Default styling*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: "PublicoHeadline", aktiv-grotesk, Helvetica, sans-serif;
+}
+
+p {
+  font-family: "aktiv-grotesk", Helvetica, sans-serif;
+}
+
+/*Header*/
+.srs-nav-container .zuc-main-nav {
+  padding: 1em 8%;
+}
+
+/* Login screen*/
+.srs-login-container {
+  width: 40%;
+  margin-top: 12%;
+}
+.srs-login-container .srs-login-content .zuc-modal-subtitle {
+  font-size: 2.5em;
+  font-family: "aktiv-grotesk", Helvetica, sans-serif;
+  padding: 1em 0;
+}
+.srs-login-container .srs-login-content .zuc-input-group {
+  padding: 10px 0;
+}
+.srs-login-container .srs-login-content .zuc-input-group .zuc-input-name {
+  font-family: "aktiv-grotesk", Helvetica, sans-serif;
+  font-size: 1.5em;
+}
+.srs-login-container .srs-login-content .zuc-input-group input[type=date], .srs-login-container .srs-login-content .zuc-input-group input[type=email], .srs-login-container .srs-login-content .zuc-input-group input[type=password], .srs-login-container .srs-login-content .zuc-input-group input[type=search], .srs-login-container .srs-login-content .zuc-input-group input[type=tel], .srs-login-container .srs-login-content .zuc-input-group input[type=text], .srs-login-container .srs-login-content .zuc-input-group input[type=url] {
+  height: 70px;
+  background-color: rgba(163, 172, 255, 0.2);
+  border: 0;
+  color: #36384B;
+}
+.srs-login-container .srs-login-content .zuc-input-group a {
+  font-size: 0.95em;
+  position: relative;
+  top: 10px;
+  padding-bottom: 10px;
+}
+.srs-login-container .srs-login-content .remember-me {
+  margin: 5% 0 0 0;
+}
+.srs-login-container .srs-login-content .remember-me input[type=checkbox] {
+  margin: 0 auto;
+}
+.srs-login-container .srs-login-content .form-buttons {
+  margin-top: 5%;
+}
+
+.srs-heading {
+  font-family: "PublicoHeadline", aktiv-grotesk, Helvetica, sans-serif;
+  font-weight: 700;
+  color: #434DA0;
+  font-size: 3.2em;
+  margin-top: 13%;
+  text-align: center;
+}
+
+.plan-registration-container {
+  border: 2px solid #36384B;
+  height: 600px;
+  /*margin-top:12%; */
+}
+
+/*Media queries */
+@media screen and (max-width: 768px) {
+  .srs-login-container {
+    width: 90%;
+    margin-top: 20%;
+  }
+
+  .srs-heading {
+    margin-top: 20%;
+  }
+}
+@media screen and (min-width: 769px) {
+  .srs-nav-container .zuc-main-nav .zuc-nav-brand {
+    width: 25vw;
+    max-width: 100%;
+  }
+}
+
+/*# sourceMappingURL=SRS-system.css.map */

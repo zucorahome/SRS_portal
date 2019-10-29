@@ -1,0 +1,110 @@
+/* variables*/
+$header-fonts: 'PublicoHeadline', aktiv-grotesk, Helvetica, sans-serif;
+$para-fonts: 'aktiv-grotesk', Helvetica, sans-serif;
+
+
+$mobile-width: 768px;
+$tablet-width:769px;
+$laptop-width:980px;
+$max-laptop-width:1024px;
+$desktop-width:1440px;
+$desktop-large-width:1980px;
+
+$light-purple:#A3ACFF;
+$zucora-purple:#434DA0;
+$grey-text: #36384B;
+/* Default styling*/
+
+h1, h2, h3, h4, h5, h6{
+	font-family: $header-fonts;
+}
+p {
+  font-family: $para-fonts;
+}
+
+
+/*Header*/
+.srs-nav-container .zuc-main-nav{
+	padding:1em 8%;
+}
+
+/* Login screen*/
+
+.srs-login-container{
+	width:40%;
+	margin-top:12%;
+
+	.srs-login-content{
+		.zuc-modal-subtitle{
+			font-size: 2.5em;
+			font-family: $para-fonts;
+			padding:1em 0;
+		}
+		.zuc-input-group{
+			padding:10px 0;
+			.zuc-input-name{
+				font-family: $para-fonts;
+				font-size:1.5em;
+			}
+			input[type=date], input[type=email], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=url]{
+				height:70px;
+				background-color: rgba(163, 172, 255,0.2);
+				border:0;
+				color: $grey-text;
+			}
+			a{
+				font-size:0.95em;
+				position: relative;
+				top:10px;
+				padding-bottom: 10px;
+			}
+		}
+			.remember-me{
+				margin:5% 0 0 0;
+				input[type="checkbox"]{
+					margin:0 auto;
+				}
+
+			}
+			.form-buttons{
+				margin-top:5%;
+			}	
+	}
+}
+
+.srs-heading{
+	font-family: $header-fonts;
+	font-weight: 700;
+	color: $zucora-purple;
+	font-size:3.2em;
+	margin-top:13%;
+	text-align: center;
+}
+.plan-registration-container{
+	border:2px solid #36384B;
+	height:600px;
+	/*margin-top:12%; */
+}
+
+/*Media queries */
+@media screen and (max-width: $mobile-width){
+	.srs-login-container{
+		width:90%;
+		margin-top:20%;
+	}
+	.srs-heading{
+		margin-top:20%;
+	}
+}
+
+
+@media screen and (min-width:$tablet-width){
+	.srs-nav-container{
+		.zuc-main-nav{
+			.zuc-nav-brand{
+			width:25vw;
+			max-width:100%;
+			}	
+		}
+	}
+}

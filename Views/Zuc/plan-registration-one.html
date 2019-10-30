@@ -61,20 +61,77 @@
     <h1 class="srs-heading">Plan Registration</h1>
     <section class="plan-registration-container width-80 center">
       <div class="planRegis-form-container flex flex-column">
-        <form action="flex flex-column planRegis-form">
-          <div class="flex flex-row">
-            <label for="location">Location* :</label>
-            <select name="store-location">
+        <form class="flex flex-column planRegis-form">
+          <div class="flex flex-row flex-vert-center">
+            <label for="location">Location*:&nbsp;</label>
+            <select name="store-location" required="">
               <option value="none">Store Location</option>
               <option value="Leon- London South">Leon- London South</option>
               <option value="Tepperman-london">Tepperman-london</option>
               <option value="Hudson Bay- Montereal">Hudson Bay- Montereal</option>
             </select>
           </div>
-          <div class="flex flex-row">
-            <label for="location">Ord/Inv Ref*:</label>
-            <input type="text" required="" name="order number" placeholder="#123456" value="" id="">
+          <div class="flex flex-row flex-vert-center">
+            <label for="order-number">Ord/Inv Ref*:&nbsp;</label>
+            <input type="text" required="" name="order number" placeholder="" value="" id="">
           </div>
+          <div class="flex flex-row flex-vert-center">
+            <label for="sale-date">Sale Date*:&nbsp;</label>
+            <i class="fa fa-calendar-alt"></i>
+            <input type="text" required="" name="sale-date" placeholder="MM/DD/YY" value="" id="">
+          </div>
+          <div class="flex flex-row flex-vert-center">
+            <label for="est-delivery-date">Est. Last Delivery Date*:</label>
+            <i class="fa fa-calendar-alt"></i>
+            <input type="text" required="" name="sale-date" placeholder="MM/DD/YY" value="" id="">
+          </div>
+          <div class="flex flex-row flex-vert-center">
+            <label for="associate">Associate:</label>
+            <select name="store-location">
+              <option value="none">Associate Name</option>
+              <option value="Leon- London South">John Doe</option>
+              <option value="Tepperman-london">Jane Doe</option>
+              <option value="Hudson Bay- Montereal">John Jane</option>
+            </select>
+          </div>
+          <div class="flex flex-row flex-vert-center">
+            <label for="customer-name">Customer*:</label>
+            <input type="text" required="" name="cust-first-name" placeholder="First Name" value="" id="" class="zuc-form-50">
+            <input type="text" required="" name="cust-last-name" placeholder="Last Name" value="" id="" class="zuc-form-50">
+          </div>
+          <div class="flex flex-row flex-vert-center">
+            <label for="customer-phone">Customer Phone*:</label>
+            <input type="text" required="" name="customer-phone" placeholder="Phone(Required)" value="" id="">
+          </div>
+            <div class="flex flex-row flex-vert-center">
+              <label for="customer-email">Customer Email*:</label>
+              <input type="text" required="" name="customer-email" placeholder="Email(Required)" value="" id="">
+            </div>
+            <div class="flex flex-row flex-vert-center">
+              <label for="rate-card">Rate Card*:</label>
+              <select name="store-location" required>
+                <option value="none">Select Rate Card</option>
+                <option value="Leon- London South">10%</option>
+                <option value="Tepperman-london">15%</option>
+                <option value="Hudson Bay- Montereal">20%</option>
+              </select>
+            </div>
+             <div class="flex flex-row flex-vert-center">
+              <label for="sku">SKU*:</label>
+              <select name="store-location" required>
+                <option value="none">SKU Description</option>
+                <option value="Leon- London South">XYZ</option>
+                <option value="Tepperman-london">Loreum Ipsum</option>
+                <option value="Hudson Bay- Montereal">Loreum Ipsum</option>
+              </select>
+            </div>
+            <div class="flex flex-row flex-vert-center">
+              <label for="order-number">Retail Plan Price Paid*:</label>
+              <input type="text" required="" name="retail-price-paid" placeholder="$[MSRP]" value="" id="">
+            </div>
+            <div class="flex flex-row flex-vert-center">
+                <button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow" type="submit">Add plan</button>
+            </div>
         </form>
       </div>
     </section>

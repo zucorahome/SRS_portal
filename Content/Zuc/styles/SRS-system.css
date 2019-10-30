@@ -6,6 +6,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   font-family: "aktiv-grotesk", Helvetica, sans-serif;
+  font-size: 18px;
 }
 
 /*Header*/
@@ -63,8 +64,44 @@ p {
 
 .plan-registration-container {
   border: 2px solid #36384B;
-  height: 600px;
-  /*margin-top:12%; */
+  height: auto;
+}
+
+.planRegis-form {
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+  padding: 2em 0;
+}
+.planRegis-form div {
+  padding: 10px 0;
+}
+.planRegis-form label {
+  font-family: "aktiv-grotesk", Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  flex-grow: 2;
+}
+.planRegis-form select {
+  width: 80%;
+  height: 50px;
+  border: 2px solid #36384B;
+  border-radius: 10px;
+  background-color: #A3ACFF;
+  color: #36384B;
+  font-size: 16px;
+  flex-grow: 8;
+  font-family: "aktiv-grotesk", Helvetica, sans-serif;
+}
+.planRegis-form input {
+  background-color: #FFFFFF;
+  border: 2px solid #36384B;
+  flex-grow: 8;
+  width: 70%;
+  font-size: 16px;
+  margin: 0 10px;
+  font-family: "aktiv-grotesk", Helvetica, sans-serif;
 }
 
 /*Media queries */
@@ -76,6 +113,10 @@ p {
 
   .srs-heading {
     margin-top: 20%;
+  }
+
+  .planRegis-form {
+    width: 90%;
   }
 }
 @media screen and (min-width: 769px) {

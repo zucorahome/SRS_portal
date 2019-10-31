@@ -76,6 +76,10 @@ p {
 .planRegis-form div {
   padding: 10px 0;
 }
+.planRegis-form div i {
+  font-size: 2em;
+  color: #434DA0;
+}
 .planRegis-form label {
   font-family: "aktiv-grotesk", Helvetica, sans-serif;
   font-weight: bold;
@@ -102,6 +106,58 @@ p {
   font-size: 16px;
   margin: 0 10px;
   font-family: "aktiv-grotesk", Helvetica, sans-serif;
+}
+
+.plan-registration-box {
+  height: auto;
+  border: 2px solid #36384B;
+  width: 90%;
+  margin-bottom: 2em;
+}
+.plan-registration-box .purple-background {
+  background-color: #434DA0;
+}
+.plan-registration-box .purple-background h2 {
+  color: white;
+  font-size: 18px;
+  padding: 1em;
+  font-family: "aktiv-grotesk", Helvetica, sans-serif;
+}
+.plan-registration-box .new-planAdd-title {
+  padding: 0 10px 14px 10px;
+}
+.plan-registration-box .new-planAdd-title p {
+  font-family: "aktiv-grotesk", Helvetica, sans-serif;
+  font-weight: 700;
+}
+.plan-registration-box .new-planAdd-title p span {
+  text-transform: uppercase;
+  padding-left: 5px;
+}
+.plan-registration-box .new-planAdd-title p ::before {
+  content: "+";
+  color: #36384B;
+  font-size: 16px;
+  float: left;
+  font-weight: bold;
+  border: 2px solid #36384B;
+  padding: 0 6px;
+}
+
+.planRegis-controls {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 0;
+}
+.planRegis-controls div a {
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-family: "aktiv-grotesk", Helvetica, sans-serif;
+  font-weight: 700;
+  color: #36384B;
 }
 
 /*Media queries */

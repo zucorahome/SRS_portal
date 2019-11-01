@@ -94,10 +94,22 @@ p {
 
 		div{
 			padding:10px 0;
+			justify-content: space-between;
 			i{
 				font-size: 2em;
 				color: $zucora-purple;
 			}
+		}
+
+		.twoInput-fields 
+		{
+			input{
+				width:40%;
+			}
+
+			input:nth(1){
+					margin-left:10%;
+				}
 		}
 
 		label{
@@ -105,28 +117,30 @@ p {
 			font-weight: bold;
 			font-size: 18px;
 			line-height: 22px;
-			flex-grow: 2;
+			text-align: right;
+
+			/*flex-grow: 2;*/
 		}
 
 		select{
-			width:80%;
+			width:70%;
 			height: 50px;
 	    	border: 2px solid $grey-text;
 		    border-radius: 10px;
 		    background-color: $light-purple;
 		    color: $grey-text;
 		    font-size: 16px;
-		    flex-grow: 8;
+		    /*flex-grow: 8;*/
 		    font-family: $para-fonts;
 		}
 
 		input{
 				background-color: #FFFFFF;
 				border: 2px solid $grey-text;
-				flex-grow: 8;
+				/*flex-grow: 8;*/
 				width:70%;
 				font-size: 16px;
-				margin:0 10px;
+				/*margin:0 10px;*/
 				font-family: $para-fonts;
 			}
 	}
@@ -136,7 +150,7 @@ p {
 	border:2px solid #36384B;
 	width:90%;
 	margin-bottom:2em;
-
+	display: none;
 	.purple-background{
 		background-color: $zucora-purple;
 
@@ -167,11 +181,44 @@ p {
 			    font-weight: bold;
 			    border:2px solid $grey-text;
 			    padding:0 6px;
+			    display: none;
 			}
 		}
 	}
 }
 
+
+.new-planAdd-detail{
+	display: none;
+	border: 1px solid $grey-text;
+	margin: 10px;
+	table{
+		border-collapse: collapse;
+		margin:0;
+		padding:0;
+		width:100%;
+		table-layout: fixed;
+
+		tr{
+				text-align: center;
+				font-family: $para-fonts;
+			}
+		th,td{
+			padding: 5px;
+			line-height:22px;
+			//overflow: hidden;
+			word-break: break-all;
+			i{
+				color: $zucora-purple;
+
+			}
+		}
+		 th{
+			color: $zucora-purple;
+			font-weight: 700;
+		}
+	}
+}
 .planRegis-controls{
 	display: flex;
 	width:80%;
@@ -190,6 +237,8 @@ p {
     	}
     }
 }
+
+
 /*Media queries */
 @media screen and (max-width: $mobile-width){
 	.srs-login-container{
@@ -202,6 +251,42 @@ p {
 
 	.planRegis-form{
 		width:90%;
+	}
+
+	.new-planAdd-detail{
+		border:none;
+		table{
+			border:0;
+
+			thead{
+				border:none;
+				clip:react(0 0 0 0);
+				width:1px;
+				height:1px;
+				margin:-1px;
+				overflow: hidden;
+				padding: 0;
+				position: absolute;
+			}
+
+			tr{
+				border-bottom: 1px solid $grey-text;
+				display: block;
+				padding:5px 0;
+			}
+			td{
+				display: block;
+				font-size: 0.8em;
+				text-align: right;
+			}
+
+			td::before{
+					content:attr(data-label);
+					float:left;
+					font-weight: 700;
+					color: $zucora-purple;
+				}
+		}
 	}
 }
 

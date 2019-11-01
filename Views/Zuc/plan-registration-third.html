@@ -61,11 +61,11 @@
     <h1 class="srs-heading">Plan Registration</h1>
     <section class="plan-registration-container width-80 center">
       <div class="planRegis-form-container flex flex-column">
-        <form class="flex flex-column planRegis-form" action="mypage.php">
+        <form class="flex flex-column planRegis-form">
           <div class="flex flex-row flex-vert-center">
             <label for="location">Location*:&nbsp;</label>
-            <select name="store-location" required>
-              <option value="">Store Location</option>
+            <select name="store-location" required="">
+              <option value="none">Store Location</option>
               <option value="Leon- London South">Leon- London South</option>
               <option value="Tepperman-london">Tepperman-london</option>
               <option value="Hudson Bay- Montereal">Hudson Bay- Montereal</option>
@@ -87,17 +87,17 @@
           </div>
           <div class="flex flex-row flex-vert-center">
             <label for="associate">Associate:</label>
-            <select name="store-location" required>
-              <option value="">Associate Name</option>
+            <select name="store-location">
+              <option value="none">Associate Name</option>
               <option value="Leon- London South">John Doe</option>
               <option value="Tepperman-london">Jane Doe</option>
               <option value="Hudson Bay- Montereal">John Jane</option>
             </select>
           </div>
-          <div class="flex flex-row flex-vert-center twoInput-fields">
+          <div class="flex flex-row flex-vert-center">
             <label for="customer-name">Customer*:</label>
-            <input type="text" required="" name="cust-first-name" placeholder="First Name" value="" id="" class="">
-            <input type="text" required="" name="cust-last-name" placeholder="Last Name" value="" id="" class="">
+            <input type="text" required="" name="cust-first-name" placeholder="First Name" value="" id="" class="zuc-form-50">
+            <input type="text" required="" name="cust-last-name" placeholder="Last Name" value="" id="" class="zuc-form-50">
           </div>
           <div class="flex flex-row flex-vert-center">
             <label for="customer-phone">Customer Phone*:</label>
@@ -119,7 +119,7 @@
              <div class="flex flex-row flex-vert-center">
               <label for="sku">SKU*:</label>
               <select name="store-location" required>
-                <option value="">SKU Description</option>
+                <option value="none">SKU Description</option>
                 <option value="Leon- London South">XYZ</option>
                 <option value="Tepperman-london">Loreum Ipsum</option>
                 <option value="Hudson Bay- Montereal">Loreum Ipsum</option>
@@ -129,13 +129,9 @@
               <label for="order-number">Retail Plan Price Paid*:</label>
               <input type="text" required="" name="retail-price-paid" placeholder="$[MSRP]" value="" id="">
             </div>
-
             <div class="flex flex-row flex-vert-center flex-hor-end">
-                <p>Note:**Once the form is filled and validated then only click function should work.</p>
-                <button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow addPlanButton" type="submit">Add plan</button>
-
+                <button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow" type="">Add plan</button>
             </div>
-
         </form>
         <div class="plan-registration-box center">
           <div class="purple-background">
@@ -144,7 +140,7 @@
           <div class="new-planAdd">
             <div class="new-planAdd-title flex flex-row flex-vert-center flex-hor-between">
               <p><span>Zucora Complete - Furniture ($1499 - $1999)</span> - Price: $199.99 Registration Number  Registration Number: ZH123456</p>
-              <button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow addItemModal" type="">Add item</button>
+              <button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow" type="">Add item</button>
             </div>
             <div class="new-planAdd-detail">
               <table class="">
@@ -199,17 +195,6 @@
         <div><a href="#" class="simple-link">Remove Plan Registration</a></div>
         <div><button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow" type="submit">Submit</button></div>
       </div>
-      <section class="popup-modals-container">
-        <div class="addItem-modal">
-          <div class="addItem-form">
-            <div class="purple-background">
-              <h2>Covered Item(s)</h2>
-            </div>
-            <form >
-            </form>
-          </div>
-        </div>
-      </section>
     <!-- main page content ends -->
    <!-- Site Footer-->
     <footer class="">

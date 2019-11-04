@@ -12,6 +12,7 @@ $desktop-large-width:1980px;
 
 $light-purple:#A3ACFF;
 $zucora-purple:#434DA0;
+$zucora-mint-green:#70E9B2;
 $grey-text: #36384B;
 /* Default styling*/
 
@@ -23,6 +24,19 @@ p {
   font-size: 18px;
 }
 
+
+/*Common classes*/
+.purple-background{
+		background-color: $zucora-purple;
+
+		h2{
+			color: white;
+			font-size: 18px;
+			padding:1em;
+			font-family: $para-fonts;
+			font-weight: 700;
+		}
+	}
 
 /*Header*/
 .srs-nav-container .zuc-main-nav{
@@ -238,6 +252,28 @@ p {
     }
 }
 
+
+.popup-modals-container{
+	/*This is pop up section class*/
+	.addItem-modal{
+		/*This is all modal div class*/
+		.addItem-form{
+			border:2px solid $grey-text;
+			width:50%;
+			display: block;
+			margin:0 auto;
+
+			.purple-background{
+				h2::after{
+					content:'X';
+					float: right;
+					color: $zucora-mint-green;
+					font-weight: 300;
+				}
+			}
+		}
+	}
+}
 
 /*Media queries */
 @media screen and (max-width: $mobile-width){

@@ -96,8 +96,8 @@
           </div>
           <div class="flex flex-row flex-vert-center twoInput-fields">
             <label for="customer-name">Customer*:</label>
-            <input type="text" required="" name="cust-first-name" placeholder="First Name" value="" id="" class="">
-            <input type="text" required="" name="cust-last-name" placeholder="Last Name" value="" id="" class="">
+            <input type="text" required="" name="cust-first-name" placeholder="First Name" value="" id="" class="twoformFileds">
+            <input type="text" required="" name="cust-last-name" placeholder="Last Name" value="" id="" class="twoformFileds">
           </div>
           <div class="flex flex-row flex-vert-center">
             <label for="customer-phone">Customer Phone*:</label>
@@ -131,7 +131,7 @@
             </div>
 
             <div class="flex flex-row flex-vert-center flex-hor-end">
-                <p>Note:**Once the form is filled and validated then only click function should work.</p>
+                <p>Note:**Once the form is filled and validated then only click function should work. Currently it does not.</p>
                 <button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow addPlanButton" type="submit">Add plan</button>
 
             </div>
@@ -199,16 +199,50 @@
         <div><a href="#" class="simple-link">Remove Plan Registration</a></div>
         <div><button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow" type="submit">Submit</button></div>
       </div>
+      <!-- planRegis ends -->
+      <!-- Pop up section starts -->
       <section class="popup-modals-container">
+        <!-- All modal in one div -->
         <div class="addItem-modal">
+          <!-- AddItem form modal  starts-->
           <div class="addItem-form">
             <div class="purple-background">
               <h2>Covered Item(s)</h2>
             </div>
-            <form >
+            <form class="flex flex-column">
+              <div class="flex flex-row flex-vert-center">
+                <label>Product Type:</label>
+                  <select name="product-type" required>
+                    <option value="">[Furniture, Appliances, Adjustable Base]</option>
+                    <option value="1">cyz</option>                    
+                  </select>
+              </div>
+               <div class="flex flex-row flex-vert-center">
+                <label>Classification:</label>
+                  <input type="text" name="classification" value="" placeholder="Text here">
+              </div>
+               <div class="flex flex-row flex-vert-center">
+                <label>Description:</label>
+                  <input type="text" name="description" value="" placeholder="e.g. Sofa, Chair, Lovesear (Optional)">
+              </div>
+               <div class="flex flex-row flex-vert-center">
+                <label>SKU Number:</label>
+                  <input type="text" name="sku-number" value="" placeholder="SKU Number (Optional)">
+              </div>
+               <div class="flex flex-row flex-vert-center">
+                <label>Brand/Model:</label>
+                  <input type="text" name="brand-model" value="" placeholder="Brand/Model (Optional)">
+              </div>
+               <div class="flex flex-row flex-vert-center">
+                <label>Serial Number:</label>
+                  <input type="text" name="serial-number" value="" placeholder="Serial Number (Optional)">
+              </div>
+              <div class="flex flex-row flex-vert-center zu">
+              </div>
             </form>
           </div>
         </div>
+        <!-- AddItem form ends -->
       </section>
     <!-- main page content ends -->
    <!-- Site Footer-->

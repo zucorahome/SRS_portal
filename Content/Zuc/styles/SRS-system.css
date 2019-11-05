@@ -87,17 +87,18 @@ p {
 }
 .planRegis-form div {
   padding: 10px 0;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 .planRegis-form div i {
   font-size: 2em;
   color: #434DA0;
+  margin-right: 10px;
 }
 .planRegis-form .twoInput-fields input {
-  width: 40%;
+  width: 33%;
 }
-.planRegis-form .twoInput-fields input:nth(1) {
-  margin-left: 10%;
+.planRegis-form .twoInput-fields input:first-of-type {
+  margin-right: 4%;
 }
 .planRegis-form label {
   font-family: "aktiv-grotesk", Helvetica, sans-serif;
@@ -105,7 +106,7 @@ p {
   font-size: 18px;
   line-height: 22px;
   text-align: right;
-  /*flex-grow: 2;*/
+  margin-right: 1em;
 }
 .planRegis-form select {
   width: 70%;
@@ -115,7 +116,6 @@ p {
   background-color: #A3ACFF;
   color: #36384B;
   font-size: 16px;
-  /*flex-grow: 8;*/
   font-family: "aktiv-grotesk", Helvetica, sans-serif;
 }
 .planRegis-form input {
@@ -215,19 +215,67 @@ p {
   /*This is pop up section class*/
 }
 .popup-modals-container .addItem-modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
   /*This is all modal div class*/
 }
 .popup-modals-container .addItem-modal .addItem-form {
   border: 2px solid #36384B;
-  width: 50%;
   display: block;
   margin: 0 auto;
+  width: 50%;
+  background-color: white;
+  margin-top: 15%;
 }
 .popup-modals-container .addItem-modal .addItem-form .purple-background h2::after {
   content: "X";
   float: right;
   color: #70E9B2;
   font-weight: 300;
+  cursor: pointer;
+  font-family: cursive;
+}
+.popup-modals-container .addItem-modal .addItem-form .planRegis-form div {
+  padding: 0;
+}
+.popup-modals-container .addItem-modal .addItem-form .planRegis-form .addItem-quantity .label {
+  font-family: "aktiv-grotesk", Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  background: none;
+  color: #36384B;
+  text-shadow: none;
+  margin-right: 1em;
+}
+.popup-modals-container .addItem-modal .addItem-form .planRegis-form .addItem-quantity .button-minus, .popup-modals-container .addItem-modal .addItem-form .planRegis-form .addItem-quantity .button-plus {
+  border-radius: 50%;
+  width: 11%;
+  margin: 5px;
+  font-size: 2em;
+  vertical-align: middle;
+  text-align: center;
+}
+.popup-modals-container .addItem-modal .addItem-form .planRegis-form .addItem-quantity .button-minus {
+  padding: 2px 8px 8px 8px;
+}
+.popup-modals-container .addItem-modal .addItem-form .planRegis-form .addItem-quantity .button-plus {
+  padding: 5px;
+}
+.popup-modals-container .addItem-modal .addItem-form .planRegis-form .addItem-quantity .quantity-input {
+  width: 15%;
+  text-align: center;
+  color: #36384B;
+  border-radius: 0;
+  border: 2px solid #C8C8C8;
+}
+.popup-modals-container .addItem-modal .addItem-form .planRegis-form .margin-10 {
+  margin: 10px;
 }
 
 /*Media queries */

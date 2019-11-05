@@ -24,6 +24,12 @@ p {
   font-size: 18px;
 }
 
+//Mixins
+
+@mixin margin($property){
+	margin:$property;
+}
+
 
 /*Common classes*/
 .purple-background{
@@ -108,21 +114,23 @@ p {
 
 		div{
 			padding:10px 0;
-			justify-content: space-between;
+			justify-content: flex-end;
 			i{
 				font-size: 2em;
 				color: $zucora-purple;
+				margin-right: 10px;
 			}
 		}
 
 		.twoInput-fields 
 		{
 			input{
-				width:40%;
+				width:33%;
 			}
 
-			input:nth(1){
-					margin-left:10%;
+			input:first-of-type{
+					
+					margin-right:4%;
 				}
 		}
 
@@ -132,8 +140,7 @@ p {
 			font-size: 18px;
 			line-height: 22px;
 			text-align: right;
-
-			/*flex-grow: 2;*/
+			margin-right: 1em;
 		}
 
 		select{
@@ -144,7 +151,6 @@ p {
 		    background-color: $light-purple;
 		    color: $grey-text;
 		    font-size: 16px;
-		    /*flex-grow: 8;*/
 		    font-family: $para-fonts;
 		}
 
@@ -256,21 +262,83 @@ p {
 .popup-modals-container{
 	/*This is pop up section class*/
 	.addItem-modal{
+		position: fixed;
+		z-index:1;
+		left:0;
+		top:0;
+		width:100%;
+		height: 100%;
+		//overflow:auto;
+		background-color: rgba(0,0,0,0.4);
 		/*This is all modal div class*/
+
 		.addItem-form{
 			border:2px solid $grey-text;
-			width:50%;
 			display: block;
 			margin:0 auto;
-
+			width:50%;
+			background-color: white;
+			margin-top:15%;
 			.purple-background{
 				h2::after{
 					content:'X';
 					float: right;
 					color: $zucora-mint-green;
 					font-weight: 300;
+					cursor: pointer;
+					font-family: cursive;
 				}
 			}
+
+			.planRegis-form{
+					div{
+						padding:0;
+
+					}
+
+					.addItem-quantity{
+						
+						.label{
+							font-family: $para-fonts;
+							font-weight: bold;
+							font-size: 18px;
+							line-height: 22px;
+							background: none;
+							color: $grey-text;
+							text-shadow: none;
+							margin-right:1em;
+						}
+
+						.button-minus, .button-plus{
+						    border-radius: 50%;
+						    width: 11%;
+						    margin: 5px;
+						    font-size: 2em;
+						    vertical-align: middle;
+						    text-align: center;
+						    
+						}
+						.button-minus{
+							padding:2px 8px 8px 8px;
+						}
+						.button-plus{
+							padding:5px;
+						}
+
+						.quantity-input{
+							width:15%;
+							text-align: center;
+							color: $grey-text;
+							border-radius: 0;
+							border: 2px solid #C8C8C8;
+							//color: #898A8D;
+						}
+					}
+
+					.margin-10{
+						@include margin(10px);
+					}
+				}
 		}
 	}
 }

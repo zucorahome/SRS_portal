@@ -94,10 +94,10 @@
               <option value="Hudson Bay- Montereal">John Jane</option>
             </select>
           </div>
-          <div class="flex flex-row flex-vert-center twoInput-fields">
+          <div class="flex flex-row flex-vert-center twoInput-fields ">
             <label for="customer-name">Customer*:</label>
-            <input type="text" required="" name="cust-first-name" placeholder="First Name" value="" id="" class="twoformFileds">
-            <input type="text" required="" name="cust-last-name" placeholder="Last Name" value="" id="" class="twoformFileds">
+            <input type="text" required="" name="cust-first-name" placeholder="First Name" value="" id="">
+            <input type="text" required="" name="cust-last-name" placeholder="Last Name" value="" id="">
           </div>
           <div class="flex flex-row flex-vert-center">
             <label for="customer-phone">Customer Phone*:</label>
@@ -203,46 +203,65 @@
       <!-- Pop up section starts -->
       <section class="popup-modals-container">
         <!-- All modal in one div -->
-        <div class="addItem-modal">
+        <div class="addItem-modal non-visible">
           <!-- AddItem form modal  starts-->
           <div class="addItem-form">
             <div class="purple-background">
               <h2>Covered Item(s)</h2>
             </div>
-            <form class="flex flex-column">
+            <form class="flex flex-column planRegis-form">
               <div class="flex flex-row flex-vert-center">
                 <label>Product Type:</label>
                   <select name="product-type" required>
-                    <option value="">[Furniture, Appliances, Adjustable Base]</option>
-                    <option value="1">cyz</option>                    
+                    <option value="">Choose product type</option>
+                    <option value="Furniture">Furniture</option>                    
+                    <option value="Appliances">Appliances</option>
+                    <option value="Adjustable Base">Adjustable Base</option>
+
                   </select>
               </div>
                <div class="flex flex-row flex-vert-center">
                 <label>Classification:</label>
-                  <input type="text" name="classification" value="" placeholder="Text here">
+                  <input type="text" name="classification" value="" placeholder="Text here" required>
               </div>
                <div class="flex flex-row flex-vert-center">
                 <label>Description:</label>
-                  <input type="text" name="description" value="" placeholder="e.g. Sofa, Chair, Lovesear (Optional)">
+                  <input type="text" name="description" value="" placeholder="e.g. Sofa, Chair, Lovesear (Optional)" required>
               </div>
                <div class="flex flex-row flex-vert-center">
                 <label>SKU Number:</label>
-                  <input type="text" name="sku-number" value="" placeholder="SKU Number (Optional)">
+                  <input type="text" name="sku-number" value="" placeholder="SKU Number (Optional)" required="">
               </div>
                <div class="flex flex-row flex-vert-center">
                 <label>Brand/Model:</label>
-                  <input type="text" name="brand-model" value="" placeholder="Brand/Model (Optional)">
+                  <input type="text" name="brand-model" value="" placeholder="Brand/Model (Optional)" required="">
               </div>
                <div class="flex flex-row flex-vert-center">
                 <label>Serial Number:</label>
-                  <input type="text" name="serial-number" value="" placeholder="Serial Number (Optional)">
+                  <input type="text" name="serial-number" value="" placeholder="Serial Number (Optional)" required="">
               </div>
-              <div class="flex flex-row flex-vert-center zu">
+              <div class="flex flex-row flex-vert-center">
+                <div class="flex flex-row flex-vert-center addItem-quantity">
+                  <div class="label">Quantity:</div>
+                  <input type="button" value="-" class="button-minus" data-field="quantity">
+                  <input type="text" name="quantity" value="1" class="quantity-input">
+                  <input type="button" value="+" class="button-plus" data-field="quantity">
+                </div>
+
+                <div class="flex flex-row flex-vert-center addItem-PPI">
+                  <label>Price per item:</label>
+                  <input type="text" name="pricePer-item" value=""placeholder="$" required="">
+                </div>
+              </div>
+              <div class="flex flex-vert-center flex-hor-end margin-top-1">
+                <div><a href="javascript:void(0)" class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow margin-10">Add more</a></div>
+                <div><button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow" type="submit">Save</button></div>
               </div>
             </form>
           </div>
-        </div>
         <!-- AddItem form ends -->
+        <!-- Congratulations modal -->
+        </div>
       </section>
     <!-- main page content ends -->
    <!-- Site Footer-->

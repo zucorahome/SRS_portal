@@ -201,7 +201,8 @@ p {
 			    font-weight: bold;
 			    border:2px solid $grey-text;
 			    padding:0 6px;
-			    display: none;
+			    //display: none;
+			    cursor: pointer;
 			}
 		}
 	}
@@ -258,11 +259,8 @@ p {
     }
 }
 
-
-.popup-modals-container{
-	/*This is pop up section class*/
-	.addItem-modal{
-		position: fixed;
+%modal{
+	position: fixed;
 		z-index:1;
 		left:0;
 		top:0;
@@ -270,15 +268,24 @@ p {
 		height: 100%;
 		//overflow:auto;
 		background-color: rgba(0,0,0,0.4);
+}
+
+%modal-background{
+	border:2px solid $grey-text;
+			background:white;
+			width:50%;
+			margin:15% auto;
+}
+
+.popup-modals-container{
+	/*This is pop up section class*/
+	.addItem-modal{
+		@extend %modal;
 		/*This is all modal div class*/
 
 		.addItem-form{
-			border:2px solid $grey-text;
-			display: block;
-			margin:0 auto;
-			width:50%;
-			background-color: white;
-			margin-top:15%;
+			@extend %modal-background;
+			
 			.purple-background{
 				h2::after{
 					content:'X';
@@ -341,8 +348,75 @@ p {
 				}
 		}
 	}
-}
 
+	/*Congratulation modal*/
+	.mainSubmit-modal-container,.remove-planModal-container{
+		@extend %modal;
+
+		.mainSubmit-modal,.remove-planModal{
+			@extend %modal-background;
+
+			h2{
+				font-family: $header-fonts;
+				font-weight: 900;
+				font-size:3em;
+				color: $zucora-purple;
+				text-align: center;
+				padding: 1em;
+			}
+			.cross{
+					float: right;
+					color: $zucora-mint-green;
+					font-weight: 300;
+					cursor: pointer;
+					font-family: cursive;
+					font-size: 1.5em;
+					padding: 10px;
+				}
+
+				p{
+					width: 75%;
+				    text-align: center;
+				    margin: 0 auto;
+				    font-size: 1.75em;
+				}
+
+				div{
+					text-align: center;
+					padding:1em;
+				}
+			} 
+		} 
+
+		.remove-planModal-container{
+		
+			.remove-planModal{
+				h3{
+					text-align: center;
+					margin-top:1em;
+				}
+
+				div{
+					a{
+						margin:0 10px;
+					}
+
+					.zuc-btn-hollow{
+						border:2px solid $zucora-purple;
+						color:$zucora-purple;
+					}
+				}
+			}
+		}
+
+
+}//popup modal container ends
+
+.purple-text{
+				color: $zucora-purple;
+				font-weight: 500;
+				font-family: $para-fonts;
+			}
 /*Media queries */
 @media screen and (max-width: $mobile-width){
 	.srs-login-container{

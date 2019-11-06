@@ -34,7 +34,18 @@
           <!-- First -->
           <div class="zuc-nav-dropdown --clickme"><a href="#/"><span class="u-uppercase">Profile</span></a>
           </div>
-          <div class="zuc-nav-dropdown --clickme"><a href="#/"><span class="u-uppercase">Plans</span></a>
+          <div class="zuc-nav-dropdown"><span class="u-uppercase">Plans</span>
+             <div class="zuc-hidden-menu" data-hidden-menu aria-hidden="true" aria-role="menu">
+                <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
+                  <!-- Dropdown links -->
+                  <div class="zuc-dropdown-column">
+                    <a href="plan-registration-one.html" title="" aria-role="menu-item">Plans</a>
+                    <a href="#/" title="" aria-role="menu-item">Plan Inquiry</a>
+                    <a href="#/" title="" aria-role="menu-item">Cancel Plan</a>
+                    <a href="#/" title="" aria-role="menu-item">Plan Reporting</a>
+                  </div>
+                </div>
+              </div>
           </div>
           <div class="zuc-nav-dropdown"><span class="u-uppercase">Orders</span>
             <!-- Drop Down-->
@@ -144,7 +155,7 @@
           <div class="new-planAdd">
             <div class="new-planAdd-title flex flex-row flex-vert-center flex-hor-between">
               <p><span>Zucora Complete - Furniture ($1499 - $1999)</span> - Price: $199.99 Registration Number  Registration Number: ZH123456</p>
-              <button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow addItemModal" type="">Add item</button>
+              <button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow addItemModal-button" type="">Add item</button>
             </div>
             <div class="new-planAdd-detail">
               <table class="">
@@ -196,8 +207,9 @@
       </div><!--planRegis-form-container ends-->
     </section> <!--plan-registration-container section ends-->
      <div class="planRegis-controls">
-        <div><a href="#" class="simple-link">Remove Plan Registration</a></div>
-        <div><button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow" type="submit">Submit</button></div>
+        <div><a href="#" class="simple-link remove-planRegis">Remove Plan Registration</a></div>
+        <p>**Note: This button should only work once the new plan added with all valid.</p>
+        <div><button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow planRegis-mainSubmit-button" type="submit">Submit</button></div>
       </div>
       <!-- planRegis ends -->
       <!-- Pop up section starts -->
@@ -254,13 +266,37 @@
                 </div>
               </div>
               <div class="flex flex-vert-center flex-hor-end margin-top-1">
+                <p>**Note:"Add more"</p>
                 <div><a href="javascript:void(0)" class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow margin-10">Add more</a></div>
-                <div><button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow" type="submit">Save</button></div>
+                <div><button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow addItem-save" type="submit">Save</button></div>
               </div>
             </form>
           </div>
         <!-- AddItem form ends -->
+        </div>
         <!-- Congratulations modal -->
+        <div class="mainSubmit-modal-container non-visible">
+          <div class="mainSubmit-modal">
+            <span class="cross close-modal">X</span>
+            <h2>Congratulations!</h2>
+            <p>Plan has been submitted for registration for the Covered Items as listed. Confirmation of Plan Registration will be emailed to customer <span class="purple-text">customer name</span> at <span class="purple-text">userEmail@emailaddress.com</span> </p>
+            <div><a href="javascript:void(0)" class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow margin-10 close-modal">ok</a></div>
+          </div>
+        </div>
+        <!-- Congratulation modal ends -->
+        <!-- Remove modal -->
+        <div class="remove-planModal-container non-visible">
+          <div class="remove-planModal">
+             <span class="cross close-modal">X</span>
+              <h2>Caution!</h2>
+              <p>Removing Plan Registration will remove all data associated with this plan including Covered Items.</p>
+              <h3 class="purple-text">Do you wish to continue?</h3>
+              <p>**Note: Yes button should remove all the data added including in add item table and No should just close the modal not the info.</p>
+              <div class="flex flex-row flex-vert-center flex-hor-center">
+                <a href="#/" class="zuc-btn zuc-btn-hollow" type="button">Yes</a>
+                <a href="#/" class="zuc-btn zuc-btn-hollow close-modal" type="button">No</a>
+              </div>
+          </div>
         </div>
       </section>
     <!-- main page content ends -->

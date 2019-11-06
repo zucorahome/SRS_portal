@@ -163,7 +163,7 @@ p {
   font-weight: bold;
   border: 2px solid #36384B;
   padding: 0 6px;
-  display: none;
+  cursor: pointer;
 }
 
 .new-planAdd-detail {
@@ -211,10 +211,7 @@ p {
   color: #36384B;
 }
 
-.popup-modals-container {
-  /*This is pop up section class*/
-}
-.popup-modals-container .addItem-modal {
+.popup-modals-container .mainSubmit-modal-container, .popup-modals-container .remove-planModal-container, .popup-modals-container .addItem-modal {
   position: fixed;
   z-index: 1;
   left: 0;
@@ -222,15 +219,21 @@ p {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.4);
-  /*This is all modal div class*/
 }
-.popup-modals-container .addItem-modal .addItem-form {
+
+.popup-modals-container .mainSubmit-modal-container .mainSubmit-modal, .popup-modals-container .mainSubmit-modal-container .remove-planModal, .popup-modals-container .remove-planModal-container .mainSubmit-modal, .popup-modals-container .remove-planModal-container .remove-planModal, .popup-modals-container .addItem-modal .addItem-form {
   border: 2px solid #36384B;
-  display: block;
-  margin: 0 auto;
+  background: white;
   width: 50%;
-  background-color: white;
-  margin-top: 15%;
+  margin: 15% auto;
+}
+
+.popup-modals-container {
+  /*This is pop up section class*/
+  /*Congratulation modal*/
+}
+.popup-modals-container .addItem-modal {
+  /*This is all modal div class*/
 }
 .popup-modals-container .addItem-modal .addItem-form .purple-background h2::after {
   content: "X";
@@ -276,6 +279,50 @@ p {
 }
 .popup-modals-container .addItem-modal .addItem-form .planRegis-form .margin-10 {
   margin: 10px;
+}
+.popup-modals-container .mainSubmit-modal-container .mainSubmit-modal h2, .popup-modals-container .mainSubmit-modal-container .remove-planModal h2, .popup-modals-container .remove-planModal-container .mainSubmit-modal h2, .popup-modals-container .remove-planModal-container .remove-planModal h2 {
+  font-family: "PublicoHeadline", aktiv-grotesk, Helvetica, sans-serif;
+  font-weight: 900;
+  font-size: 3em;
+  color: #434DA0;
+  text-align: center;
+  padding: 1em;
+}
+.popup-modals-container .mainSubmit-modal-container .mainSubmit-modal .cross, .popup-modals-container .mainSubmit-modal-container .remove-planModal .cross, .popup-modals-container .remove-planModal-container .mainSubmit-modal .cross, .popup-modals-container .remove-planModal-container .remove-planModal .cross {
+  float: right;
+  color: #70E9B2;
+  font-weight: 300;
+  cursor: pointer;
+  font-family: cursive;
+  font-size: 1.5em;
+  padding: 10px;
+}
+.popup-modals-container .mainSubmit-modal-container .mainSubmit-modal p, .popup-modals-container .mainSubmit-modal-container .remove-planModal p, .popup-modals-container .remove-planModal-container .mainSubmit-modal p, .popup-modals-container .remove-planModal-container .remove-planModal p {
+  width: 75%;
+  text-align: center;
+  margin: 0 auto;
+  font-size: 1.75em;
+}
+.popup-modals-container .mainSubmit-modal-container .mainSubmit-modal div, .popup-modals-container .mainSubmit-modal-container .remove-planModal div, .popup-modals-container .remove-planModal-container .mainSubmit-modal div, .popup-modals-container .remove-planModal-container .remove-planModal div {
+  text-align: center;
+  padding: 1em;
+}
+.popup-modals-container .remove-planModal-container .remove-planModal h3 {
+  text-align: center;
+  margin-top: 1em;
+}
+.popup-modals-container .remove-planModal-container .remove-planModal div a {
+  margin: 0 10px;
+}
+.popup-modals-container .remove-planModal-container .remove-planModal div .zuc-btn-hollow {
+  border: 2px solid #434DA0;
+  color: #434DA0;
+}
+
+.purple-text {
+  color: #434DA0;
+  font-weight: 500;
+  font-family: "aktiv-grotesk", Helvetica, sans-serif;
 }
 
 /*Media queries */

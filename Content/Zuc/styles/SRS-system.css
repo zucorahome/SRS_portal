@@ -9,6 +9,59 @@ p {
   font-size: 18px;
 }
 
+.popup-modals-container .mainSubmit-modal-container, .popup-modals-container .remove-planModal-container, .popup-modals-container .addItem-modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-modals-container .mainSubmit-modal-container .mainSubmit-modal, .popup-modals-container .mainSubmit-modal-container .remove-planModal, .popup-modals-container .remove-planModal-container .mainSubmit-modal, .popup-modals-container .remove-planModal-container .remove-planModal, .popup-modals-container .addItem-modal .addItem-form {
+  border: 2px solid #36384B;
+  background: white;
+  width: 50%;
+  margin: 15% auto;
+}
+
+.retailer-profile-container .profile-address label, .retailer-profile-container .two-grid-column .retailer-info-form label, .planRegis-form label {
+  font-family: "aktiv-grotesk", Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: right;
+  margin-right: 1em;
+}
+
+.retailer-profile-container .profile-address select, .retailer-profile-container .two-grid-column .retailer-info-form select, .planRegis-form select {
+  width: 70%;
+  height: 50px;
+  border: 2px solid #36384B;
+  border-radius: 10px;
+  background-color: #A3ACFF;
+  color: #36384B;
+  font-size: 16px;
+  font-family: "aktiv-grotesk", Helvetica, sans-serif;
+}
+
+.retailer-profile-container .profile-address input, .retailer-profile-container .two-grid-column .retailer-info-form input, .planRegis-form input {
+  background-color: #FFFFFF;
+  border: 2px solid #36384B;
+  width: 70%;
+  font-size: 16px;
+  font-family: "aktiv-grotesk", Helvetica, sans-serif;
+}
+
+.planRegis-controls div a, .simple-link {
+  text-transform: uppercase;
+  text-decoration: underline;
+  font-family: "aktiv-grotesk", Helvetica, sans-serif;
+  font-weight: 700;
+  color: #36384B;
+}
+
 /*Common classes*/
 .purple-background {
   background-color: #434DA0;
@@ -21,9 +74,36 @@ p {
   font-weight: 700;
 }
 
+.purple-text {
+  color: #434DA0;
+  font-weight: 500;
+  font-family: "aktiv-grotesk", Helvetica, sans-serif;
+}
+
+.profileBox-heading {
+  font-family: "aktiv-grotesk", Helvetica, sans-serif;
+  color: #434DA0;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.two-grid-column {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.srs-heading {
+  font-family: "PublicoHeadline", aktiv-grotesk, Helvetica, sans-serif;
+  font-weight: 700;
+  color: #434DA0;
+  font-size: 3.2em;
+  margin-top: 13%;
+  text-align: center;
+}
+
 /*Header*/
 .srs-nav-container .zuc-main-nav {
-  padding: 1em 8%;
+  /*padding:1em 8%;*/
 }
 
 /* Login screen*/
@@ -65,15 +145,6 @@ p {
   margin-top: 5%;
 }
 
-.srs-heading {
-  font-family: "PublicoHeadline", aktiv-grotesk, Helvetica, sans-serif;
-  font-weight: 700;
-  color: #434DA0;
-  font-size: 3.2em;
-  margin-top: 13%;
-  text-align: center;
-}
-
 .plan-registration-container {
   border: 2px solid #36384B;
   height: auto;
@@ -100,34 +171,6 @@ p {
 .planRegis-form .twoInput-fields input:first-of-type {
   margin-right: 4%;
 }
-.planRegis-form label {
-  font-family: "aktiv-grotesk", Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 22px;
-  text-align: right;
-  margin-right: 1em;
-}
-.planRegis-form select {
-  width: 70%;
-  height: 50px;
-  border: 2px solid #36384B;
-  border-radius: 10px;
-  background-color: #A3ACFF;
-  color: #36384B;
-  font-size: 16px;
-  font-family: "aktiv-grotesk", Helvetica, sans-serif;
-}
-.planRegis-form input {
-  background-color: #FFFFFF;
-  border: 2px solid #36384B;
-  /*flex-grow: 8;*/
-  width: 70%;
-  font-size: 16px;
-  /*margin:0 10px;*/
-  font-family: "aktiv-grotesk", Helvetica, sans-serif;
-}
-
 .plan-registration-box {
   height: auto;
   border: 2px solid #36384B;
@@ -203,31 +246,6 @@ p {
   align-items: center;
   padding: 2em 0;
 }
-.planRegis-controls div a {
-  text-transform: uppercase;
-  text-decoration: underline;
-  font-family: "aktiv-grotesk", Helvetica, sans-serif;
-  font-weight: 700;
-  color: #36384B;
-}
-
-.popup-modals-container .mainSubmit-modal-container, .popup-modals-container .remove-planModal-container, .popup-modals-container .addItem-modal {
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.popup-modals-container .mainSubmit-modal-container .mainSubmit-modal, .popup-modals-container .mainSubmit-modal-container .remove-planModal, .popup-modals-container .remove-planModal-container .mainSubmit-modal, .popup-modals-container .remove-planModal-container .remove-planModal, .popup-modals-container .addItem-modal .addItem-form {
-  border: 2px solid #36384B;
-  background: white;
-  width: 50%;
-  margin: 15% auto;
-}
-
 .popup-modals-container {
   /*This is pop up section class*/
   /*Congratulation modal*/
@@ -319,10 +337,46 @@ p {
   color: #434DA0;
 }
 
-.purple-text {
-  color: #434DA0;
-  font-weight: 500;
-  font-family: "aktiv-grotesk", Helvetica, sans-serif;
+/*Retailer Profile*/
+.retailer-profile-container {
+  width: 80%;
+  margin: 0 auto;
+}
+.retailer-profile-container .two-grid-column div {
+  padding: 0 10px;
+}
+.retailer-profile-container .two-grid-column .retailer-info-form div {
+  padding: 5px 0;
+  justify-content: flex-end;
+}
+.retailer-profile-container .two-grid-column .retailer-info-form div p {
+  width: 70%;
+  font-weight: bold;
+}
+.retailer-profile-container .profile-boxStyle {
+  border: 2px solid #36384B;
+  padding: 10px;
+}
+.retailer-profile-container .new-planAdd-detail {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+}
+.retailer-profile-container .new-planAdd-detail table tr {
+  text-align: left;
+}
+.retailer-profile-container .new-planAdd-detail table thead tr th:nth-child(1) {
+  width: 10%;
+  text-transform: uppercase;
+}
+.retailer-profile-container .new-planAdd-detail table thead tr th:nth-child(2) {
+  width: 20%;
+}
+.retailer-profile-container .new-planAdd-detail table thead tr th:nth-child(3) {
+  width: 30%;
+}
+.retailer-profile-container .new-planAdd-detail table thead tr th:nth-child(4) {
+  width: 20%;
 }
 
 /*Media queries */
@@ -372,10 +426,33 @@ p {
     font-weight: 700;
     color: #434DA0;
   }
+
+  .popup-modals-container {
+    /*This is pop up section class*/
+  }
+  .popup-modals-container .addItem-modal {
+    overflow: auto;
+  }
+  .popup-modals-container .addItem-modal .addItem-form {
+    width: 90%;
+    margin: 30% auto;
+  }
+  .popup-modals-container .addItem-modal .addItem-form .mobile-column div {
+    justify-content: space-around;
+  }
+
+  .mobile-column {
+    flex-direction: column;
+    grid-template-columns: 100%;
+  }
+
+  .retailer-profile-container {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 769px) {
   .srs-nav-container .zuc-main-nav .zuc-nav-brand {
-    width: 25vw;
+    width: 15vw;
     max-width: 100%;
   }
 }

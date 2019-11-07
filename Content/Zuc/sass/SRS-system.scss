@@ -24,13 +24,65 @@ p {
   font-size: 18px;
 }
 
-//Mixins
+//Mixins and extends
 
 @mixin margin($property){
 	margin:$property;
 }
 
+%modal{
+	position: fixed;
+		z-index:1;
+		left:0;
+		top:0;
+		width:100%;
+		height: 100%;
+		//overflow:auto;
+		background-color: rgba(0,0,0,0.4);
+}
 
+%modal-background{
+	border:2px solid $grey-text;
+			background:white;
+			width:50%;
+			margin:15% auto;
+}
+
+%label{
+	font-family: "aktiv-grotesk", Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: right;
+    margin-right: 1em;
+}
+
+%select{
+			width:70%;
+			height: 50px;
+	    	border: 2px solid $grey-text;
+		    border-radius: 10px;
+		    background-color: $light-purple;
+		    color: $grey-text;
+		    font-size: 16px;
+		    font-family: $para-fonts;
+}
+
+%input{
+				background-color: #FFFFFF;
+				border: 2px solid $grey-text;
+				width:70%;
+				font-size: 16px;
+				font-family: $para-fonts;
+}
+
+%simple-link{
+			text-transform: uppercase;
+    		text-decoration: underline;
+    		font-family: $para-fonts;
+    		font-weight: 700;
+    		color:$grey-text;
+}
 /*Common classes*/
 .purple-background{
 		background-color: $zucora-purple;
@@ -43,10 +95,36 @@ p {
 			font-weight: 700;
 		}
 	}
+.purple-text{
+				color: $zucora-purple;
+				font-weight: 500;
+				font-family: $para-fonts;
+			}
+.profileBox-heading{
+	font-family: $para-fonts;
+	color: $zucora-purple;
+	font-size:24px;
+	font-weight:700;
 
+}
+.two-grid-column{
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+.srs-heading{
+	font-family: $header-fonts;
+	font-weight: 700;
+	color: $zucora-purple;
+	font-size:3.2em;
+	margin-top:13%;
+	text-align: center;
+}
+.simple-link{
+	@extend %simple-link;
+}
 /*Header*/
 .srs-nav-container .zuc-main-nav{
-	padding:1em 8%;
+	/*padding:1em 8%;*/
 }
 
 /* Login screen*/
@@ -93,14 +171,7 @@ p {
 	}
 }
 
-.srs-heading{
-	font-family: $header-fonts;
-	font-weight: 700;
-	color: $zucora-purple;
-	font-size:3.2em;
-	margin-top:13%;
-	text-align: center;
-}
+
 .plan-registration-container{
 	border:2px solid #36384B;
 	height:auto;
@@ -135,33 +206,15 @@ p {
 		}
 
 		label{
-			font-family: $para-fonts;
-			font-weight: bold;
-			font-size: 18px;
-			line-height: 22px;
-			text-align: right;
-			margin-right: 1em;
+			@extend %label;
 		}
 
 		select{
-			width:70%;
-			height: 50px;
-	    	border: 2px solid $grey-text;
-		    border-radius: 10px;
-		    background-color: $light-purple;
-		    color: $grey-text;
-		    font-size: 16px;
-		    font-family: $para-fonts;
+			@extend %select;
 		}
 
 		input{
-				background-color: #FFFFFF;
-				border: 2px solid $grey-text;
-				/*flex-grow: 8;*/
-				width:70%;
-				font-size: 16px;
-				/*margin:0 10px;*/
-				font-family: $para-fonts;
+				@extend %input;
 			}
 	}
 
@@ -250,32 +303,12 @@ p {
 
     div{
     	a{
-    		text-transform: uppercase;
-    		text-decoration: underline;
-    		font-family: $para-fonts;
-    		font-weight: 700;
-    		color:$grey-text;
+    		@extend %simple-link;
     	}
     }
 }
 
-%modal{
-	position: fixed;
-		z-index:1;
-		left:0;
-		top:0;
-		width:100%;
-		height: 100%;
-		//overflow:auto;
-		background-color: rgba(0,0,0,0.4);
-}
 
-%modal-background{
-	border:2px solid $grey-text;
-			background:white;
-			width:50%;
-			margin:15% auto;
-}
 
 .popup-modals-container{
 	/*This is pop up section class*/
@@ -349,6 +382,7 @@ p {
 		}
 	}
 
+
 	/*Congratulation modal*/
 	.mainSubmit-modal-container,.remove-planModal-container{
 		@extend %modal;
@@ -412,11 +446,91 @@ p {
 
 }//popup modal container ends
 
-.purple-text{
-				color: $zucora-purple;
-				font-weight: 500;
-				font-family: $para-fonts;
+/*Retailer Profile*/
+	.retailer-profile-container{
+		width:80%;
+		margin:0 auto;
+
+		.two-grid-column{
+
+		div{
+			padding:0 10px;
+		}	
+		.retailer-info-form{
+			div{
+				padding:5px 0;
+				justify-content: flex-end;
+
+				p{
+					width:70%;
+					font-weight: bold;
+				}
 			}
+			label{
+				@extend %label;
+				}
+
+				input{
+					@extend %input;
+				}
+
+				select{
+					@extend %select;
+				}
+			}
+		}
+
+		.profile-boxStyle{
+			border:2px solid $grey-text;
+			padding:10px;
+		}
+
+		.profile-address{
+			label{
+				@extend %label;
+				//text-align: left;
+				//margin-right:0;
+			}
+
+			input{
+				@extend %input;
+			}
+
+			select{
+				@extend %select;
+			}
+		}
+
+		.new-planAdd-detail{
+			display: block;
+			margin:0 auto;
+			padding: 0;
+
+			table{
+				tr{
+					text-align: left;
+				}
+
+				thead{
+					tr{
+						th:nth-child(1){
+							width:10%;
+							text-transform: uppercase;
+						}
+						th:nth-child(2){
+							width:20%;
+						}
+						th:nth-child(3){
+							width: 30%;
+						}
+						th:nth-child(4){
+							width: 20%;
+						}
+					}
+				}
+			}
+		}		
+	}
 /*Media queries */
 @media screen and (max-width: $mobile-width){
 	.srs-login-container{
@@ -466,14 +580,37 @@ p {
 				}
 		}
 	}
-}
+.popup-modals-container{
+	/*This is pop up section class*/
+	.addItem-modal{
+		overflow: auto;
+	.addItem-form{
+			width:90%;
+			margin:30% auto;
 
+			.mobile-column{
+					div{
+						justify-content: space-around;
+					}
+				}
+			}
+		}	
+	}
+	.mobile-column{
+		flex-direction: column;
+		grid-template-columns: 100%;
+	}
+
+	.retailer-profile-container{
+		width:100%;
+	}
+}
 
 @media screen and (min-width:$tablet-width){
 	.srs-nav-container{
 		.zuc-main-nav{
 			.zuc-nav-brand{
-			width:25vw;
+			width:15vw;
 			max-width:100%;
 			}	
 		}

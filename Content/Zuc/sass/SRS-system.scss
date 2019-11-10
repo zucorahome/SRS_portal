@@ -37,14 +37,14 @@ p {
 		top:0;
 		width:100%;
 		height: 100%;
-		//overflow:auto;
+		overflow:auto;
 		background-color: rgba(0,0,0,0.4);
 }
 
 %modal-background{
-	border:2px solid $grey-text;
+			border:2px solid $grey-text;
 			background:white;
-			width:50%;
+			width:60%;
 			margin:15% auto;
 }
 
@@ -83,6 +83,15 @@ p {
     		font-weight: 700;
     		color:$grey-text;
 }
+
+%form-cross{
+			content:'X';
+			float: right;
+			color: $zucora-mint-green;
+			font-weight: 300;
+			cursor: pointer;
+			font-family: cursive;
+}
 /*Common classes*/
 .purple-background{
 		background-color: $zucora-purple;
@@ -100,6 +109,10 @@ p {
 				font-weight: 500;
 				font-family: $para-fonts;
 			}
+
+.grey-text{
+	color:$grey-text !important;
+}
 .profileBox-heading{
 	font-family: $para-fonts;
 	color: $zucora-purple;
@@ -121,6 +134,10 @@ p {
 }
 .simple-link{
 	@extend %simple-link;
+}
+
+.margin-10{
+	@include margin(10px);
 }
 /*Header*/
 .srs-nav-container .zuc-main-nav{
@@ -315,18 +332,12 @@ p {
 	.addItem-modal{
 		@extend %modal;
 		/*This is all modal div class*/
-
 		.addItem-form{
 			@extend %modal-background;
 			
 			.purple-background{
 				h2::after{
-					content:'X';
-					float: right;
-					color: $zucora-mint-green;
-					font-weight: 300;
-					cursor: pointer;
-					font-family: cursive;
+					@extend %form-cross;
 				}
 			}
 
@@ -351,7 +362,7 @@ p {
 
 						.button-minus, .button-plus{
 						    border-radius: 50%;
-						    width: 11%;
+						    width: auto;
 						    margin: 5px;
 						    font-size: 2em;
 						    vertical-align: middle;
@@ -453,9 +464,9 @@ p {
 
 		.two-grid-column{
 
-		div{
+		/*div{
 			padding:0 10px;
-		}	
+		}*/	
 		.retailer-info-form{
 			div{
 				padding:5px 0;
@@ -482,10 +493,11 @@ p {
 
 		.profile-boxStyle{
 			border:2px solid $grey-text;
-			padding:10px;
+			/*padding:10px;*/
 		}
 
 		.profile-address{
+			padding:10px;
 			label{
 				@extend %label;
 				//text-align: left;
@@ -500,39 +512,134 @@ p {
 				@extend %select;
 			}
 		}
+		.locations-container{
+			.new-planAdd-detail{
+				display: block;
+				/*margin:0 auto;*/
+				padding: 0;
 
-		.new-planAdd-detail{
-			display: block;
-			margin:0 auto;
-			padding: 0;
+				table{
+					tr{
+						text-align: left;
+					}
+
+					thead{
+						tr{
+							th:nth-child(1){
+								width:10%;
+								
+							}
+							th:nth-child(2){
+								width:20%;
+							}
+							th:nth-child(3){
+								width: 30%;
+							}
+							th:nth-child(4){
+								width: 20%;
+							}
+						}
+					}
+				}
+			}
+		}
+		.contacts-container{
+			padding:0;
+			.new-planAdd-detail{
+				display: block;
+			}
 
 			table{
-				tr{
-					text-align: left;
-				}
-
 				thead{
 					tr{
-						th:nth-child(1){
-							width:10%;
-							text-transform: uppercase;
+						th{
+							border-right:1px solid #d3d3df;
 						}
-						th:nth-child(2){
-							width:20%;
-						}
-						th:nth-child(3){
-							width: 30%;
-						}
-						th:nth-child(4){
-							width: 20%;
+					}
+				}
+				tbody{
+					tr{
+						td{
+							border-right:1px solid #d3d3df;
 						}
 					}
 				}
 			}
 		}		
 	}
+
+	.shipping-locations-modal{
+		@extend %modal;
+		
+		.shipping-locations-form{
+			@extend %modal-background;
+
+			.purple-background{
+				h2::after{
+					@extend %form-cross;
+				}
+			}
+
+			.planRegis-form{
+					width:100%;
+					padding:1em;
+					
+					div{
+						/*justify-content: space-between;*/
+						width:90%;
+					}
+					label{
+						@extend %label;
+						padding:0 5px;
+					}
+
+					input{
+						@extend %input;
+					}
+
+					select{
+						@extend %select;
+					}
+					h3{
+						font-family: $para-fonts;
+						margin-bottom: 0;
+						font-weight: 700;
+					}
+
+					.srs-checkmark{
+
+					}
+				}
+
+				.width-45{
+					width:45% !important;
+				}
+		}
+	}
+
+	.location-form-modal{
+		@extend %modal;
+
+		.location-form{
+			@extend %modal-background;
+
+			label{
+						@extend %label;
+						padding:0 5px;
+					}
+
+					input{
+						@extend %input;
+					}
+
+					select{
+						@extend %select;
+					}
+		}
+	}
 /*Media queries */
 @media screen and (max-width: $mobile-width){
+
 	.srs-login-container{
 		width:90%;
 		margin-top:20%;
@@ -604,6 +711,28 @@ p {
 	.retailer-profile-container{
 		width:100%;
 	}
+
+	.shipping-locations-modal{
+		.shipping-locations-form{
+			width:90%;
+			margin-top:30%;
+			.planRegis-form{
+				div{
+					width:100%;
+				}
+				input{
+					width:100%;
+				}
+				select{
+					width: 100%;
+				}
+			}
+		}
+		.width-45{
+			width:100%;
+		}
+	}
+	
 }
 
 @media screen and (min-width:$tablet-width){

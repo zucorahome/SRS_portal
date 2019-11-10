@@ -9,24 +9,25 @@ p {
   font-size: 18px;
 }
 
-.popup-modals-container .mainSubmit-modal-container, .popup-modals-container .remove-planModal-container, .popup-modals-container .addItem-modal {
+.location-form-modal, .shipping-locations-modal, .popup-modals-container .mainSubmit-modal-container, .popup-modals-container .remove-planModal-container, .popup-modals-container .addItem-modal {
   position: fixed;
   z-index: 1;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
+  overflow: auto;
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.popup-modals-container .mainSubmit-modal-container .mainSubmit-modal, .popup-modals-container .mainSubmit-modal-container .remove-planModal, .popup-modals-container .remove-planModal-container .mainSubmit-modal, .popup-modals-container .remove-planModal-container .remove-planModal, .popup-modals-container .addItem-modal .addItem-form {
+.location-form-modal .location-form, .shipping-locations-modal .shipping-locations-form, .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal, .popup-modals-container .mainSubmit-modal-container .remove-planModal, .popup-modals-container .remove-planModal-container .mainSubmit-modal, .popup-modals-container .remove-planModal-container .remove-planModal, .popup-modals-container .addItem-modal .addItem-form {
   border: 2px solid #36384B;
   background: white;
-  width: 50%;
+  width: 60%;
   margin: 15% auto;
 }
 
-.retailer-profile-container .profile-address label, .retailer-profile-container .two-grid-column .retailer-info-form label, .planRegis-form label {
+.location-form-modal .location-form label, .shipping-locations-modal .shipping-locations-form .planRegis-form label, .retailer-profile-container .profile-address label, .retailer-profile-container .two-grid-column .retailer-info-form label, .planRegis-form label {
   font-family: "aktiv-grotesk", Helvetica, sans-serif;
   font-weight: bold;
   font-size: 18px;
@@ -35,7 +36,7 @@ p {
   margin-right: 1em;
 }
 
-.retailer-profile-container .profile-address select, .retailer-profile-container .two-grid-column .retailer-info-form select, .planRegis-form select {
+.location-form-modal .location-form select, .shipping-locations-modal .shipping-locations-form .planRegis-form select, .retailer-profile-container .profile-address select, .retailer-profile-container .two-grid-column .retailer-info-form select, .planRegis-form select {
   width: 70%;
   height: 50px;
   border: 2px solid #36384B;
@@ -46,7 +47,7 @@ p {
   font-family: "aktiv-grotesk", Helvetica, sans-serif;
 }
 
-.retailer-profile-container .profile-address input, .retailer-profile-container .two-grid-column .retailer-info-form input, .planRegis-form input {
+.location-form-modal .location-form input, .shipping-locations-modal .shipping-locations-form .planRegis-form input, .retailer-profile-container .profile-address input, .retailer-profile-container .two-grid-column .retailer-info-form input, .planRegis-form input {
   background-color: #FFFFFF;
   border: 2px solid #36384B;
   width: 70%;
@@ -60,6 +61,15 @@ p {
   font-family: "aktiv-grotesk", Helvetica, sans-serif;
   font-weight: 700;
   color: #36384B;
+}
+
+.shipping-locations-modal .shipping-locations-form .purple-background h2::after, .popup-modals-container .addItem-modal .addItem-form .purple-background h2::after {
+  content: "X";
+  float: right;
+  color: #70E9B2;
+  font-weight: 300;
+  cursor: pointer;
+  font-family: cursive;
 }
 
 /*Common classes*/
@@ -78,6 +88,10 @@ p {
   color: #434DA0;
   font-weight: 500;
   font-family: "aktiv-grotesk", Helvetica, sans-serif;
+}
+
+.grey-text {
+  color: #36384B !important;
 }
 
 .profileBox-heading {
@@ -99,6 +113,10 @@ p {
   font-size: 3.2em;
   margin-top: 13%;
   text-align: center;
+}
+
+.margin-10 {
+  margin: 10px;
 }
 
 /*Header*/
@@ -253,14 +271,6 @@ p {
 .popup-modals-container .addItem-modal {
   /*This is all modal div class*/
 }
-.popup-modals-container .addItem-modal .addItem-form .purple-background h2::after {
-  content: "X";
-  float: right;
-  color: #70E9B2;
-  font-weight: 300;
-  cursor: pointer;
-  font-family: cursive;
-}
 .popup-modals-container .addItem-modal .addItem-form .planRegis-form div {
   padding: 0;
 }
@@ -276,7 +286,7 @@ p {
 }
 .popup-modals-container .addItem-modal .addItem-form .planRegis-form .addItem-quantity .button-minus, .popup-modals-container .addItem-modal .addItem-form .planRegis-form .addItem-quantity .button-plus {
   border-radius: 50%;
-  width: 11%;
+  width: auto;
   margin: 5px;
   font-size: 2em;
   vertical-align: middle;
@@ -342,8 +352,10 @@ p {
   width: 80%;
   margin: 0 auto;
 }
-.retailer-profile-container .two-grid-column div {
-  padding: 0 10px;
+.retailer-profile-container .two-grid-column {
+  /*div{
+  	padding:0 10px;
+  }*/
 }
 .retailer-profile-container .two-grid-column .retailer-info-form div {
   padding: 5px 0;
@@ -355,30 +367,67 @@ p {
 }
 .retailer-profile-container .profile-boxStyle {
   border: 2px solid #36384B;
+  /*padding:10px;*/
+}
+.retailer-profile-container .profile-address {
   padding: 10px;
 }
-.retailer-profile-container .new-planAdd-detail {
+.retailer-profile-container .locations-container .new-planAdd-detail {
   display: block;
-  margin: 0 auto;
+  /*margin:0 auto;*/
   padding: 0;
 }
-.retailer-profile-container .new-planAdd-detail table tr {
+.retailer-profile-container .locations-container .new-planAdd-detail table tr {
   text-align: left;
 }
-.retailer-profile-container .new-planAdd-detail table thead tr th:nth-child(1) {
+.retailer-profile-container .locations-container .new-planAdd-detail table thead tr th:nth-child(1) {
   width: 10%;
-  text-transform: uppercase;
 }
-.retailer-profile-container .new-planAdd-detail table thead tr th:nth-child(2) {
+.retailer-profile-container .locations-container .new-planAdd-detail table thead tr th:nth-child(2) {
   width: 20%;
 }
-.retailer-profile-container .new-planAdd-detail table thead tr th:nth-child(3) {
+.retailer-profile-container .locations-container .new-planAdd-detail table thead tr th:nth-child(3) {
   width: 30%;
 }
-.retailer-profile-container .new-planAdd-detail table thead tr th:nth-child(4) {
+.retailer-profile-container .locations-container .new-planAdd-detail table thead tr th:nth-child(4) {
   width: 20%;
 }
+.retailer-profile-container .contacts-container {
+  padding: 0;
+}
+.retailer-profile-container .contacts-container .new-planAdd-detail {
+  display: block;
+}
+.retailer-profile-container .contacts-container table thead tr th {
+  border-right: 1px solid #d3d3df;
+}
+.retailer-profile-container .contacts-container table tbody tr td {
+  border-right: 1px solid #d3d3df;
+}
 
+.shipping-locations-modal .shipping-locations-form .planRegis-form {
+  width: 100%;
+  padding: 1em;
+}
+.shipping-locations-modal .shipping-locations-form .planRegis-form div {
+  /*justify-content: space-between;*/
+  width: 90%;
+}
+.shipping-locations-modal .shipping-locations-form .planRegis-form label {
+  padding: 0 5px;
+}
+.shipping-locations-modal .shipping-locations-form .planRegis-form h3 {
+  font-family: "aktiv-grotesk", Helvetica, sans-serif;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+.shipping-locations-modal .shipping-locations-form .width-45 {
+  width: 45% !important;
+}
+
+.location-form-modal .location-form label {
+  padding: 0 5px;
+}
 /*Media queries */
 @media screen and (max-width: 768px) {
   .srs-login-container {
@@ -447,6 +496,23 @@ p {
   }
 
   .retailer-profile-container {
+    width: 100%;
+  }
+
+  .shipping-locations-modal .shipping-locations-form {
+    width: 90%;
+    margin-top: 30%;
+  }
+  .shipping-locations-modal .shipping-locations-form .planRegis-form div {
+    width: 100%;
+  }
+  .shipping-locations-modal .shipping-locations-form .planRegis-form input {
+    width: 100%;
+  }
+  .shipping-locations-modal .shipping-locations-form .planRegis-form select {
+    width: 100%;
+  }
+  .shipping-locations-modal .width-45 {
     width: 100%;
   }
 }

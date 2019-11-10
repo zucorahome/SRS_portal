@@ -36,4 +36,12 @@ $('.remove-planRegis').bind('click',{key:'.remove-planModal-container'},openModa
 
 $('.remove-planModal').find('.close-modal').bind('click',{key:'.remove-planModal-container'},closeModal);
 
+$('.contact-form-button').bind('click',{key:'.shipping-locations-modal'},openModal);
+
+let shippingCross = $('.shipping-locations-form').find('.purple-background h2');
+
+shippingCross.bind('click',{key:'.shipping-locations-modal'},closeModal);
+
+
+
 });

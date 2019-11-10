@@ -82,13 +82,13 @@
     <section class="retailer-profile-container">
       <h1 class="srs-heading">Retailer Profile</h1>
       <div class="two-grid-column mobile-column">
-        <div class="">
+        <div class="margin-10">
           <h3 class="profileBox-heading">Retailer</h3>
           <form class="retailer-name-form">
             <input type="text" name="retailer-store-name" placeholder="Store Name">**note: should come from data
           </form>
         </div>
-        <div class="">
+        <div class="margin-10">
           <form class="retailer-info-form">
             <!-- Adding planRegis-form class for styling only -->
             <div class="flex flex-row flex-vert-center">
@@ -112,8 +112,8 @@
       <!-- 1st Two grid columns ends-->
       <div class="two-grid-column mobile-column">
         <div class="address-location-container">
-          <div class="billingAddress-container">
-            <h3 class="profileBox-heading">Billing Address:</h3>
+          <div class="billingAddress-container margin-10">
+            <h3 class="profileBox-heading" style="margin-bottom:10px;">Billing Address:</h3>
             <div class="profile-boxStyle">
               <form class="profile-address">
                   <div class="flex flex-row flex-vert-center">
@@ -126,8 +126,8 @@
                   </div>
                   <div class="flex flex-row flex-vert-center mobile-column">
                     <div class="flex flex-row flex-vert-center">
-                        <label for="profile-address">City:</label>
-                        <select name="province">
+                        <label for="profile-province">Province:</label>
+                        <select name="province" style="margin-bottom: 0;margin-top:6px;">
                             <option value="" disabled="" selected="">Choose your province</option>
                             <option value="AB">Alberta</option>
                             <option value="BC">British Columbia</option>
@@ -143,6 +143,7 @@
                             <option value="SK">Saskatchewan</option>
                             <option value="YT">Yukon</option>
                         </select>
+
                       </div>
                       <div class="flex flex-row flex-vert-center">
                         <label for="profile-postalCode">Postal:</label>
@@ -153,12 +154,12 @@
             </div>
           </div>
           <div class="locations-container margin-top-1">
-            <h3 class="profileBox-heading">Our Locations<a href="#/" class="profileBox-heading">+</a></h3>
+            <h3 class="profileBox-heading margin-10">Our Locations<a href="#/" class="profileBox-heading location-form-button">+</a></h3>
             <div class="profile-boxStyle new-planAdd-detail">
               <table class="">
                 <thead>
                   <tr>
-                    <th scope="col">Code</th>
+                    <th scope="col u-uppercase">Code</th>
                     <th scope="col">Location Name</th>
                     <th scope="col">Address</th>
                     <th scope="col">Phone</th>
@@ -183,12 +184,175 @@
               </table>
             </div>
             <div class="flex flex-row margin-top-1">
-              <a href="#/" class="simple-link u-uppercase">Change password</a>&nbsp;<i class="fa fa-pencil-alt purple-text"></i>
+              <a href="#/" class="simple-link u-uppercase" style="margin-left:10px;">Change password</a>&nbsp;<i class="fa fa-pencil-alt purple-text"></i>
             </div>
           </div>
         </div>
         <div class="contacts-container">
-          <h3 class="profileBox-heading">Our People <a href="#/" class="profileBox-heading">+</a></h3>
+          <h3 class="profileBox-heading margin-10">Our People <a href="#/" class="profileBox-heading contact-form-button">+</a></h3>
+          <div class="profile-boxStyle new-planAdd-detail">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Name</th>
+                  <th scope="col">Role</th>
+                  <th scope="col">Status</th>
+                  <th scope="col" colspan="3">
+                    Plans                    
+                  </th>
+                  <th scope="col" colspan="1">Orders</th>
+                  <th scope="col" colspan="1">SLP</th>
+                  <th scope="col"></th>
+                </tr>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th>Add</th>
+                  <th>Mod</th>
+                  <th>Inq</th>
+                  <th>Add</th>
+                  <th>Reg</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="Name">Bob Joe</td>
+                  <td data-label="Role">Buyer</td>
+                  <td data-label="Status">Active</td>
+                  
+                  <td data-label="Plans: Add"><i class="fa fa-check grey-text"></i></td>
+                  <td data-label="Mod"><p class="u-transparent">none</p></td> 
+                  <!-- Should add  "<p class="u-transparent">none</p>" whenever there is no data so that it does look as table.-->
+                  <td data-label="Inq"><i class="fas fa-check grey-text"></i></td>
+                  
+                  <td data-label="Orders: Add"><i class="fa fa-check grey-text"></i></td>
+                  
+                  <td data-label="SLP: Reg"><i class="fa fa-check grey-text"></i></td>
+                  <td data-label="Edit:"><a href="#/"><i class="fa fa-pencil-alt"></i></a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="popup-modals-container">
+      <div class="shipping-locations-modal non-visible">
+        <div class="shipping-locations-form">
+          <div class="purple-background">
+              <h2>Store or Shipping Locations</h2>
+          </div>
+          <form class="flex flex-column planRegis-form">
+            <div class="flex flex-row flex-vert-center">
+              <label for="location-name">Name*:</label>
+              <input type="text" name="location-name" value="" placeholder="Location name" required>
+            </div>
+            <div class="flex flex-row flex-vert-center">
+              <label for="address-type">Address Type*:</label>
+              <input type="text" name="address-type" value="" placeholder="Address Type" required>
+            </div>
+            
+              <h3 class="purple-text">Contact:</h3>
+          
+            <!-- 50 50 input -->
+            <div class="flex flex-row flex-vert-center mobile-column">
+                <div class="flex flex-row flex-vert-center">
+                  <label for="first-name">First Name*:</label>
+                  <input type="text" name="SRScontact-name" value="" class="" required="" placeholder="Contact First Name">
+                </div>
+
+                <div class="flex flex-row flex-vert-center">
+                  <label for="last-name">Last Name*:</label>
+                  <input type="text" name="SRScontact-lastname" value=""placeholder="Contact Last Name" required="">
+                </div>
+              </div>
+              <!-- next 50 50 forms -->
+                  <div class="flex flex-row flex-vert-center mobile-column">
+                    <div class="flex flex-row flex-vert-center">
+                      <label for="contact-phone">Phone*:</label>
+                      <input type="text" name="SRSContact-phone" placeholder="Contact Phone Number">
+                    </div>
+
+                    <div class="flex flex-row flex-vert-center">
+                      <label for="email-id">Email*:</label>
+                      <input type="text" name="SRSContact-email" value="" placeholder="Contact Email" required="">
+                    </div>
+              </div>
+              <!-- 3rd like 60 40-->
+                  <div class="flex flex-row flex-vert-center mobile-column">
+                    <div class="flex flex-row flex-vert-center">
+                      <label for="contact-map">Map:</label>
+                      <input type="text" name="googleMap-map" placeholder="Type your address">
+                    </div>
+
+                    <div class="flex flex-row flex-vert-center">
+                      <label class="srs-checkmark">Manual Address Entry</label>
+                      <input type="checkbox" class="">
+                      <span class="green-checkmark"></span>
+                    </div>
+                </div>
+                <!-- single input -->
+                <div class="flex flex-row flex-vert-center">
+                  <label>Adress Line 1*:</label>
+                  <input type="text" name="contact-address-one" value="" placeholder="Address line 1" required>
+                </div>
+              <div class="flex flex-row flex-vert-center">
+                <label>Address Line 2*:</label>
+                  <input type="text" name="contact-address-two" value="" placeholder="Address line 2" required>
+              </div>
+              <!-- 50 50 form inouts -->
+              <div class="flex flex-row flex-vert-center mobile-column">
+                 <div class="flex flex-row flex-vert-center">
+                  <label>City*:</label>
+                  <input type="text" name="SRSContact-city" value="" placeholder="City" required>
+                </div>
+                 <div class="flex flex-row flex-vert-center">
+                  <label>Prov/State*:</label>
+                    <select name="province" style="margin-bottom: 0;margin-top:6px;">
+                          <option value="" disabled="" selected="">Choose your province</option>
+                          <option value="AB">Alberta</option>
+                          <option value="BC">British Columbia</option>
+                          <option value="MB">Manitoba</option>
+                          <option value="NB">New Brunswick</option>
+                          <option value="NL">Newfoundland and Labrador</option>
+                          <option value="NT">Northwest Territories</option>
+                          <option value="NS">Nova Scotia</option>
+                          <option value="NU">Nunavut</option>
+                          <option value="ON">Ontario</option>
+                          <option value="PE">Prince Edward Island</option>
+                          <option value="QC">Québec</option>
+                          <option value="SK">Saskatchewan</option>
+                          <option value="YT">Yukon</option>
+                      </select>
+                </div>
+              </div>
+              <!--  Make 50% width only-->
+             
+             <div class="flex flex-row flex-vert-center width-45">
+                <label>Phone*:</label>
+                <input type="text" name="SRSContact-phone" value="" placeholder="Phone Number" required>
+              </div>
+
+              <div class="flex flex-row flex-vert-center mobile-column">
+                <div class="flex flex-row flex-vert-center">
+                  <label>Status*:</label>
+                  <input type="text" name="SRSContact-status" value="" placeholder="Active or Inactive" required>
+                </div>
+
+                <div class="flex flex-ver-center flex-hor-center"><button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow addItem-save" type="submit">Save</button>
+                  <p>**Note: After validating only this button should close the modal.</p></div>
+              </div>
+            
+
+          </form>
+        </div>
+      </div>
+      <!-- Locations form modal -->
+      <div class="location-form-modal">
+        <div class="location-form">
+          
         </div>
       </div>
     </section>
@@ -201,7 +365,7 @@
    <!--  @*@if (LoadModal) { Html.RenderAction("ProductsServicesAvailabilityModal", "Zuc"); }*@ -->
     
     <script type="text/javascript" src="../../Content/Zuc/js/build9d66868d59cc90dfcd5c.js"></script></body>
-
+    <script type="text/javascript" src="../../Scripts/Zuc/js/srs-interactivity.js"></script>
   </body>
 
 </html>

@@ -399,6 +399,9 @@ p {
 .retailer-profile-container .contacts-container {
   padding: 0;
 }
+.retailer-profile-container .contacts-container .grey {
+  color: grey;
+}
 .retailer-profile-container .contacts-container .new-planAdd-detail {
   display: block;
 }

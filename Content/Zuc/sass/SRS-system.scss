@@ -139,6 +139,9 @@ p {
 .margin-10{
 	@include margin(10px);
 }
+.u-underline{
+	text-decoration: underline;
+}
 /*Header*/
 .srs-nav-container .zuc-main-nav{
 	/*padding:1em 8%;*/
@@ -585,12 +588,15 @@ p {
 					padding:1em;
 					
 					div{
-						/*justify-content: space-between;*/
+						justify-content: space-between;
 						width:90%;
+						margin:0 auto;
 					}
 					label{
 						@extend %label;
 						padding:0 5px;
+						text-align: left;
+						margin:0;
 					}
 
 					input{
@@ -604,6 +610,7 @@ p {
 						font-family: $para-fonts;
 						margin-bottom: 0;
 						font-weight: 700;
+						padding-left:5%;
 					}
 
 					.srs-checkmark{
@@ -612,20 +619,34 @@ p {
 				}
 
 				.width-45{
-					width:45% !important;
+					width:45%;
 				}
 		}
 	}
 
-	.location-form-modal{
+	.contacts-form-modal{
 		@extend %modal;
 
-		.location-form{
+		.contacts-form{
 			@extend %modal-background;
-
-			label{
+			.purple-background{
+				h2::after{
+					@extend %form-cross;
+				}
+			}
+			.planRegis-form{
+				width:100%;
+				padding:1em;
+				div{
+						justify-content: space-between;
+						width:90%;
+						margin:0 auto;
+					}
+					label{
 						@extend %label;
 						padding:0 5px;
+						text-align: left;
+						margin:0;
 					}
 
 					input{
@@ -635,8 +656,21 @@ p {
 					select{
 						@extend %select;
 					}
+			}
+			.contact-radio{
+				    display: grid;
+				    grid-template-columns: 30% 7% 10% 7% 10%;
+				    justify-content: flex-start;
+				    align-items: center;
+				    padding: 5px;
+
+				 input[type="radio"]{
+				 	height: 30px;
+				 }
+			}
 		}
 	}
+
 /*Media queries */
 @media screen and (max-width: $mobile-width){
 

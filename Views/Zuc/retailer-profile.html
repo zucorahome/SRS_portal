@@ -51,7 +51,7 @@
               <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
                 <!-- Dropdown links -->
                 <div class="zuc-dropdown-column">
-                  <a href="#/" title="" aria-role="menuitem">Entry</a>
+                  <a href="retailer-profile.html" title="" aria-role="menuitem">Entry</a>
                   <a href="#/" title="" aria-role="menuitem">Order History</a>
                 </div>
               </div>
@@ -163,21 +163,24 @@
                     <th scope="col">Location Name</th>
                     <th scope="col">Address</th>
                     <th scope="col">Phone</th>
+                    <th scope="col">Status</th>
                   </tr>
                 </thead>
 
                 <tbody>
                   <tr>
                     <td data-label="CODE">101</td>
-                    <td data-label="Location Name">Westmall <a href="javascript:void(0)"><i class="fa fa-pencil-alt"></i></a></td>
+                    <td data-label="Location Name">Westmall <a href="javascript:void(0)" class="shipping-location-edit"><i class="fa fa-pencil-alt"></i></a></td>
                     <td data-label="Address"> #3-220 Wyland Rd, Maple, ON M5L 4K9</td>
                     <td data-label="Phone">519-889-0224</td>
+                    <td data-label="Status">Active</td>
                   </tr>
                   <tr>
                     <td data-label="CODE">102</td>
-                    <td data-label="Location Name">Sunnyridge  <a href="javascript:void(0)"><i class="fa fa-pencil-alt"></i></a></td>
+                    <td data-label="Location Name">Sunnyridge  <a href="javascript:void(0)" class="shipping-location-edit"><i class="fa fa-pencil-alt"></i></a></td>
                     <td data-label="Address">9834 Garvin Street, Maple, ON</td>
                     <td data-label="Phone">519-889-0224</td>
+                    <td data-label="Status">Inactive</td>
                   </tr>
                 </tbody>
 
@@ -218,7 +221,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td data-label="Name">Bob Joe</td>
+                  <td data-label="Name" class="u-underline">Bob Joe</td>
                   <td data-label="Role">Buyer</td>
                   <td data-label="Status">Active</td>
                   
@@ -260,24 +263,24 @@
             <div class="flex flex-row flex-vert-center mobile-column">
                 <div class="flex flex-row flex-vert-center">
                   <label for="first-name">First Name*:</label>
-                  <input type="text" name="SRScontact-name" value="" class="" required="" placeholder="Contact First Name">
+                  <input type="text" name="shippingLocation-name" value="" class="" required="" placeholder="Contact First Name">
                 </div>
 
                 <div class="flex flex-row flex-vert-center">
                   <label for="last-name">Last Name*:</label>
-                  <input type="text" name="SRScontact-lastname" value=""placeholder="Contact Last Name" required="">
+                  <input type="text" name="shippingLocation-lastname" value=""placeholder="Contact Last Name" required="">
                 </div>
               </div>
               <!-- next 50 50 forms -->
                   <div class="flex flex-row flex-vert-center mobile-column">
                     <div class="flex flex-row flex-vert-center">
                       <label for="contact-phone">Phone*:</label>
-                      <input type="text" name="SRSContact-phone" placeholder="Contact Phone Number">
+                      <input type="text" name="shippingLocation-phone" placeholder="Contact Phone Number">
                     </div>
 
                     <div class="flex flex-row flex-vert-center">
                       <label for="email-id">Email*:</label>
-                      <input type="text" name="SRSContact-email" value="" placeholder="Contact Email" required="">
+                      <input type="text" name="shippingLocation-email" value="" placeholder="Contact Email" required="">
                     </div>
               </div>
               <!-- 3rd like 60 40-->
@@ -330,10 +333,16 @@
               </div>
               <!--  Make 50% width only-->
              
-             <div class="flex flex-row flex-vert-center width-45">
-                <label>Phone*:</label>
-                <input type="text" name="SRSContact-phone" value="" placeholder="Phone Number" required>
-              </div>
+              <div class="flex flex-row flex-vert-center">
+                <div class="flex flex-row flex-vert-center">
+                  <label>Phone*:</label>
+                  <input type="text" name="shippingLocation-phone" value="" placeholder="Phone Number" required>
+                </div> 
+                <div class="flex flex-row flex-vert-center u-transparent">
+                  <label>Phone*:</label>
+                  <input type="text" name="" value="" placeholder="Phone Number" disabled="">
+                </div>                 
+            </div>
 
               <div class="flex flex-row flex-vert-center mobile-column">
                 <div class="flex flex-row flex-vert-center">
@@ -341,18 +350,79 @@
                   <input type="text" name="SRSContact-status" value="" placeholder="Active or Inactive" required>
                 </div>
 
-                <div class="flex flex-ver-center flex-hor-center"><button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow addItem-save" type="submit">Save</button>
-                  <p>**Note: After validating only this button should close the modal.</p></div>
+                <div class="center"><button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow center" type="submit">Save</button>
+                  </div>
               </div>
-            
+            <p>**Note: After validating only this button should close the modal.</p>
 
           </form>
         </div>
       </div>
       <!-- Locations form modal -->
-      <div class="location-form-modal">
-        <div class="location-form">
-          
+      <div class="contacts-form-modal non-visible">
+        <div class="contacts-form">
+           <div class="purple-background">
+              <h2>Contacts</h2>
+          </div>
+          <form class="flex flex-column planRegis-form">
+            <div class="flex flex-row flex-vert-center mobile-column">
+                <div class="flex flex-row flex-vert-center">
+                  <label for="first-name">First Name*:</label>
+                  <input type="text" name="SRScontact-name" value="" class="" required="" placeholder="Contact First Name">
+                </div>
+
+                <div class="flex flex-row flex-vert-center">
+                  <label for="last-name">Last Name*:</label>
+                  <input type="text" name="SRScontact-lastname" value=""placeholder="Contact Last Name" required="">
+                </div>
+              </div>
+               <div class="flex flex-row flex-vert-center">
+                  <label>Role:</label>
+                    <select name="contact-role" style="margin-bottom: 0;margin-top:6px;">
+                          <option value="" disabled="" selected="">Select role</option>
+                          <option value="Buyer">Buyer</option>
+                          <option value="Manager">Manager</option>
+                          <option value="Associate">Associate</option>
+                      </select>
+                </div>
+                <div class="flex flex-row flex-vert-center">
+                      <label for="email-id">Email*:</label>
+                      <input type="text" name="SRSContact-email" value="" placeholder="Contact Email" required="">
+                </div>
+                <div class="flex flex-row flex-vert-center">
+                  <label>Phone*:</label>
+                  <input type="text" name="SRSContact-phone" value="" placeholder="Phone Number" required="">
+                </div> 
+                <div class="flex flex-row flex-vert-center">
+                  <label for="SRSContact-Lang-pref">Language Pref:&nbsp;</label>
+                  <select name="SRSContact-lang-pref">
+                    <option value="English">English</option>
+                    <option value="French">French</option>
+                  </select>
+                </div>
+                <div class="flex flex-row flex-vert-start">
+                  <label for="SRSContact-permission">Permissions:&nbsp;</label>
+                  <div class="flex-column">
+                      <div class="contact-radio flex flex-row flex-vert-center">
+                        <span>Add Plans</span>
+                        <input type="radio" name="AddPlans-perm" value="yes" placeholder=""><span>Yes</span>
+                        <input type="radio" name="AddPlans-perm" value="no" placeholder=""><span>No</span>
+                      </div>
+                      <div class="contact-radio flex flex-row flex-vert-center">
+                        <span>Modify/Cancel Plans</span>
+                        <input type="radio" name="ModifyPlan-perm" value="yes" placeholder="">Yes
+                        <input type="radio" name="ModifyPlan-perm" value="no" placeholder="">No
+                      </div>
+                      <div class="contact-radio flex flex-row flex-vert-center">
+                        <span>View Success Trackers</span>
+                        <input type="radio" name="successTracker-perm" value="yes" placeholder="">Yes
+                        <input type="radio" name="successTracker-perm" value="no" placeholder="">No
+                      </div>
+                    </div>
+                </div>
+                 <div class="flex flex-row flex-hor-end"><button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow center" type="submit">Save</button>
+                  </div>
+          </form>
         </div>
       </div>
     </section>
@@ -361,7 +431,7 @@
     <footer class="">
      
     </footer>
-    <div class=""></div>
+    
    <!--  @*@if (LoadModal) { Html.RenderAction("ProductsServicesAvailabilityModal", "Zuc"); }*@ -->
     
     <script type="text/javascript" src="../../Content/Zuc/js/build9d66868d59cc90dfcd5c.js"></script></body>

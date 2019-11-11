@@ -38,7 +38,7 @@
                   <!-- Dropdown links -->
                   <div class="zuc-dropdown-column">
                     <a href="plan-registration-one.html" title="" aria-role="menu-item">Plans</a>
-                    <a href="#/" title="" aria-role="menu-item">Plan Inquiry</a>
+                    <a href="plan-inquiry.html" title="" aria-role="menu-item">Plan Inquiry</a>
                     <a href="#/" title="" aria-role="menu-item">Cancel Plan</a>
                     <a href="#/" title="" aria-role="menu-item">Plan Reporting</a>
                   </div>
@@ -51,7 +51,7 @@
               <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
                 <!-- Dropdown links -->
                 <div class="zuc-dropdown-column">
-                  <a href="retailer-profile.html" title="" aria-role="menuitem">Entry</a>
+                  <a href="order-entry.html" title="" aria-role="menuitem">Entry</a>
                   <a href="#/" title="" aria-role="menuitem">Order History</a>
                 </div>
               </div>
@@ -63,7 +63,7 @@
               <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
                 <!-- Dropdown links -->
                 <div class="zuc-dropdown-column">
-                  <a href="#/">Profile</a>
+                  <a href="retailer-profile.html">Profile</a>
                   <a href="#/">Log out</a>
                 </div>
               </div>
@@ -233,7 +233,7 @@
                   <td data-label="Orders: Add"><i class="fa fa-check grey-text"></i></td>
                   
                   <td data-label="SLP: Reg"><i class="fa fa-check grey-text"></i></td>
-                  <td data-label="Edit:"><a href="#/"><i class="fa fa-pencil-alt"></i></a></td>
+                  <td data-label="Edit:"><a href="#/" class="contact-form-edit"><i class="fa fa-pencil-alt"></i></a></td>
                 </tr>
               </tbody>
             </table>
@@ -405,22 +405,23 @@
                   <div class="flex-column">
                       <div class="contact-radio flex flex-row flex-vert-center">
                         <span>Add Plans</span>
-                        <input type="radio" name="AddPlans-perm" value="yes" placeholder=""><span>Yes</span>
+                        <input type="radio" name="AddPlans-perm" value="yes" checked><span>Yes</span>
                         <input type="radio" name="AddPlans-perm" value="no" placeholder=""><span>No</span>
                       </div>
                       <div class="contact-radio flex flex-row flex-vert-center">
                         <span>Modify/Cancel Plans</span>
-                        <input type="radio" name="ModifyPlan-perm" value="yes" placeholder="">Yes
+                        <input type="radio" name="ModifyPlan-perm" value="yes" checked>Yes
                         <input type="radio" name="ModifyPlan-perm" value="no" placeholder="">No
                       </div>
                       <div class="contact-radio flex flex-row flex-vert-center">
                         <span>View Success Trackers</span>
-                        <input type="radio" name="successTracker-perm" value="yes" placeholder="">Yes
+                        <input type="radio" name="successTracker-perm" value="yes" checked>Yes
                         <input type="radio" name="successTracker-perm" value="no" placeholder="">No
                       </div>
                     </div>
                 </div>
-                 <div class="flex flex-row flex-hor-end"><button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow center" type="submit">Save</button>
+                 <div class="flex flex-row flex-hor-end">
+                  <button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow center" type="submit">Save</button>
                   </div>
           </form>
         </div>

@@ -38,7 +38,7 @@
                   <!-- Dropdown links -->
                   <div class="zuc-dropdown-column">
                     <a href="plan-registration-one.html" title="" aria-role="menu-item">Plans</a>
-                    <a href="#/" title="" aria-role="menu-item">Plan Inquiry</a>
+                    <a href="plan-inquirey.html" title="" aria-role="menu-item">Plan Inquiry</a>
                     <a href="#/" title="" aria-role="menu-item">Cancel Plan</a>
                     <a href="#/" title="" aria-role="menu-item">Plan Reporting</a>
                   </div>
@@ -51,7 +51,7 @@
               <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
                 <!-- Dropdown links -->
                 <div class="zuc-dropdown-column">
-                  <a href="order-entry.html" title="" aria-role="menuitem">Entry</a>
+                  <a href="retailer-profile.html" title="" aria-role="menuitem">Entry</a>
                   <a href="#/" title="" aria-role="menuitem">Order History</a>
                 </div>
               </div>
@@ -79,7 +79,57 @@
       <!-- Mobile Navigation-->
     </div>
     <!-- Main page content-->
-
+    <section class="width-80 center plan-inquiry-container">
+      <h1 class="srs-heading">Plan registration inquiry</h1>
+      <div class="two-grid-column mobile-column">
+        <!-- first div -->
+        <div class="manual-search-container">
+          <div class="date-filter-container">
+            <p><span>Effective date</span></p>
+            <form class="flex flex-row">
+              <div class=" ">
+                <label>From
+                <div class="flex flex-row flex-vert-center">
+                  <i class="fa fa-calendar-alt"></i>
+                  <input type="date" name="inquiry-date-from" placeholder="MM/DD/YY">
+                </div>
+             </label>
+              </div>
+                <div class="">
+                <label>To
+                <div class="flex flex-row flex-vert-center">
+                  <i class="fa fa-calendar-alt"></i>
+                  <input type="date" name="inquiry-date-to" placeholder="MM/DD/YY">
+                </div>
+                </label>
+              </div>
+              <div class="flex flex-vert-center flex-hor-center">
+                <button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow planRegis-mainSubmit-button" type="submit">Submit</button></div>
+            </form>
+          </div>
+          <div class="flex flex-row second-filter margin-top-2">
+            <div class="width-30">
+              <p>Select Plan:</p>
+              <div class="filter-box">
+                <p class="u-uppercase">All</p>
+                <p>Submitted</p>
+                <p>Pending</p>
+                <p>Registered</p>
+                <p>Canceled</p>
+              </div>
+            </div>
+            <div class="">
+              
+            </div>
+            <div class="">
+              
+            </div>
+          </div>
+        </div>
+        <!-- 2nd div -->
+        <div class="advance-search-container"></div>
+      </div>
+    </section>
     <!-- main page content ends -->
          <!-- Site Footer-->
     <footer class="">

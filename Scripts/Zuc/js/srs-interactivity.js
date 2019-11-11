@@ -51,8 +51,9 @@ shippingCross.bind('click',{key:'.shipping-locations-modal'},closeModal);
 //Contact form  
 
 $('.contact-form-button').bind('click',{key:'.contacts-form-modal'},openModal);
+$('.contact-form-edit').bind('click',{key:'.contacts-form-modal'},openModal);
 let contactFormClose = $('.contacts-form').find('.purple-background h2');
-
 contactFormClose.bind('click',{key:'.contacts-form-modal'},closeModal);
+
 
 });

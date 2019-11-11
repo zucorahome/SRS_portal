@@ -458,6 +458,43 @@ p {
   height: 30px;
 }
 
+/*Plan inquiry screen*/
+.plan-inquiry-container .date-filter-container {
+  border: 2px solid #36384B;
+}
+.plan-inquiry-container .date-filter-container p {
+  font-size: 18px;
+  font-family: "aktiv-grotesk", Helvetica, sans-serif;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px dashed #36384B;
+  line-height: 0.1em;
+  margin: 20px 0 20px;
+  text-transform: uppercase;
+}
+.plan-inquiry-container .date-filter-container p span {
+  background: #fff;
+  padding: 0 10px;
+}
+.plan-inquiry-container .width-30 {
+  width: 30%;
+}
+.plan-inquiry-container .filter-box {
+  border: 2px solid #36384B;
+  min-height: 300px;
+}
+.plan-inquiry-container .filter-box p {
+  font-family: "aktiv-grotesk", Helvetica, sans-serif;
+  color: #36384B;
+  line-height: 26px;
+  padding: 5px;
+}
+.plan-inquiry-container .filter-box p:hover {
+  background-color: #70E9B2;
+  transition: all ease-in 0.5s;
+}
+
 /*Media queries */
 @media screen and (max-width: 768px) {
   .srs-login-container {

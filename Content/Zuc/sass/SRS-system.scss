@@ -670,7 +670,45 @@ p {
 			}
 		}
 	}
+/*Plan inquiry screen*/
+.plan-inquiry-container{
+	.date-filter-container{
+		border:2px solid $grey-text;
+		p{
+			font-size:18px;
+			font-family: $para-fonts;
+			font-weight: 700;
+			width: 100%; 
+		   text-align: center; 
+		   border-bottom: 1px dashed $grey-text; 
+		   line-height: 0.1em;
+		   margin: 20px 0 20px; 
+		   text-transform: uppercase;
+			span{
+				 background:#fff; 
+				 padding:0 10px; 
+			}
+		}
+	}
 
+	.width-30{
+		width:30%;
+	}
+	.filter-box{
+		border:2px solid $grey-text;
+		min-height:300px;
+		p{
+			font-family: $para-fonts;
+			color: $grey-text;
+			line-height: 26px;
+			padding:5px;
+			&:hover{
+				background-color:$zucora-mint-green;
+				transition: all ease-in 0.5s;
+			}
+		}
+	}
+}
 /*Media queries */
 @media screen and (max-width: $mobile-width){
 

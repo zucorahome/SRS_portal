@@ -808,18 +808,31 @@ p {
 				select{
 					@extend %select;
 				}
+
+				a{
+					margin:5px 10px;
+				}
 			}
+		}
+	}
+
+	.allPlans-container{
+		width:99%;
+		margin:3em auto;
+		border:2px solid $grey-text;
+
+		.title{
+			p{
+				margin:0 10px;
+			}
+		}
+
+		.new-planAdd-detail{
+			display: block;
+			border:2px solid #d3d3df;
 		}
 	}	
 }
-
-
-
-
-
-
-
-
 
 
 /*Media queries */
@@ -917,7 +930,16 @@ p {
 			width:100%;
 		}
 	}
-	
+
+	.plan-inquiry-container{
+		.manual-search-container{
+				.date-filter-box{
+					.date-filter-form{
+						flex-flow: column; 
+					}	
+				}
+			}
+		}  
 }
 
 @media screen and (min-width:$tablet-width){
@@ -960,7 +982,6 @@ p {
 			width:100%;
 			max-width:100%;
 			height:400px;
-			background-color: orange;
 		}	
 	}	
 

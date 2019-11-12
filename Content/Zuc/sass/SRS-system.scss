@@ -6,7 +6,7 @@ $para-fonts: 'aktiv-grotesk', Helvetica, sans-serif;
 $mobile-width: 768px;
 $tablet-width:769px;
 $laptop-width:980px;
-$max-laptop-width:1024px;
+$max-laptop-width:1200px;
 $desktop-width:1440px;
 $desktop-large-width:1980px;
 
@@ -675,43 +675,153 @@ p {
 	}
 /*Plan inquiry screen*/
 .plan-inquiry-container{
-	.date-filter-container{
-		border:2px solid $grey-text;
-		p{
-			font-size:18px;
-			font-family: $para-fonts;
-			font-weight: 700;
-			width: 100%; 
-		   text-align: center; 
-		   border-bottom: 1px dashed $grey-text; 
-		   line-height: 0.1em;
-		   margin: 20px 0 20px; 
-		   text-transform: uppercase;
-			span{
-				 background:#fff; 
-				 padding:0 10px; 
+	width:100%;
+	max-width:100%;
+	/*padding:0 1em;*/
+
+	.search-container{
+		margin-top:7%;
+		/*grid-gap: 2em 2em;*/
+	}
+
+	.manual-search-container{
+		width:100%;
+		max-width:100%;
+		height:auto;
+		display: grid;
+		grid-row-gap: 2em;
+		padding: 10px;
+		.date-filter-box{
+			border:2px solid $grey-text;
+			height:auto;
+			p{
+				width: 100%; 
+			   text-align: center; 
+			   border-bottom: 1px dashed $grey-text; 
+			   line-height: 0.1em;
+			   margin: 20px 0 20px; 
+				
+				span{
+					background:#fff; 
+				 	padding:0 10px; 
+				}
+			}
+
+			.date-filter-form{
+				max-width:100%;
+				height:auto;
+				display: flex;
+				flex-flow: row;
+				justify-content: space-around;
+				align-items: center;
+
+				div:nth-child(1){
+					width:100%;
+					height:auto;
+					/*background-color: yellow;*/
+				}
+
+				div:nth-child(2){
+					width:100%;
+					height:auto;
+					
+				}
+
+				input{
+					margin:5px;
+				}
+				i{
+					font-size: 1.5em;
+					color:$zucora-purple;
+				}
+
+				span{
+					font-size:18px;
+					font-weight: 700;
+					font-family: $para-fonts;
+					margin-left:2em;
+				}
+
+				.zuc-btn-secondary{
+					background: #A3ACFF;
+				}
+			}
+
+		}
+
+
+		.filter-param-box{
+				display: grid;
+				grid-template-columns: auto auto auto;
+				grid-gap:1em 1em;
+				max-width:100%;
+				height:auto;
+
+				.filter-box{
+					border:2px solid $grey-text;
+					background-color: white;
+					min-height: 300px;
+					height:auto;
+
+					p{
+						padding:10px;
+						cursor: pointer;
+						&:hover{
+							background-color: $zucora-mint-green;
+							transition: all ease-in 0.5;
+						}
+					}
+				}
+
+			.selected{
+				background-color: $zucora-mint-green;
+				transition: all ease-in 0.5;
 			}
 		}
 	}
 
-	.width-30{
-		width:30%;
-	}
-	.filter-box{
-		border:2px solid $grey-text;
-		min-height:300px;
-		p{
-			font-family: $para-fonts;
-			color: $grey-text;
-			line-height: 26px;
-			padding:5px;
-			&:hover{
-				background-color:$zucora-mint-green;
-				transition: all ease-in 0.5s;
+	.advance-search-container{
+		width:100%;
+		max-width:100%;
+		height:auto;
+		display: grid;
+		grid-row-gap: 2em;
+		padding:10px;
+
+		.advance-search-form{
+			border:2px solid $grey-text;
+			
+			.planRegis-form{
+				width:90%;
+				padding:1em 0;
+				div{
+					padding:0;
+				}
+				label{
+					@extend %label;
+				}
+
+				input{
+					@extend %input;
+				}
+
+				select{
+					@extend %select;
+				}
 			}
 		}
-	}
+	}	
 }
+
+
+
+
+
+
+
+
+
+
 /*Media queries */
 @media screen and (max-width: $mobile-width){
 
@@ -819,4 +929,39 @@ p {
 			}	
 		}
 	}
+}
+
+@media screen and (max-width:$max-laptop-width){
+
+	.plan-inquiry-container{
+	width:100%;
+	padding:0 1em;
+
+	.search-container{
+		margin-top:7%;
+		grid-template-columns: 100%;
+		
+	}
+
+	.manual-search-container{
+		width:100%;
+		max-width:100%;
+		height:auto;
+		display: grid;
+		grid-row-gap: 2em;
+
+		.filter-param-box{
+			grid-template-columns: auto;
+
+		}
+	}
+
+	.advance-search-container{
+			width:100%;
+			max-width:100%;
+			height:400px;
+			background-color: orange;
+		}	
+	}	
+
 }

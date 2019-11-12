@@ -27,7 +27,7 @@ p {
   margin: 15% auto;
 }
 
-.contacts-form-modal .contacts-form .planRegis-form label, .shipping-locations-modal .shipping-locations-form .planRegis-form label, .retailer-profile-container .profile-address label, .retailer-profile-container .two-grid-column .retailer-info-form label, .planRegis-form label {
+.plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form label, .contacts-form-modal .contacts-form .planRegis-form label, .shipping-locations-modal .shipping-locations-form .planRegis-form label, .retailer-profile-container .profile-address label, .retailer-profile-container .two-grid-column .retailer-info-form label, .planRegis-form label {
   font-family: "aktiv-grotesk", Helvetica, sans-serif;
   font-weight: bold;
   font-size: 18px;
@@ -36,7 +36,7 @@ p {
   margin-right: 1em;
 }
 
-.contacts-form-modal .contacts-form .planRegis-form select, .shipping-locations-modal .shipping-locations-form .planRegis-form select, .retailer-profile-container .profile-address select, .retailer-profile-container .two-grid-column .retailer-info-form select, .planRegis-form select {
+.plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form select, .contacts-form-modal .contacts-form .planRegis-form select, .shipping-locations-modal .shipping-locations-form .planRegis-form select, .retailer-profile-container .profile-address select, .retailer-profile-container .two-grid-column .retailer-info-form select, .planRegis-form select {
   width: 70%;
   height: 50px;
   border: 2px solid #36384B;
@@ -47,7 +47,7 @@ p {
   font-family: "aktiv-grotesk", Helvetica, sans-serif;
 }
 
-.contacts-form-modal .contacts-form .planRegis-form input, .shipping-locations-modal .shipping-locations-form .planRegis-form input, .retailer-profile-container .profile-address input, .retailer-profile-container .two-grid-column .retailer-info-form input, .planRegis-form input {
+.plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form input, .contacts-form-modal .contacts-form .planRegis-form input, .shipping-locations-modal .shipping-locations-form .planRegis-form input, .retailer-profile-container .profile-address input, .retailer-profile-container .two-grid-column .retailer-info-form input, .planRegis-form input {
   background-color: #FFFFFF;
   border: 2px solid #36384B;
   width: 70%;
@@ -462,42 +462,114 @@ p {
 }
 
 /*Plan inquiry screen*/
-.plan-inquiry-container .date-filter-container {
-  border: 2px solid #36384B;
+.plan-inquiry-container {
+  width: 100%;
+  max-width: 100%;
+  /*padding:0 1em;*/
 }
-.plan-inquiry-container .date-filter-container p {
-  font-size: 18px;
-  font-family: "aktiv-grotesk", Helvetica, sans-serif;
-  font-weight: 700;
+.plan-inquiry-container .search-container {
+  margin-top: 7%;
+  /*grid-gap: 2em 2em;*/
+}
+.plan-inquiry-container .manual-search-container {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: grid;
+  grid-row-gap: 2em;
+  padding: 10px;
+}
+.plan-inquiry-container .manual-search-container .date-filter-box {
+  border: 2px solid #36384B;
+  height: auto;
+}
+.plan-inquiry-container .manual-search-container .date-filter-box p {
   width: 100%;
   text-align: center;
   border-bottom: 1px dashed #36384B;
   line-height: 0.1em;
   margin: 20px 0 20px;
-  text-transform: uppercase;
 }
-.plan-inquiry-container .date-filter-container p span {
+.plan-inquiry-container .manual-search-container .date-filter-box p span {
   background: #fff;
   padding: 0 10px;
 }
-.plan-inquiry-container .width-30 {
-  width: 30%;
+.plan-inquiry-container .manual-search-container .date-filter-box .date-filter-form {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
 }
-.plan-inquiry-container .filter-box {
-  border: 2px solid #36384B;
-  min-height: 300px;
+.plan-inquiry-container .manual-search-container .date-filter-box .date-filter-form div:nth-child(1) {
+  width: 100%;
+  height: auto;
+  /*background-color: yellow;*/
 }
-.plan-inquiry-container .filter-box p {
+.plan-inquiry-container .manual-search-container .date-filter-box .date-filter-form div:nth-child(2) {
+  width: 100%;
+  height: auto;
+}
+.plan-inquiry-container .manual-search-container .date-filter-box .date-filter-form input {
+  margin: 5px;
+}
+.plan-inquiry-container .manual-search-container .date-filter-box .date-filter-form i {
+  font-size: 1.5em;
+  color: #434DA0;
+}
+.plan-inquiry-container .manual-search-container .date-filter-box .date-filter-form span {
+  font-size: 18px;
+  font-weight: 700;
   font-family: "aktiv-grotesk", Helvetica, sans-serif;
-  color: #36384B;
-  line-height: 26px;
-  padding: 5px;
+  margin-left: 2em;
 }
-.plan-inquiry-container .filter-box p:hover {
+.plan-inquiry-container .manual-search-container .date-filter-box .date-filter-form .zuc-btn-secondary {
+  background: #A3ACFF;
+}
+.plan-inquiry-container .manual-search-container .filter-param-box {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 1em 1em;
+  max-width: 100%;
+  height: auto;
+}
+.plan-inquiry-container .manual-search-container .filter-param-box .filter-box {
+  border: 2px solid #36384B;
+  background-color: white;
+  min-height: 300px;
+  height: auto;
+}
+.plan-inquiry-container .manual-search-container .filter-param-box .filter-box p {
+  padding: 10px;
+  cursor: pointer;
+}
+.plan-inquiry-container .manual-search-container .filter-param-box .filter-box p:hover {
   background-color: #70E9B2;
-  transition: all ease-in 0.5s;
+  transition: all ease-in 0.5;
 }
-
+.plan-inquiry-container .manual-search-container .filter-param-box .selected {
+  background-color: #70E9B2;
+  transition: all ease-in 0.5;
+}
+.plan-inquiry-container .advance-search-container {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: grid;
+  grid-row-gap: 2em;
+  padding: 10px;
+}
+.plan-inquiry-container .advance-search-container .advance-search-form {
+  border: 2px solid #36384B;
+}
+.plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form {
+  width: 90%;
+  padding: 1em 0;
+}
+.plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form div {
+  padding: 0;
+}
 /*Media queries */
 @media screen and (max-width: 768px) {
   .srs-login-container {
@@ -590,6 +662,32 @@ p {
   .srs-nav-container .zuc-main-nav .zuc-nav-brand {
     width: 15vw;
     max-width: 100%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .plan-inquiry-container {
+    width: 100%;
+    padding: 0 1em;
+  }
+  .plan-inquiry-container .search-container {
+    margin-top: 7%;
+    grid-template-columns: 100%;
+  }
+  .plan-inquiry-container .manual-search-container {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: grid;
+    grid-row-gap: 2em;
+  }
+  .plan-inquiry-container .manual-search-container .filter-param-box {
+    grid-template-columns: auto;
+  }
+  .plan-inquiry-container .advance-search-container {
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+    background-color: orange;
   }
 }
 

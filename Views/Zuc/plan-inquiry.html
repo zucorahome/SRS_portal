@@ -79,55 +79,113 @@
       <!-- Mobile Navigation-->
     </div>
     <!-- Main page content-->
-    <section class="width-80 center plan-inquiry-container">
+    <section class="center plan-inquiry-container">
       <h1 class="srs-heading">Plan registration inquiry</h1>
-      <div class="two-grid-column mobile-column">
+      <div class="two-grid-column search-container">
         <!-- first div -->
         <div class="manual-search-container">
-          <div class="date-filter-container">
-            <p><span>Effective date</span></p>
-            <form class="flex flex-row">
-              <div class=" ">
-                <label>From
-                <div class="flex flex-row flex-vert-center">
-                  <i class="fa fa-calendar-alt"></i>
-                  <input type="date" name="inquiry-date-from" placeholder="MM/DD/YY">
-                </div>
-             </label>
-              </div>
-                <div class="">
-                <label>To
-                <div class="flex flex-row flex-vert-center">
-                  <i class="fa fa-calendar-alt"></i>
-                  <input type="date" name="inquiry-date-to" placeholder="MM/DD/YY">
-                </div>
+          <div class="date-filter-box">
+            <p class="u-bold u-uppercase"><span>Effective date</span></p>
+            <form class="date-filter-form">
+             
+                <label for="from-date">
+                   <span>From</span>
+                    <div class="flex flex-row flex-vert-center">
+                      <i class="fa fa-calendar-alt"></i>
+                      <input type="text" name="inquiry-date-from" placeholder="MM/DD/YY"> 
+                  </div>
                 </label>
-              </div>
-              <div class="flex flex-vert-center flex-hor-center">
-                <button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow planRegis-mainSubmit-button" type="submit">Submit</button></div>
+              
+              <label for="from-date">
+                  <span> To</span>
+                    <div class="flex flex-row flex-vert-center">
+                      <i class="fa fa-calendar-alt"></i>
+                      <input type="text" name="inquiry-date-to" placeholder="MM/DD/YY"> 
+                  </div>
+                </label>
+
+              <div><button class="zuc-btn zuc-btn-secondary">Filter</button></div>
+
             </form>
           </div>
-          <div class="flex flex-row second-filter margin-top-2">
-            <div class="width-30">
-              <p>Select Plan:</p>
-              <div class="filter-box">
-                <p class="u-uppercase">All</p>
-                <p>Submitted</p>
-                <p>Pending</p>
-                <p>Registered</p>
-                <p>Canceled</p>
+          <div class="filter-param-box">
+            <div>
+              <p class="u-bold">Select Plan (Filter):</p>
+                <div class="filter-box">
+                  <p class="u-uppercase selected">All</p>
+                  <p>Submitted</p>
+                  <p>Pending</p>
+                  <p>Registered</p>
+                  <p>Canceled</p>
               </div>
             </div>
-            <div class="">
-              
+            <div>
+              <p class="u-bold">Select Location (Filter):</p>
+                <div class="filter-box">
+                  <p class="u-uppercase selected">All</p>
+                  <p>Westmall</p>
+                  <p>Sunnyridge</p>
+              </div>
             </div>
-            <div class="">
-              
+            <div>
+              <p class="u-bold">Select Associate (Filter):</p>
+                <div class="filter-box">
+                  <p class="u-uppercase selected">All</p>
+                  <p>Bob Doe</p>
+                  <p>Gary Tip</p>
+                  <p>Ken Sandler</p>
+              </div>
             </div>
           </div>
         </div>
         <!-- 2nd div -->
-        <div class="advance-search-container"></div>
+        <div class="advance-search-container">
+          <div class="advance-search-form">
+            <div class="purple-background">
+              <h2>Advanced Search</h2>
+            </div>
+            <form class="planRegis-form">
+               <div class="flex flex-row flex-vert-center">
+                  <label>Retailer:</label>
+                    <select name="search-retailer" style="">
+                          <option value="" selected="">Select Retailer</option>
+                          <option value="Buyer">XYZ</option>
+                          <option value="Manager">ABC</option>
+                          <option value="Associate">EFG</option>
+                      </select>
+                </div>
+                <div class="flex flex-row flex-vert-center">
+                  <label for="first-name">First Name:</label>
+                  <input type="text" name="search-first-name" value="" class="" required="" placeholder="First name">
+                </div>
+                <div class="flex flex-row flex-vert-center">
+                  <label for="last-name">Last Name:</label>
+                  <input type="text" name="search-last-name" value="" class="" required="" placeholder="Last Name">
+                </div>
+                <div class="flex flex-row flex-vert-center">
+                  <label for="search-streetName">Street Name:</label>
+                  <input type="text" name="search-streetName" value="" class="" required="" placeholder="Street Name">
+                </div>
+                <div class="flex flex-row flex-vert-center">
+                  <label for="search-city">City:</label>
+                  <input type="text" name="search-city" vaCitylue="" class="" required="" placeholder="Contact First Name">
+                </div>
+                <div class="flex flex-row flex-vert-center">
+                  <label for="search-postalCode">Postal Code:</label>
+                  <input type="text" name="search-postalCode" vaCitylue="" class="" required="" placeholder="Contact First Name">
+                </div>
+                <div class="flex flex-row flex-vert-center">
+                  <a href="#/" class="zuc-btn zuc-btn-secondary" type="submit">Save</a>
+
+                  <a href="#/" class=""></a>
+                </div>
+            </form>
+          </div>
+        </div>
+        <!-- two grid closing -->
+      </div>
+      <!-- Table -->
+      <div class="">
       </div>
     </section>
     <!-- main page content ends -->

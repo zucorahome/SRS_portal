@@ -8,6 +8,11 @@ $('.addPlanButton').click(function(){
 })
 
 
+$('.new-planAdd-title p').click(function(){
+	$('.new-planAdd-detail').toggle(1000);
+	$(this).find('.change-icon').toggleClass('fa-plus-square fa-minus-square');
+});
+
 function openModal(className){
     $(className.data.key).removeClass('non-visible');
     $("html, body").animate({ scrollTop: 0 }, "slow");
@@ -21,9 +26,9 @@ let cross = $('.addItem-form').find('.purple-background h2');
 cross.bind('click',{key:'.addItem-modal'},closeModal);
 
 $('.addItem-save').click(function(){
-	$('.new-planAdd-title p::before').show(700);
+	//$('.new-planAdd-title p::before').show(700);
 	$('.new-planAdd-detail').show(1000);
-	$('.addItem-modal').hide("slow");
+	$('.addItem-modal').addClass('non-visible');
 	$("html, body").animate({ scrollTop: 750 }, "slow")
 
 });

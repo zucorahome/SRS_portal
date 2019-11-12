@@ -139,6 +139,7 @@ p {
   .srs-login-container .srs-login-content .form-buttons {
     margin-top: 5%; }
 
+/*Plan registration styling*/
 .plan-registration-container {
   border: 2px solid #36384B;
   height: auto; }
@@ -174,22 +175,31 @@ p {
       padding: 1em;
       font-family: "aktiv-grotesk", Helvetica, sans-serif; }
   .plan-registration-box .new-planAdd-title {
-    padding: 0 10px 14px 10px; }
+    padding: 0 10px 14px 10px;
+    transition: all ease-in 0.5s;
+    -webkit-transition: all ease-in 0.5s; }
     .plan-registration-box .new-planAdd-title p {
       font-family: "aktiv-grotesk", Helvetica, sans-serif;
-      font-weight: 700; }
+      font-weight: 700;
+      cursor: pointer;
+      /*::before{
+      	//content: "\2212";
+      	content:'\002B';
+          color: $grey-text;
+          font-size: 16px;
+          float: left;
+          font-weight: bold;
+          border:2px solid $grey-text;
+          padding:0 6px;
+          //display: none;
+          cursor: pointer;
+      }*/ }
       .plan-registration-box .new-planAdd-title p span {
         text-transform: uppercase;
         padding-left: 5px; }
-      .plan-registration-box .new-planAdd-title p ::before {
-        content: '\002B';
-        color: #36384B;
-        font-size: 16px;
-        float: left;
-        font-weight: bold;
-        border: 2px solid #36384B;
-        padding: 0 6px;
-        cursor: pointer; }
+      .plan-registration-box .new-planAdd-title p i {
+        font-size: 1.5em;
+        color: #36384B; }
 
 .new-planAdd-detail {
   display: none;
@@ -204,6 +214,9 @@ p {
     .new-planAdd-detail table tr {
       text-align: center;
       font-family: "aktiv-grotesk", Helvetica, sans-serif; }
+      .new-planAdd-detail table tr:hover {
+        background-color: #70E9B2;
+        transition: background-color ease-in 0.5s; }
     .new-planAdd-detail table th, .new-planAdd-detail table td {
       padding: 5px;
       line-height: 22px;
@@ -374,7 +387,7 @@ p {
 
 /*Plan inquiry screen*/
 .plan-inquiry-container {
-  width: 90%;
+  width: 85%;
   max-width: 100%;
   /*padding:0 1em;*/ }
   .plan-inquiry-container .search-container {
@@ -470,6 +483,59 @@ p {
     .plan-inquiry-container .allPlans-container .new-planAdd-detail {
       display: block;
       border: 2px solid #d3d3df; }
+      .plan-inquiry-container .allPlans-container .new-planAdd-detail table td i {
+        cursor: pointer; }
+
+.plan-cancelation-container {
+  width: 85%;
+  max-width: 100%;
+  height: auto; }
+  .plan-cancelation-container .container-border {
+    border: 2px solid #36384B;
+    padding: 2em 0;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 3em 0; }
+    .plan-cancelation-container .container-border .plan-cancelation {
+      display: grid;
+      grid-template-columns: 45% 55%;
+      justify-content: center;
+      align-items: flex-start; }
+      .plan-cancelation-container .container-border .plan-cancelation .plan-search-field {
+        height: auto;
+        padding: 0 2em;
+        width: 100%; }
+        .plan-cancelation-container .container-border .plan-cancelation .plan-search-field .search-form div button {
+          height: 50px;
+          border: 2px solid #36384B;
+          border-radius: 10px;
+          background: #434DA0;
+          position: absolute;
+          left: 80%;
+          width: 20%; }
+          .plan-cancelation-container .container-border .plan-cancelation .plan-search-field .search-form div button i {
+            font-size: 1.5em;
+            color: white; }
+      .plan-cancelation-container .container-border .plan-cancelation .reason-container {
+        height: auto;
+        padding: 0 2em;
+        width: 100%; }
+        .plan-cancelation-container .container-border .plan-cancelation .reason-container textarea {
+          border: 2px solid #36384B;
+          border-radius: 0;
+          height: 350px;
+          font-size: 16px; }
+    .plan-cancelation-container .container-border .search-plan-details {
+      margin-top: 3em; }
+      .plan-cancelation-container .container-border .search-plan-details .plan-registration-box {
+        display: block;
+        width: 95%;
+        margin-bottom: 0; }
+        .plan-cancelation-container .container-border .search-plan-details .plan-registration-box .new-planAdd-detail {
+          /*display: block;*/ }
+  .plan-cancelation-container .cancelPlan-Button {
+    margin-right: 2.5em; }
 
 /*Media queries */
 @media screen and (max-width: 768px) {
@@ -540,7 +606,26 @@ p {
     width: 100%; }
 
   .plan-inquiry-container .manual-search-container .date-filter-box .date-filter-form {
-    flex-flow: column; } }
+    flex-flow: column; }
+
+  .plan-cancelation-container {
+    width: 100%;
+    max-width: 100%;
+    height: auto; }
+    .plan-cancelation-container .container-border .plan-cancelation {
+      display: grid;
+      grid-template-columns: 100%;
+      justify-content: center; }
+      .plan-cancelation-container .container-border .plan-cancelation .reason-container {
+        margin-top: 2em; }
+        .plan-cancelation-container .container-border .plan-cancelation .reason-container textarea {
+          border: 2px solid #36384B;
+          border-radius: 0;
+          height: 350px; }
+
+  .popup-modals-container .addItem-modal .addItem-form, .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal, .popup-modals-container .mainSubmit-modal-container .remove-planModal, .popup-modals-container .remove-planModal-container .mainSubmit-modal, .popup-modals-container .remove-planModal-container .remove-planModal, .shipping-locations-modal .shipping-locations-form, .contacts-form-modal .contacts-form {
+    width: 100%;
+    margin: 50% auto; } }
 @media screen and (min-width: 769px) {
   .srs-nav-container .zuc-main-nav .zuc-nav-brand {
     width: 15vw;

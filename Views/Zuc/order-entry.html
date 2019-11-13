@@ -39,7 +39,7 @@
                   <div class="zuc-dropdown-column">
                     <a href="plan-registration-one.html" title="" aria-role="menu-item">Plans</a>
                     <a href="plan-inquiry.html" title="" aria-role="menu-item">Plan Inquiry</a>
-                    <a href="#/" title="" aria-role="menu-item">Cancel Plan</a>
+                    <a href="plan-cancelation.html" title="" aria-role="menu-item">Cancel Plan</a>
                     <a href="#/" title="" aria-role="menu-item">Plan Reporting</a>
                   </div>
                 </div>
@@ -51,7 +51,7 @@
               <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
                 <!-- Dropdown links -->
                 <div class="zuc-dropdown-column">
-                  <a href="order-entry.html" title="" aria-role="menuitem">Entry</a>
+                  <a href="retailer-profile.html" title="" aria-role="menuitem">Entry</a>
                   <a href="#/" title="" aria-role="menuitem">Order History</a>
                 </div>
               </div>
@@ -63,7 +63,7 @@
               <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
                 <!-- Dropdown links -->
                 <div class="zuc-dropdown-column">
-                  <a href="#/">Profile</a>
+                  <a href="retailer-profile.html">Profile</a>
                   <a href="#/">Log out</a>
                 </div>
               </div>
@@ -79,7 +79,186 @@
       <!-- Mobile Navigation-->
     </div>
     <!-- Main page content-->
+    <section class="order-entry-container">
+       <h1 class="srs-heading">Order Entry</h1>
+       <div class="two-grid-column">
+          <div class="add-item-info">
+            <form class="planRegis-form">
+              <div class="flex flex-row flex-vert-center">
+                <label>Product Type:</label>
+                  <select name="orderEntry-location" required>
+                    <option value="">Store Location</option>
+                    <option value="Leon's - London South">Leon's - London South</option>                    
+                    <option value="Teppermans- London">Teppermans- London</option>
+                    <option value="Leon's- London North">Leon's- London North</option>
+                  </select>
+              </div>
+              <div class="flex flex-row flex-vert-center">
+                <label>PO/Ref*:</label>
+                  <input type="text" name="PO/Ref" value="" placeholder="" required>
+              </div>
+              <div class="flex flex-row flex-vert-center">
+                <label>Buying Group Authorization:</label>
+                  <input type="text" name="buying-group-auth" value="" placeholder="" required>
+              </div>
+              <p class="light-grey-text u-text-right">(Required if requested by Buying Group)</p>
+              <div class="flex flex-hor-end">
+                <button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow" type="submit">Add Item</button>
+              </div>
+            </form>
+          </div>
+          <div class="shipping-instructions">
+            <div class="flex flex-column">
+              <h3 class="profileBox-heading">Shipping Instructions:</h3>
+              <textarea name="paragraph_text" cols="50" rows="10" placeholder="Customer decided they could not wait for special order Sofa and Chair."></textarea>
+            </div>
+            <div class="flex flex-row flex-vert-center flex-hor-center">
+              <div>
+                <form class="planRegis-form">
+                  <div class="flex flex-row flex-vert-center">
+                    <label for="sale-date">Ship After Date (Optional):&nbsp;</label>
+                    <i class="fa fa-calendar-alt"></i>
+                    <input type="text" name="shipping-date" placeholder="MM/DD/YY" value="" id="">
+                  </div>
+                </form>
+              </div>
+              <div>
+                <form class="planRegis-form">
+                  <div class="flex flex-row flex-vert-center">
+                      <label class="srs-checkmark">Request Expedited Shipping</label>
+                      <input type="checkbox" class="">
+                      <span class="green-checkmark"></span>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+       </div>
+       <div class="order-table-container">
+          <div class="order-table">
+             <div class="purple-background">
+                  <h2>Bedding</h2>
+              </div>
+              <div class="new-planAdd-detail">
+                <table>
+                  <thead>
+                    <tr>
+                      <th scope="col">Item</th>
+                      <th scope="col">SKU Number</th>
+                      <th scope="col">Description</th>
+                      <th scope="col">QTY</th>
+                      <th scope="col">Unit Price</th>
+                      <th scope="col">Total</th>
+                      <th scope="col">Edit</th>
+                      <th scope="col">Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="Item">Mattress protector</td>
+                      <td data-label="SKU Number">ZFES3050</td>
+                      <td data-label="Description">Silver 5 Sided Standard-Queen</td>
+                      <td data-label="QTY">10</td>
+                      <td data-label="Unit Price">$47.99</td>
+                      <td data-label="Total">$479.90</td>
+                      <td data-label="Edit"><a href="javascript:void(0)" class="addItemModal-button"><i class="fa fa-pencil-alt"></i></a></td>
+                      <td data-label="Delete"><a href="javascript:void(0)" class="remove-planRegis"><i class="fa fa-trash-alt"></i></a></td>
+                    </tr>
 
+                     <tr>
+                      <td data-label="Item">Pillow</td>
+                      <td data-label="SKU Number">ZPCFRIOP603</td>
+                      <td data-label="Description">Sub-0 Soft Cell Chill Pillow Queen</td>
+                      <td data-label="QTY">4</td>
+                      <td data-label="Unit Price">$69.00</td>
+                      <td data-label="Total">$279.96</td>
+                      <td data-label="Edit"><a href="javascript:void(0)" class="addItemModal-button"><i class="fa fa-pencil-alt"></i></a></td>
+                      <td data-label="Delete"><a href="javascript:void(0)" class="remove-planRegis"><i class="fa fa-trash-alt"></i></a></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td class="u-hidden-phone">Subtotal:</td>
+                      <td data-label="Subtotal:">$759.86</td>
+                      <td></td>
+                      <td></td>
+                      <!-- <td data-label="Order Total:"></td> -->
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          </div>
+          <!-- 1st order table ends -->
+          <!-- 2nd order table -->
+          <div class="order-table">
+             <div class="purple-background">
+                  <h2>Point of Sale</h2>
+              </div>
+              <div class="new-planAdd-detail">
+                <table>
+                  <thead>
+                    <tr>
+                      <th scope="col">Item</th>
+                      <th scope="col">SKU Number</th>
+                      <th scope="col">Description</th>
+                      <th scope="col">QTY</th>
+                      <th scope="col">Unit Price</th>
+                      <th scope="col">Total</th>
+                      <th scope="col">Edit</th>
+                      <th scope="col">Delete</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td data-label="Item">Brochure</td>
+                      <td data-label="SKU Number">PS10106-GN</td>
+                      <td data-label="Description">ZucoraHome Complete Bilingual</td>
+                      <td data-label="QTY">100</td>
+                      <td data-label="Unit Price">$0</td>
+                      <td data-label="Total">$0</td>
+                      <td data-label="Edit"><a href="javascript:void(0)" class="addItemModal-button"><i class="fa fa-pencil-alt"></i></a></td>
+                      <td data-label="Delete"><a href="javascript:void(0)" class="remove-planRegis"><i class="fa fa-trash-alt"></i></a></td>
+                    </tr>
+                    
+                     <tr>
+                      <td data-label="Item">Display Card</td>
+                      <td data-label="SKU Number">ZPCFRIOP603</td>
+                      <td data-label="Description">ZucoraHome Complete Bilingual Card</td>
+                      <td data-label="QTY">25</td>
+                      <td data-label="Unit Price">$0</td>
+                      <td data-label="Total">$0</td>
+                      <td data-label="Edit"><a href="javascript:void(0)" class="addItemModal-button"><i class="fa fa-pencil-alt"></i></a></td>
+                      <td data-label="Delete"><a href="javascript:void(0)" class="remove-planRegis"><i class="fa fa-trash-alt"></i></a></td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td class="u-hidden-phone">Subtotal:</td>
+                      <td data-label="Subtotal:">$0</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <!-- This is for last all of the total -->
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td class="u-hidden-phone u-bold" style="font-size:22px;">Order total:</td>
+                      <td data-label="Order total:" style="font-size:22px;">$759.86</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+          </div>
+       </div>
+    </section>
     <!-- main page content ends -->
          <!-- Site Footer-->
     <footer class="">

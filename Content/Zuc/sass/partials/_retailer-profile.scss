@@ -1,0 +1,212 @@
+/*Retailer Profile*/
+	.retailer-profile-container{
+		width:80%;
+		margin:0 auto;
+
+		.two-grid-column{
+
+		/*div{
+			padding:0 10px;
+		}*/	
+		.retailer-info-form{
+			div{
+				padding:5px 0;
+				justify-content: flex-end;
+
+				p{
+					width:70%;
+					font-weight: bold;
+				}
+			}
+			label{
+				@extend %label;
+				}
+
+				input{
+					@extend %input;
+				}
+
+				select{
+					@extend %select;
+				}
+			}
+		}
+
+		.profile-boxStyle{
+			border:2px solid $grey-text;
+			/*padding:10px;*/
+		}
+
+		.profile-address{
+			padding:10px;
+			label{
+				@extend %label;
+				//text-align: left;
+				//margin-right:0;
+			}
+
+			input{
+				@extend %input;
+			}
+
+			select{
+				@extend %select;
+			}
+		}
+		.locations-container{
+			.new-planAdd-detail{
+				display: block;
+				/*margin:0 auto;*/
+				padding: 0;
+
+				table{
+					tr{
+						text-align: left;
+					}
+
+					thead{
+						tr{
+							th:nth-child(1){
+								width:10%;
+								
+							}
+							th:nth-child(2){
+								width:20%;
+							}
+							th:nth-child(3){
+								width: 30%;
+							}
+							th:nth-child(4){
+								width: 20%;
+							}
+						}
+					}
+				}
+			}
+		}
+		.contacts-container{
+			.grey{
+				color:grey;
+			}
+			padding:0;
+			.new-planAdd-detail{
+				display: block;
+			}
+
+			table{
+				thead{
+					tr{
+						th{
+							border-right:1px solid #d3d3df;
+						}
+					}
+				}
+				tbody{
+					tr{
+						td{
+							border-right:1px solid #d3d3df;
+						}
+					}
+				}
+			}
+		}		
+	}
+	.shipping-locations-modal{
+		@extend %modal;
+		
+		.shipping-locations-form{
+			@extend %modal-background;
+
+			.purple-background{
+				h2::after{
+					@extend %form-cross;
+				}
+			}
+
+			.planRegis-form{
+					width:100%;
+					padding:1em;
+					
+					div{
+						justify-content: space-between;
+						width:90%;
+						margin:0 auto;
+					}
+					label{
+						@extend %label;
+						padding:0 5px;
+						text-align: left;
+						margin:0;
+					}
+
+					input{
+						@extend %input;
+					}
+
+					select{
+						@extend %select;
+					}
+					h3{
+						font-family: $para-fonts;
+						margin-bottom: 0;
+						font-weight: 700;
+						padding-left:5%;
+					}
+
+					.srs-checkmark{
+
+					}
+				}
+
+				.width-45{
+					width:45%;
+				}
+		}
+	}
+
+	.contacts-form-modal{
+		@extend %modal;
+
+		.contacts-form{
+			@extend %modal-background;
+			.purple-background{
+				h2::after{
+					@extend %form-cross;
+				}
+			}
+			.planRegis-form{
+				width:100%;
+				padding:1em;
+				div{
+						justify-content: space-between;
+						width:90%;
+						margin:0 auto;
+					}
+					label{
+						@extend %label;
+						padding:0 5px;
+						text-align: left;
+						margin:0;
+					}
+
+					input{
+						@extend %input;
+					}
+
+					select{
+						@extend %select;
+					}
+			}
+			.contact-radio{
+				    display: grid;
+				    grid-template-columns: 30% 7% 10% 7% 10%;
+				    justify-content: flex-start;
+				    align-items: center;
+				    padding: 5px;
+
+				 input[type="radio"]{
+				 	height: 30px;
+				 }
+			}
+		}
+	}

@@ -1,0 +1,61 @@
+/*Common classes*/
+.purple-background{
+		background-color: $zucora-purple;
+
+		h2{
+			color: white;
+			font-size: 18px;
+			padding:1em;
+			font-family: $para-fonts;
+			font-weight: 700;
+		}
+	}
+.purple-text{
+				color: $zucora-purple;
+				font-weight: 500;
+				font-family: $para-fonts;
+			}
+
+.grey-text{
+	color:$grey-text !important;
+}
+.profileBox-heading{
+	font-family: $para-fonts;
+	color: $zucora-purple;
+	font-size:24px;
+	font-weight:700;
+
+}
+.two-grid-column{
+	display: grid;
+	grid-template-columns: 50% 50%;
+}
+.srs-heading{
+	font-family: $header-fonts;
+	font-weight: 700;
+	color: $zucora-purple;
+	font-size:3.2em;
+	margin-top:13%;
+	text-align: center;
+}
+.simple-link{
+	@extend %simple-link;
+}
+
+.margin-10{
+	@include margin(10px);
+}
+.u-underline{
+	text-decoration: underline;
+}
+
+.light-grey-text{
+					color:#898A8D;
+					font-weight:300;
+				}
+
+/*Header*/
+.srs-nav-container .zuc-main-nav{
+	/*padding:1em 8%;*/
+}
+

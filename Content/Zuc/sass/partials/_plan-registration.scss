@@ -1,0 +1,283 @@
+
+/*Plan registration styling*/
+
+.plan-registration-container{
+	border:2px solid #36384B;
+	height:auto;
+}
+
+.planRegis-form{
+		width:60%;
+		display: block;
+		margin: 0 auto;
+		padding:2em 0;
+
+		div{
+			padding:10px 0;
+			justify-content: flex-end;
+			i{
+				font-size: 2em;
+				color: $zucora-purple;
+				margin-right: 10px;
+			}
+		}
+
+		.twoInput-fields 
+		{
+			input{
+				width:33%;
+			}
+
+			input:first-of-type{
+					
+					margin-right:4%;
+				}
+		}
+
+		label{
+			@extend %label;
+		}
+
+		select{
+			@extend %select;
+		}
+
+		input{
+				@extend %input;
+			}
+	}
+
+.plan-registration-box{
+	height:auto;
+	border:2px solid #36384B;
+	width:90%;
+	margin-bottom:2em;
+	display: none;
+	.purple-background{
+		background-color: $zucora-purple;
+
+		h2{
+			color: white;
+			font-size: 18px;
+			padding:1em;
+			font-family: $para-fonts;
+		}
+	}
+
+	.new-planAdd-title {
+		padding:0 10px 14px 10px;
+		transition: all ease-in 0.5s;
+		-webkit-transition:all ease-in 0.5s;
+		p{
+			font-family: $para-fonts;
+			font-weight: 700;
+			cursor: pointer;
+		 span{
+				text-transform: uppercase;
+				padding-left:5px;
+			}
+
+			/*::before{
+				//content: "\2212";
+				content:'\002B';
+			    color: $grey-text;
+			    font-size: 16px;
+			    float: left;
+			    font-weight: bold;
+			    border:2px solid $grey-text;
+			    padding:0 6px;
+			    //display: none;
+			    cursor: pointer;
+			}*/
+			i{
+				font-size:1.5em;
+				color:$grey-text;
+			}
+		}
+	}
+}
+
+
+.new-planAdd-detail{
+	display: none;
+	border: 1px solid $grey-text;
+	margin: 10px;
+	table{
+		border-collapse: collapse;
+		margin:0;
+		padding:0;
+		width:100%;
+		table-layout: fixed;
+
+		tr{
+				text-align: center;
+				font-family: $para-fonts;
+
+				&:hover{
+					background-color:$zucora-mint-green;
+					transition: background-color ease-in 0.5s;
+				}
+			}
+		th,td{
+			padding: 5px;
+			line-height:22px;
+			//overflow: hidden;
+			word-break: break-word;
+			text-align: left;
+			i{
+				color: $zucora-purple;
+
+			}
+		}
+		 th{
+			color: $zucora-purple;
+			font-weight: 700;
+		}
+	}
+}
+.planRegis-controls{
+	display: flex;
+	width:80%;
+	margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 0;
+
+    div{
+    	a{
+    		@extend %simple-link;
+    	}
+    }
+}
+
+
+
+.popup-modals-container{
+	/*This is pop up section class*/
+	.addItem-modal{
+		@extend %modal;
+		/*This is all modal div class*/
+		.addItem-form{
+			@extend %modal-background;
+			
+			.purple-background{
+				h2::after{
+					@extend %form-cross;
+				}
+			}
+
+			.planRegis-form{
+					div{
+						padding:0;
+
+					}
+
+					.addItem-quantity{
+						
+						.label{
+							font-family: $para-fonts;
+							font-weight: bold;
+							font-size: 18px;
+							line-height: 22px;
+							background: none;
+							color: $grey-text;
+							text-shadow: none;
+							margin-right:1em;
+						}
+
+						.button-minus, .button-plus{
+						    border-radius: 50%;
+						    width: auto;
+						    margin: 5px;
+						    font-size: 2em;
+						    vertical-align: middle;
+						    text-align: center;
+						    
+						}
+						.button-minus{
+							padding:2px 8px 8px 8px;
+						}
+						.button-plus{
+							padding:5px;
+						}
+
+						.quantity-input{
+							width:15%;
+							text-align: center;
+							color: $grey-text;
+							border-radius: 0;
+							border: 2px solid #C8C8C8;
+							//color: #898A8D;
+						}
+					}
+
+					.margin-10{
+						@include margin(10px);
+					}
+				}
+		}
+	}
+
+
+	/*Congratulation modal*/
+	.mainSubmit-modal-container,.remove-planModal-container{
+		@extend %modal;
+
+		.mainSubmit-modal,.remove-planModal{
+			@extend %modal-background;
+
+			h2{
+				font-family: $header-fonts;
+				font-weight: 900;
+				font-size:3em;
+				color: $zucora-purple;
+				text-align: center;
+				padding: 1em;
+			}
+			.cross{
+					float: right;
+					color: $zucora-mint-green;
+					font-weight: 300;
+					cursor: pointer;
+					font-family: cursive;
+					font-size: 1.5em;
+					padding: 10px;
+				}
+
+				p{
+					width: 75%;
+				    text-align: center;
+				    margin: 0 auto;
+				    font-size: 1.75em;
+				}
+
+				div{
+					text-align: center;
+					padding:1em;
+				}
+			} 
+		} 
+
+		.remove-planModal-container{
+		
+			.remove-planModal{
+				h3{
+					text-align: center;
+					margin-top:1em;
+				}
+
+				div{
+					a{
+						margin:0 10px;
+					}
+
+					.zuc-btn-hollow{
+						border:2px solid $zucora-purple;
+						color:$zucora-purple;
+					}
+				}
+			}
+		}
+
+
+}

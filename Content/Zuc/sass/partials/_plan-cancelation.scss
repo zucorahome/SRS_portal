@@ -1,0 +1,88 @@
+.plan-cancelation-container{
+	width:80%;
+	max-width:100%;
+	height: auto;
+
+	.container-border{
+				border:2px solid $grey-text;
+				padding:2em 0;
+				max-width:100%;
+				display: flex;
+				flex-direction: column;
+				margin: 3em 0;
+			.plan-cancelation{
+				
+				display: grid;
+				grid-template-columns: 45% 55%;
+				justify-content: center;
+				align-items: flex-start;
+
+				.plan-search-field{
+					
+					height:auto;
+					padding:0 2em;
+					width:100%;
+
+					.search-form{
+						div{
+							margin-top:12px;
+							input{
+								margin:0;
+							}
+
+							button{
+								height: 50px;
+							    border: 2px solid $grey-text;
+							    border-radius: 10px;
+							    background: $zucora-purple;
+							    position: relative;
+							    left: -50px;
+							    width: 25%;
+
+							    i{
+						    	    font-size: 1.5em;
+    								color: white;
+							    }
+							}
+						}
+					}
+					.search-param-result{
+
+					}
+				}
+				.reason-container{
+					
+					height:auto;
+					padding:0 2em;
+					width:100%;
+
+					textarea{
+						border:2px solid $grey-text;
+						border-radius: 0;
+						height:350px;
+						font-size:16px;
+					}
+				}
+			}
+
+			.search-plan-details{
+				margin-top:3em;
+					.plan-registration-box{
+						display: block;
+						width:95%;
+						margin-bottom: 0;
+
+						.new-planAdd-detail{
+							/*display: block;*/
+						}
+					}
+				}
+		}
+
+		.warning-text{
+			color:red;
+		}
+		.cancelPlan-Button{
+			/*margin-right:2.5em;*/
+		}
+}

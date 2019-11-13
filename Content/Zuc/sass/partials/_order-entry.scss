@@ -1,0 +1,108 @@
+
+.order-entry-container{
+	width:85%;
+	max-width:100%;
+	height: auto;
+	margin:0 auto;
+	
+	.two-grid-column{
+		margin-top:4em;
+		.add-item-info{
+			height:auto;
+			width:100%;
+			padding:0 1em 0 0;
+			.planRegis-form{
+				
+				div{
+					/*justify-content: space-between;*/
+				}
+
+				label{
+					text-align: left;
+					width:25%;
+				}
+
+				select{
+					margin-bottom: 0;
+				}
+
+			}
+		}
+
+		.shipping-instructions{
+			height:auto;
+			width:100%;
+			padding:0 0 0 1em;
+
+			textarea{
+				font-size:16px;
+			}
+		}
+	}
+	.planRegis-form{
+				width:100%;
+				padding:0;
+			}
+
+	.order-table-container{
+		width:100%;
+		margin:0 auto;
+		border:2px solid $grey-text;
+		margin: 5% auto;
+
+		.new-planAdd-detail{
+			display: block;
+			border:0;
+			table{
+				th,td{
+					/*text-align: left;*/
+					word-break: break-word;
+				}
+				th{
+					width:10%;
+				}
+				th:nth-child(3){
+					width:25%;
+				}
+				th:nth-child(4),th:nth-child(7),th:nth-child(8){
+					width:5%;
+				}
+			}
+		}
+	}
+
+}
+
+
+@media screen and (max-width:$mobile-width){
+	.order-entry-container{
+		margin-top:10%;
+		.order-entry-container{
+			width:100%;
+			height:auto;
+
+			.new-planAdd-detail{
+				display: block;
+				border:0;
+				table{
+					td{
+						text-align: right;
+					}
+				}
+			}
+		}
+	}
+
+	.two-grid-column{
+				grid-template-columns: 100%;
+			}
+}
+
+
+@media screen and (min-width:$laptop-width){
+.order-entry-container{
+	
+
+
+	}
+}

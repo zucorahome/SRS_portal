@@ -103,7 +103,7 @@
               </div>
               <p class="light-grey-text u-text-right">(Required if requested by Buying Group)</p>
               <div class="flex flex-hor-end">
-                <button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow" type="submit">Add Item</button>
+                <a href="#/" class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow orderEntry-add-button" type="submit">Add Item</a>
               </div>
             </form>
           </div>
@@ -112,7 +112,7 @@
               <h3 class="profileBox-heading">Shipping Instructions:</h3>
               <textarea name="paragraph_text" cols="50" rows="10" placeholder="Customer decided they could not wait for special order Sofa and Chair."></textarea>
             </div>
-            <div class="flex flex-row flex-vert-center flex-hor-center">
+            <div class="two-grid-column mobile-column flex-vert-center flex-hor-center">
               <div>
                 <form class="planRegis-form">
                   <div class="flex flex-row flex-vert-center">
@@ -125,7 +125,8 @@
               <div>
                 <form class="planRegis-form">
                   <div class="flex flex-row flex-vert-center">
-                      <label class="srs-checkmark">Request Expedited Shipping</label>
+                      <label class="srs-checkmark">Request Expedited Shipping
+                        <p style="font-size:12px;">Note: Expedited Shipping incurs additional cost which will be determined at time of order completion.</p></label>
                       <input type="checkbox" class="">
                       <span class="green-checkmark"></span>
                   </div>
@@ -161,7 +162,7 @@
                       <td data-label="QTY">10</td>
                       <td data-label="Unit Price">$47.99</td>
                       <td data-label="Total">$479.90</td>
-                      <td data-label="Edit"><a href="javascript:void(0)" class="addItemModal-button"><i class="fa fa-pencil-alt"></i></a></td>
+                      <td data-label="Edit"><a href="javascript:void(0)" class="orderEntry-add-button"><i class="fa fa-pencil-alt"></i></a></td>
                       <td data-label="Delete"><a href="javascript:void(0)" class="remove-planRegis"><i class="fa fa-trash-alt"></i></a></td>
                     </tr>
 
@@ -172,7 +173,7 @@
                       <td data-label="QTY">4</td>
                       <td data-label="Unit Price">$69.00</td>
                       <td data-label="Total">$279.96</td>
-                      <td data-label="Edit"><a href="javascript:void(0)" class="addItemModal-button"><i class="fa fa-pencil-alt"></i></a></td>
+                      <td data-label="Edit"><a href="javascript:void(0)" class="orderEntry-add-button"><i class="fa fa-pencil-alt"></i></a></td>
                       <td data-label="Delete"><a href="javascript:void(0)" class="remove-planRegis"><i class="fa fa-trash-alt"></i></a></td>
                     </tr>
                     <tr>
@@ -218,7 +219,7 @@
                       <td data-label="QTY">100</td>
                       <td data-label="Unit Price">$0</td>
                       <td data-label="Total">$0</td>
-                      <td data-label="Edit"><a href="javascript:void(0)" class="addItemModal-button"><i class="fa fa-pencil-alt"></i></a></td>
+                      <td data-label="Edit"><a href="javascript:void(0)" class="orderEntry-add-button"><i class="fa fa-pencil-alt"></i></a></td>
                       <td data-label="Delete"><a href="javascript:void(0)" class="remove-planRegis"><i class="fa fa-trash-alt"></i></a></td>
                     </tr>
                     
@@ -229,7 +230,7 @@
                       <td data-label="QTY">25</td>
                       <td data-label="Unit Price">$0</td>
                       <td data-label="Total">$0</td>
-                      <td data-label="Edit"><a href="javascript:void(0)" class="addItemModal-button"><i class="fa fa-pencil-alt"></i></a></td>
+                      <td data-label="Edit"><a href="javascript:void(0)" class="orderEntry-add-button"><i class="fa fa-pencil-alt"></i></a></td>
                       <td data-label="Delete"><a href="javascript:void(0)" class="remove-planRegis"><i class="fa fa-trash-alt"></i></a></td>
                     </tr>
                     <tr>
@@ -258,9 +259,70 @@
               </div>
           </div>
        </div>
+       <div class="flex flex-vert-center flex-hor-between orderEntry-controls mobile-column">
+        <div><a href="#" class="simple-link remove-planRegis">Remove Order</a></div>
+        
+        <div>
+          <p>Final order confirmation including shipping costs and taxes will be emailed once the order has been finalized.</p>
+          <div class="flex flex-hor-end">
+          <button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow planRegis-mainSubmit-button" type="submit">Submit</button></div>
+        </div>
+      </div>
+
+    </section>
+    <section class="popup-modals-container">
+      <div class="remove-planModal-container non-visible">
+          <div class="remove-planModal">
+             <span class="cross close-modal">X</span>
+              <h2>Caution!</h2>
+              <p>Removing Plan Registration will remove all data associated with this plan including Covered Items.</p>
+              <h3 class="purple-text">Do you wish to continue?</h3>
+              <p>**Note: Yes button should remove all the data added including in add item table and No should just close the modal not the info.</p>
+              <div class="flex flex-row flex-vert-center flex-hor-center">
+                <a href="#/" class="zuc-btn zuc-btn-hollow" type="button">Yes</a>
+                <a href="#/" class="zuc-btn zuc-btn-hollow close-modal" type="button">No</a>
+              </div>
+          </div>
+        </div>
+        <div class="editOrder-modal-container non-visible">
+            <div class="editOrder-modal">
+              <div class="purple-background">
+                <h2>Order Item</h2>
+              </div>
+              <form class="flex flex-column planRegis-form">
+                  <div class="flex flex-row flex-vert-center">
+                    <label>Item*:</label>
+                      <input type="text" name=""editOrder-item placeholder="Seach the item">
+                  </div>
+                  <div class="flex flex-column item-found">
+                    <p>Note: When search happens then only shows up this box.</p>
+                    <p>Item no: Description</p>
+                    <p>Item no: Description</p>
+                    <p></p>
+                  </div>
+                  <div class="flex flex-row flex-vert-center mobile-column">
+                    <div class="flex flex-row flex-vert-center addItem-quantity">
+                      <div class="label">Quantity:</div>
+                      <input type="button" value="-" class="button-minus" data-field="quantity">
+                      <input type="text" name="quantity" value="1" class="quantity-input">
+                      <input type="button" value="+" class="button-plus" data-field="quantity">
+                    </div>
+
+                    <div class="flex flex-row flex-vert-center addItem-PPI">
+                      <label>Price per item:</label>
+                      <p>$0.00</p>
+                    </div>
+                  </div>
+                  <div class="flex flex-vert-center flex-row">
+                    <div><button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow" type="submit">Add More</button></div>
+                    <div><button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow" type="submit">Add</button></div>
+                  </div>
+              </form>
+            </div>
+        </div>
     </section>
     <!-- main page content ends -->
-         <!-- Site Footer-->
+    <!-- Site Footer-->
     <footer class="">
      
     </footer>

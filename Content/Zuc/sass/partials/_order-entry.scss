@@ -37,6 +37,10 @@
 			textarea{
 				font-size:16px;
 			}
+
+			.two-grid-column{
+				margin-top:0;
+			}
 		}
 	}
 	.planRegis-form{
@@ -46,9 +50,8 @@
 
 	.order-table-container{
 		width:100%;
-		margin:0 auto;
 		border:2px solid $grey-text;
-		margin: 5% auto;
+		margin: 3% auto;
 
 		.new-planAdd-detail{
 			display: block;
@@ -71,13 +74,103 @@
 		}
 	}
 
+	.orderEntry-controls{
+		margin-bottom:2em;
+		p{
+			padding-left:30%;
+			text-align: right;
+		}
+	}
+
 }
 
 
+		.editOrder-modal-container{
+			@extend %modal;
+			
+			.editOrder-modal{
+			
+				@extend %modal-background;
+				
+				.purple-background{
+					h2::after{
+						@extend %form-cross;
+					}
+				}
+
+				.planRegis-form{
+					width:90%;
+					div{
+						justify-content: space-evenly;
+					}
+
+					input{
+						width:80%;
+					}
+
+					.addItem-quantity{
+						
+						.label{
+							font-family: $para-fonts;
+							font-weight: bold;
+							font-size: 18px;
+							line-height: 22px;
+							background: none;
+							color: $grey-text;
+							text-shadow: none;
+							margin-right:1em;
+						}
+
+						.button-minus, .button-plus{
+						    border-radius: 50%;
+						    width: auto;
+						    margin: 5px;
+						    font-size: 2em;
+						    vertical-align: middle;
+						    text-align: center;
+						    
+						}
+						.button-minus{
+							padding:2px 8px 8px 8px;
+						}
+						.button-plus{
+							padding:5px;
+						}
+
+						.quantity-input{
+							width:15%;
+							text-align: center;
+							color: $grey-text;
+							border-radius: 0;
+							border: 2px solid #C8C8C8;
+							//color: #898A8D;
+							padding:0;
+							margin:0;
+						}
+					}
+
+					.item-found{
+						border:1px solid #d1d1e0;
+						padding:0;
+
+						p{
+							font-size:14px;
+							font-family: $para-fonts;
+							color: $grey-text;
+							border-bottom: 1px solid #d1d1e0;
+
+							&:hover{
+								background:$zucora-mint-green;
+							}
+						}
+					}
+				}
+			}
+		}
+
 @media screen and (max-width:$mobile-width){
 	.order-entry-container{
-		margin-top:10%;
-		.order-entry-container{
+			margin-top:10%;
 			width:100%;
 			height:auto;
 
@@ -90,19 +183,24 @@
 					}
 				}
 			}
-		}
-	}
 
-	.two-grid-column{
-				grid-template-columns: 100%;
+			.orderEntry-controls{
+			display: flex;
+			flex-direction: column;
+			margin-bottom:2em;
+		
+			p{
+
+				padding-left:0;
+				text-align: right;
 			}
-}
-
-
-@media screen and (min-width:$laptop-width){
-.order-entry-container{
-	
-
-
+		}
+		.two-grid-column{
+				grid-template-columns: 100%;
+			}	
 	}
+
 }
+
+
+		

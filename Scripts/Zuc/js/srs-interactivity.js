@@ -61,4 +61,12 @@ let contactFormClose = $('.contacts-form').find('.purple-background h2');
 contactFormClose.bind('click',{key:'.contacts-form-modal'},closeModal);
 
 
+//order entry
+
+$('.orderEntry-add-button').bind('click',{key:'.editOrder-modal-container'},openModal);
+
+let orderAddButton = $('.editOrder-modal').find('.purple-background h2');
+
+orderAddButton.bind('click',{key:'.editOrder-modal-container'},closeModal);
+
 });

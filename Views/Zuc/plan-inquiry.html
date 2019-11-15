@@ -18,6 +18,7 @@
     <link href="https://use.typekit.net/ovc0ozw.css" rel="stylesheet">
     <!-- [ JQUERY ]-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../../Scripts/Zuc/js/navigation.js"></script>
     <!-- [ RESPONSIVE VIEWPORT ]-->
     <meta content="width=device-width, initial-scale=1" name="viewport">
 </head>
@@ -37,10 +38,10 @@
                 <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
                   <!-- Dropdown links -->
                   <div class="zuc-dropdown-column">
-                    <a href="plan-registration-one.html" title="" aria-role="menu-item">Plans</a>
-                    <a href="plan-inquiry.html" title="" aria-role="menu-item">Plan Inquiry</a>
-                    <a href="plan-cancelation.html" title="" aria-role="menu-item">Cancel Plan</a>
-                    <a href="#/" title="" aria-role="menu-item">Plan Reporting</a>
+                    <a href="plan-registration.html" title="Plan Registration" aria-role="menu-item">Plans</a>
+                    <a href="plan-inquiry.html" title="Plan Registration Inquiry" aria-role="menu-item">Plan Inquiry</a>
+                    <a href="plan-cancelation.html" title="Plan Cancelation" aria-role="menu-item">Cancel Plan</a>
+                    <a href="plan-pending-registrations.html" title="Plan Reporting(Pending Registrations)" aria-role="menu-item">Plan Reporting</a>
                   </div>
                 </div>
               </div>
@@ -51,8 +52,8 @@
               <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
                 <!-- Dropdown links -->
                 <div class="zuc-dropdown-column">
-                  <a href="retailer-profile.html" title="" aria-role="menuitem">Entry</a>
-                  <a href="#/" title="" aria-role="menuitem">Order History</a>
+                  <a href="order-entry.html" title="Order Entry" aria-role="menuitem">Entry</a>
+                  <a href="order-history.html" title="Order History" aria-role="menuitem">Order History</a>
                 </div>
               </div>
             </div>
@@ -77,6 +78,45 @@
         </div>
       </nav>
       <!-- Mobile Navigation-->
+      <div class="zuc-mobile-nav" data-mobile-menu>
+        <!-- Top Branding CTA-->
+        <div class="zuc-mobile-nav-content">
+          <a href="https://zucorahome.com/" title="Zucora Home">
+            <img src="../../Images/Zuc/images/ZucoraHome-brand-white.svg" alt="Zucora Home">
+          </a>
+        </div>
+        <div class="zuc-accordion-nav" role="menu" aria-role="menu">
+          <!--Plans Links ---------------------------------->
+            <div class="zuc-accordion-item" data-accordion-item>
+              <div class="zuc-accordion-title">Plans<i class="zuc-accordion-arrow fas fa-angle-right"></i></div>
+              <!-- Hidden Content-->
+              <div class="zuc-accordion-hidden" aria-hidden="true">
+                <a class="zuc-accordion-link" href="plan-registration.html" title="Plan Registration" aria-role="menuitem">Plan Registration</a>
+                <a class="zuc-accordion-link" href="plan-inquiry.html" title="Plan Registration Inquiry" aria-role="menuitem">Plan Registration Inquiry</a>
+                <a class="zuc-accordion-link" href="plan-cancelation.html" title="Plan Cancelation" aria-role="menuitem">Plan Cancelation</a>
+                <a class="zuc-accordion-link" href="plan-reporting.html" title="Plan Reporting(Pending Registrations)" aria-role="menuitem">Plan Reporting</a>
+              </div>
+            </div>
+            <!--Orders Links ---------------------------------->
+            <div class="zuc-accordion-item" data-accordion-item>
+              <div class="zuc-accordion-title">Orders<i class="zuc-accordion-arrow fas fa-angle-right"></i></div>
+              <!-- Hidden Content-->
+              <div class="zuc-accordion-hidden" aria-hidden="true">
+                <a class="zuc-accordion-link" href="order-entry.html" title="Order Entry" aria-role="menuitem">Order Entry</a>
+                <a class="zuc-accordion-link" href="order-history.html" title="Order History" aria-role="menuitem">Order History</a>
+              </div>
+            </div>
+              <!--Username Links ---------------------------------->
+            <div class="zuc-accordion-item" data-accordion-item>
+              <div class="zuc-accordion-title"><i class="fa fa-user-alt"></i>User name<i class="zuc-accordion-arrow fas fa-angle-right"></i></div>
+              <!-- Hidden Content-->
+              <div class="zuc-accordion-hidden" aria-hidden="true">
+                <a class="zuc-accordion-link" href="retailer-profile.html" title="Retailer Profile" aria-role="menuitem">Retialer Profile</a>
+                <a class="zuc-accordion-link" href="#/" title="Log Out" aria-role="menuitem">Log Out</a>
+              </div>
+            </div>
+        </div>
+      </div>
     </div>
     <!-- Main page content-->
     <section class="center plan-inquiry-container">

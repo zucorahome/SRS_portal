@@ -69,5 +69,13 @@ let orderAddButton = $('.editOrder-modal').find('.purple-background h2');
 
 orderAddButton.bind('click',{key:'.editOrder-modal-container'},closeModal);
 
+// Plan reporting: pending registrations
+ 
+let todayDate = new Date();
+console.log(todayDate, todayDate.getMonth());
+let twoDigitMonth  = (todayDate.getMonth() >= 10) ? (todayDate.getMonth()+1) : '0'+(todayDate.getMonth()+1);
+let currentDate = twoDigitMonth + '/' + todayDate.getDate() + '/' + todayDate.getFullYear();
+let apos = '&#39;';
+$('#today-date').append("Today"+apos+"s Date: "+currentDate);
 
 });

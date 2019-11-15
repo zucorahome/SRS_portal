@@ -112,8 +112,9 @@ p {
   font-weight: 700;
   color: #434DA0;
   font-size: 3.2em;
-  margin-top: 13%;
+  margin-top: 10%;
   text-align: center;
+  margin-bottom: 3%;
 }
 
 .margin-10 {
@@ -186,7 +187,7 @@ p {
   padding: 2em 0;
 }
 .planRegis-form div {
-  padding: 10px 0;
+  padding: 5px 0;
   justify-content: flex-end;
 }
 .planRegis-form div i {
@@ -199,6 +200,9 @@ p {
 }
 .planRegis-form .twoInput-fields input:first-of-type {
   margin-right: 4%;
+}
+.planRegis-form select {
+  margin-bottom: 0;
 }
 .plan-registration-box {
   height: auto;
@@ -494,7 +498,7 @@ p {
   /*padding:0 1em;*/
 }
 .plan-inquiry-container .search-container {
-  margin-top: 7%;
+  /*margin-top:7%;*/
   /*grid-gap: 2em 2em;*/
 }
 .plan-inquiry-container .manual-search-container {
@@ -837,6 +841,37 @@ p {
   }
   .order-entry-container .two-grid-column {
     grid-template-columns: 100%;
+  }
+}
+.planPending-registrations-container .status-report-container {
+  width: 85%;
+  max-height: 100%;
+  height: auto;
+  border: 2px solid #36384B;
+  margin: 5% auto;
+}
+.planPending-registrations-container .status-report-container .status-report-table-container .invoice-title p {
+  margin: 10px;
+}
+.planPending-registrations-container .status-report-container .status-report-table-container .new-planAdd-detail {
+  display: block;
+  border: 2px solid #d1d1e0;
+}
+.planPending-registrations-container .status-report-container .status-report-table-container .box-total {
+  width: auto;
+  display: flex;
+}
+.planPending-registrations-container .status-report-container .status-report-table-container .box-total p {
+  border: 2px solid #d1d1e0;
+  color: #36384B;
+  padding: 10px;
+  font-weight: 900;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .planPending-registrations-container .status-report-container {
+    width: 100%;
   }
 }
 /*Media queries */

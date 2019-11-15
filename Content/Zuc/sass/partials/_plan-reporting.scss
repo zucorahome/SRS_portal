@@ -21,7 +21,8 @@
 			.box-total{
 				width:auto;	
 				display: flex;
-
+				justify-content: center;
+				margin-bottom: 10px;
 				p{
 					border:2px solid #d1d1e0;
 					color:$grey-text;

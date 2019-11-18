@@ -876,6 +876,16 @@ p {
     width: 100%;
   }
 }
+.order-history-container {
+  width: 85%;
+  max-width: 100%;
+}
+.order-history-container .two-grid-column {
+  margin: 0 auto;
+}
+.order-history-container .two-grid-column .select-location .planRegis-form {
+  width: 90%;
+}
 /*Media queries */
 @media screen and (max-width: 768px) {
   .srs-login-container {

@@ -22,12 +22,13 @@ function openModal(className){
   }
 
 $('.addItemModal-button').bind('click',{key:'.addItem-modal'},openModal);
+
 let cross = $('.addItem-form').find('.purple-background h2');
 cross.bind('click',{key:'.addItem-modal'},closeModal);
 
 $('.addItem-save').click(function(){
-	//$('.new-planAdd-title p::before').show(700);
 	$('.new-planAdd-detail').show(1000);
+	$('.new-planAdd-title p').find('.change-icon').toggleClass('fa-plus-square fa-minus-square');
 	$('.addItem-modal').addClass('non-visible');
 	$("html, body").animate({ scrollTop: 750 }, "slow")
 
@@ -72,7 +73,6 @@ orderAddButton.bind('click',{key:'.editOrder-modal-container'},closeModal);
 // Plan reporting: pending registrations
  
 let todayDate = new Date();
-console.log(todayDate, todayDate.getMonth());
 let twoDigitMonth  = (todayDate.getMonth() >= 10) ? (todayDate.getMonth()+1) : '0'+(todayDate.getMonth()+1);
 let currentDate = twoDigitMonth + '/' + todayDate.getDate() + '/' + todayDate.getFullYear();
 let apos = '&#39;';

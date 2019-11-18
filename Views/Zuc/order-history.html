@@ -120,6 +120,46 @@
     </div>
     <!-- Main page content-->
     <section class="order-history-container">
+      <h1 class="srs-heading">Order History Report</h1>
+      <div class="two-grid-column">
+          <div class="select-location">
+            <form class="planRegis-form">
+                <div class="flex flex-row flex-vert-center">
+                  <label>Select Location (Filter):</label>
+                    <select name="search-location" style="">
+                          <option value="all" selected="">All</option>
+                          <option value="London">London</option>
+                          <option value="Alberta">Alberta</option>
+                          <option value="Calgary">Calgary</option>
+                      </select>
+                </div>
+            </form>
+          </div>
+          <div class="date-filter-box">
+            <p class="u-bold u-uppercase"><span>Effective date</span></p>
+            <form class="date-filter-form">
+             
+                <label for="from-date">
+                   <span>From</span>
+                    <div class="flex flex-row flex-vert-center">
+                      <i class="fa fa-calendar-alt"></i>
+                      <input type="text" name="inquiry-date-from" placeholder="MM/DD/YY"> 
+                  </div>
+                </label>
+              
+              <label for="from-date">
+                  <span> To</span>
+                    <div class="flex flex-row flex-vert-center">
+                      <i class="fa fa-calendar-alt"></i>
+                      <input type="text" name="inquiry-date-to" placeholder="MM/DD/YY"> 
+                  </div>
+                </label>
+
+              <div><button class="zuc-btn zuc-btn-secondary">Filter</button></div>
+
+            </form>
+          </div>
+      </div>
     </section>
     <!-- main page content ends -->
     <!-- Site Footer-->

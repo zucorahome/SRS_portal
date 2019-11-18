@@ -265,7 +265,7 @@
                   <td data-label="MGM">$29.99</td>
                   <td data-label="Status">Pending</td>
                   <td data-label="Points">0</td>
-                  <td data-label=""><i class="fa fa-trash-alt"></i></td>
+                  <td data-label=""><a href="javascript:void(0)" class="remove-planRegis"><i class="fa fa-trash-alt"></i></a></td>
                 </tr>
                 <tr>
                   <td data-label="Effective Date">09/14/19</td>
@@ -279,7 +279,7 @@
                   <td data-label="MGM">$29.99</td>
                   <td data-label="Status">Pending</td>
                   <td data-label="Points">0</td>
-                  <td data-label=""><i class="fa fa-trash-alt"></i></td>
+                  <td data-label=""><a href="javascript:void(0)" class="remove-planRegis"><i class="fa fa-trash-alt"></i></a></td>
                 </tr>
                 <tr>
                   <td data-label="Effective Date">09/14/19</td>
@@ -293,7 +293,7 @@
                   <td data-label="MGM">$29.99</td>
                   <td data-label="Status">Pending</td>
                   <td data-label="Points">0</td>
-                  <td data-label=""><i class="fa fa-trash-alt"></i></td>
+                  <td data-label=""><a href="javascript:void(0)" class="remove-planRegis"><i class="fa fa-trash-alt"></i></a></td>
                 </tr>
                 <!-- An empty data row for limeTac to add data here -->
                 <!-- <tr>
@@ -314,6 +314,21 @@
             </table>
           </div>
       </div>
+    </section>
+    <section class="popup-modals-container">
+      <div class="remove-planModal-container non-visible">
+            <div class="remove-planModal">
+               <span class="cross close-modal">X</span>
+                <h2>Caution!</h2>
+                <p>Removing Plan Registration will remove all data associated with this plan including Covered Items.</p>
+                <h3 class="purple-text">Do you wish to continue?</h3>
+                <p>**Note: Yes button should remove all the data added including in add item table and No should just close the modal not the info.</p>
+                <div class="flex flex-row flex-vert-center flex-hor-center">
+                  <a href="#/" class="zuc-btn zuc-btn-hollow" type="button">Yes</a>
+                  <a href="#/" class="zuc-btn zuc-btn-hollow close-modal" type="button">No</a>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- main page content ends -->
          <!-- Site Footer-->

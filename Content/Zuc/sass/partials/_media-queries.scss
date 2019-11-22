@@ -6,7 +6,7 @@
 		margin-top:20%;
 	}
 	.srs-heading{
-		margin-top:25%;
+		margin-top:10%;
 	}
 
 	.planRegis-form{
@@ -14,6 +14,12 @@
 
 		div{
 			justify-content: space-between;
+
+			.info-text-container{
+				width:100%;
+				top:40%;
+				left:0;
+			}
 		}
 
 		label{
@@ -197,6 +203,16 @@
 		.allPlans-container{
 			width:100%;
 		}	
+	}
+
+	.planRegis-form{
+		div{
+			.info-text-container{
+				width:100%;
+				top:40%;
+				left:0;
+			}
+		}
 	}	
 
 }

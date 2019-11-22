@@ -122,7 +122,12 @@
     <h1 class="srs-heading">Plan Registration</h1>
     <section class="plan-registration-container width-80 center">
       <div class="planRegis-form-container flex flex-column">
-        <form class="flex flex-column planRegis-form" action="mypage.php">
+
+        <form class="flex flex-column planRegis-form">
+            <div class="flex flex-row flex-vert-center formField-data-controller">
+              <div><a href="#/" class="simple-link"><i class="fas fa-paste"></i>Same as previous data</a></div>
+              <div><a href="#/" class="simple-link"><i class="fas fa-eraser"></i>Clear the Data</a></div>
+          </div>
           <div class="flex flex-row flex-vert-center">
             <label for="location">Location*:&nbsp;</label>
             <select name="store-location" required>
@@ -138,14 +143,18 @@
           </div>
           <div class="flex flex-row flex-vert-center">
             <label for="sale-date">Sale Date*:&nbsp;</label>
-            <i class="fa fa-calendar-alt"></i>
+            <!-- <i class="fa fa-calendar-alt"></i> -->
             <input type="text" required="" name="sale-date" placeholder="MM/DD/YY" value="" id="">
           </div>
           <div class="flex flex-row flex-vert-center">
             <label for="est-delivery-date">Est. Last Delivery Date*:</label>
-            <i class="fa fa-calendar-alt"></i>
+            <!-- <i class="fa fa-calendar-alt"></i> -->
             <input type="text" required="" name="sale-date" placeholder="MM/DD/YY" value="" id="">
             <i class="fa fa-info-circle info-circle"></i>
+                <div class="info-text-container">
+                  <i class="fa fa-caret-up"></i>
+                  <p class="info-text">Please indicate the last expected delivery date for the last item being delivered (examples may include Backordered or special order items). Also referred to as the “Plan Start Date”, any items delivered prior to this Estimated Last Date of Delivery will still adhere to the full Terms and Conditions of the plan purchased. This date indicates the beginning of the plan duration and will last the term set out in your Plan Agreement. </p>
+                </div>
           </div>
           <div class="flex flex-row flex-vert-center">
             <label for="associate">Associate:</label>
@@ -234,7 +243,7 @@
                     <td data-label="Unit Price">$999.99</td>
                     <td data-label="Total">$999.99</td>
                     <td data-label="Edit"><a href="javascript:void(0)" class="addItemModal-button"><i class="fa fa-pencil-alt"></i></a></td>
-                    <td data-label="Delete"><a href="javascript:void(0)" class="remove-planRegis"><i class="fa fa-trash-alt"></i></a></td>
+                    <td data-label="Delete"><a href="javascript:void(0)"><i class="fa fa-trash-alt"></i></a></td>
 
                   </tr>
                    <tr>
@@ -247,7 +256,7 @@
                     <td data-label="Unit Price">$299.99</td>
                     <td data-label="Total">$599.98</td>
                     <td data-label="Edit"><a href="javascript:void(0)" class="addItemModal-button"><i class="fa fa-pencil-alt"></i></a></td>
-                    <td data-label="Delete"><a href="javascript:void(0)" class="remove-planRegis"><i class="fa fa-trash-alt"></i></a></td>
+                    <td data-label="Delete"><a href="javascript:void(0)"><i class="fa fa-trash-alt"></i></a></td>
                   </tr>
                 </tbody>
               </table>
@@ -315,7 +324,6 @@
                 </div>
               </div>
               <div class="flex flex-vert-center flex-hor-end margin-top-1">
-                <p>**Note:"Add more"</p>
                 <div><a href="javascript:void(0)" class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow margin-10">Add more</a></div>
                 <div><button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow addItem-save" type="submit">Save</button></div>
               </div>
@@ -340,7 +348,6 @@
               <h2>Caution!</h2>
               <p>Removing Plan Registration will remove all data associated with this plan including Covered Items.</p>
               <h3 class="purple-text">Do you wish to continue?</h3>
-              <p>**Note: Yes button should remove all the data added including in add item table and No should just close the modal not the info.</p>
               <div class="flex flex-row flex-vert-center flex-hor-center">
                 <a href="#/" class="zuc-btn zuc-btn-hollow" type="button">Yes</a>
                 <a href="#/" class="zuc-btn zuc-btn-hollow close-modal" type="button">No</a>

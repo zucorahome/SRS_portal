@@ -22,13 +22,35 @@
 				margin-right: 10px;
 				
 			}
+		}
 
-			.info-circle{
+		.info-circle{
 				color:#70E9B2;
 				margin-left:10px;
 				cursor: pointer;
 			}
-		}
+			.info-text-container{
+				display: none;
+				position: absolute;
+				background-color: #E2FBF0;
+				padding:10px 15px;
+				top:40%;
+				left:80%;
+				width:30%;
+				z-index: 1000;
+				p{
+					font-size:13px;
+					color:$grey-text;
+				}
+
+				i{
+					position: absolute;
+					color: #E2FBF0;
+					left:50%;
+					top:-30px;
+					font-size:3em;
+				}
+			}
 
 		.twoInput-fields 
 		{
@@ -53,6 +75,13 @@
 
 		input{
 				@extend %input;
+			}
+
+			.formField-data-controller{
+				width: 100%;
+			    display: flex;
+			    justify-content: space-around;
+			    margin: 0 auto;
 			}
 	}
 
@@ -145,6 +174,7 @@
 	}
 }
 .planRegis-controls{
+	visibility: hidden;
 	display: flex;
 	width:80%;
 	margin: 0 auto;

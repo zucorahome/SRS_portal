@@ -4,13 +4,19 @@ $(document).ready(function(){
 $('.addPlanButton').click(function(){
 	$('.plan-registration-box').show(1000);
 	$(this).css("background","#D9D8D6");
-	$("html, body").animate({ scrollTop: 640 }, "slow")
+	$("html, body").animate({ scrollTop: 640 }, "slow");
+	$('.planRegis-controls').css("visibility","visible");
 })
 
 
 $('.new-planAdd-title p').click(function(){
 	$('.new-planAdd-detail').toggle(1000);
 	$(this).find('.change-icon').toggleClass('fa-plus-square fa-minus-square');
+});
+
+// Info circle
+$('.info-circle').click(function(){
+	$('.info-text-container').toggle(500);
 });
 
 function openModal(className){
@@ -28,7 +34,8 @@ cross.bind('click',{key:'.addItem-modal'},closeModal);
 
 $('.addItem-save').click(function(){
 	$('.new-planAdd-detail').show(1000);
-	$('.new-planAdd-title p').find('.change-icon').toggleClass('fa-plus-square fa-minus-square');
+	$('.new-planAdd-title p').find('.change-icon').removeClass('fa-plus-square');
+	$('.new-planAdd-title p').find('.change-icon').addClass('fa-minus-square');
 	$('.addItem-modal').addClass('non-visible');
 	$("html, body").animate({ scrollTop: 750 }, "slow")
 

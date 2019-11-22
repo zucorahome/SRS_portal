@@ -195,10 +195,31 @@ p {
   color: #434DA0;
   margin-right: 10px;
 }
-.planRegis-form div .info-circle {
+.planRegis-form .info-circle {
   color: #70E9B2;
   margin-left: 10px;
   cursor: pointer;
+}
+.planRegis-form .info-text-container {
+  display: none;
+  position: absolute;
+  background-color: #E2FBF0;
+  padding: 10px 15px;
+  top: 40%;
+  left: 80%;
+  width: 30%;
+  z-index: 1000;
+}
+.planRegis-form .info-text-container p {
+  font-size: 13px;
+  color: #36384B;
+}
+.planRegis-form .info-text-container i {
+  position: absolute;
+  color: #E2FBF0;
+  left: 50%;
+  top: -30px;
+  font-size: 3em;
 }
 .planRegis-form .twoInput-fields input {
   width: 33%;
@@ -209,6 +230,13 @@ p {
 .planRegis-form select {
   margin-bottom: 0;
 }
+.planRegis-form .formField-data-controller {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
 .plan-registration-box {
   height: auto;
   border: 2px solid #36384B;
@@ -291,6 +319,7 @@ p {
 }
 
 .planRegis-controls {
+  visibility: hidden;
   display: flex;
   width: 80%;
   margin: 0 auto;
@@ -945,6 +974,9 @@ p {
   .order-history-container .filter-box .planRegis-form {
     grid-template-columns: auto;
   }
+  .order-history-container .filter-box .planRegis-form .select-location {
+    margin: 1em 0;
+  }
 }
 /*Media queries */
 @media screen and (max-width: 768px) {
@@ -954,7 +986,7 @@ p {
   }
 
   .srs-heading {
-    margin-top: 25%;
+    margin-top: 10%;
   }
 
   .planRegis-form {
@@ -962,6 +994,11 @@ p {
   }
   .planRegis-form div {
     justify-content: space-between;
+  }
+  .planRegis-form div .info-text-container {
+    width: 100%;
+    top: 40%;
+    left: 0;
   }
   .planRegis-form label {
     text-align: left;
@@ -1101,6 +1138,12 @@ p {
   }
   .plan-inquiry-container .allPlans-container {
     width: 100%;
+  }
+
+  .planRegis-form div .info-text-container {
+    width: 100%;
+    top: 40%;
+    left: 0;
   }
 }
 

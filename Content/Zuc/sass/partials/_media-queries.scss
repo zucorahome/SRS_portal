@@ -11,6 +11,15 @@
 
 	.planRegis-form{
 		width:90%;
+
+		div{
+			justify-content: space-between;
+		}
+
+		label{
+			text-align: left;
+			margin-right: 10px;
+		}
 	}
 
 	.new-planAdd-detail{

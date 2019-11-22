@@ -112,7 +112,7 @@ p {
   font-weight: 700;
   color: #434DA0;
   font-size: 3.2em;
-  margin-top: 5%;
+  margin-top: 7%;
   text-align: center;
   margin-bottom: 1%;
 }
@@ -132,7 +132,7 @@ p {
 
 /*Header*/
 .srs-nav-container .zuc-main-nav {
-  /*padding:1em 8%;*/
+  padding: 1em 8%;
 }
 
 /* Login screen*/
@@ -194,6 +194,11 @@ p {
   font-size: 2em;
   color: #434DA0;
   margin-right: 10px;
+}
+.planRegis-form div .info-circle {
+  color: #70E9B2;
+  margin-left: 10px;
+  cursor: pointer;
 }
 .planRegis-form .twoInput-fields input {
   width: 33%;
@@ -879,12 +884,67 @@ p {
 .order-history-container {
   width: 85%;
   max-width: 100%;
+  margin: 0 auto;
+  /*order-history-table*/
 }
-.order-history-container .two-grid-column {
+.order-history-container .filter-box {
+  border: 2px solid #36384B;
+  height: auto;
+  width: 65%;
+  margin: 3em auto;
+}
+.order-history-container .filter-box .planRegis-form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 40% 40% 20%;
+  padding: 10px;
+  align-items: center;
+}
+.order-history-container .filter-box .planRegis-form div {
+  justify-content: center;
+}
+.order-history-container .filter-box .planRegis-form .date-filter {
+  display: flex;
+  flex-direction: column;
+}
+.order-history-container .filter-box .planRegis-form .date-filter div:nth-child(1) p {
+  width: 90%;
+  text-align: center;
+  border-bottom: 1px dashed #36384B;
+  line-height: 0.1px;
   margin: 0 auto;
 }
-.order-history-container .two-grid-column .select-location .planRegis-form {
-  width: 90%;
+.order-history-container .filter-box .planRegis-form .date-filter div:nth-child(1) p span {
+  background: #fff;
+  padding: 0 5px;
+}
+.order-history-container .filter-box .planRegis-form label {
+  text-align: center;
+}
+.order-history-container .filter-box .planRegis-form .select-location {
+  width: 100%;
+  padding: 0 10px;
+}
+.order-history-container .order-history-table-container {
+  width: 100%;
+  margin: 3em auto;
+  border: 2px solid #36384B;
+}
+.order-history-container .order-history-table-container .new-planAdd-detail {
+  display: block;
+  border: 2px solid #d3d3df;
+}
+
+@media screen and (max-width: 768px) {
+  .order-history-container {
+    width: 100%;
+  }
+  .order-history-container .filter-box {
+    width: 100%;
+  }
+  .order-history-container .filter-box .planRegis-form {
+    grid-template-columns: auto;
+  }
 }
 /*Media queries */
 @media screen and (max-width: 768px) {
@@ -899,6 +959,13 @@ p {
 
   .planRegis-form {
     width: 90%;
+  }
+  .planRegis-form div {
+    justify-content: space-between;
+  }
+  .planRegis-form label {
+    text-align: left;
+    margin-right: 10px;
   }
 
   .new-planAdd-detail {

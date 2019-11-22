@@ -29,7 +29,7 @@
       <!-- Main Navigation-->
       <nav class="zuc-main-nav flex flex-hor-start flex-hor-between flex-vert-center u-uppercase" data-main-navigation>
         <!-- Nav Branding-->
-        <a class="zuc-nav-brand" href="srs-login.html"><img src="../../Images/Zuc/images/SRS-logo-white.png"></a>
+        <a class="zuc-nav-brand" href="srs-login.html"><img src="../../Images/Zuc/images/ZucoraHome-brand-white.svg"></a>
         <!-- Nav Links-->
         <div class="zuc-nav-links flex flex-hor-end flex-hor-between flex-no-wrap flex-vert-center">
           <!-- First -->
@@ -38,7 +38,7 @@
                 <div class="zuc-dropdown-content flex flex-hor-between flex-vert-stretch">
                   <!-- Dropdown links -->
                   <div class="zuc-dropdown-column">
-                    <a href="plan-registration.html" title="Plan Registration" aria-role="menu-item">Plans</a>
+                    <a href="plan-registration.html" title="Plan Registration" aria-role="menu-item">Plan Registration</a>
                     <a href="plan-inquiry.html" title="Plan Registration Inquiry" aria-role="menu-item">Plan Inquiry</a>
                     <a href="plan-cancelation.html" title="Plan Cancelation" aria-role="menu-item">Cancel Plan</a>
                     <a href="plan-pending-registrations.html" title="Plan Reporting(Pending Registrations)" aria-role="menu-item">Plan Reporting</a>
@@ -121,31 +121,22 @@
     <!-- Main page content-->
     <section class="order-history-container">
       <h1 class="srs-heading">Order History Report</h1>
-      <div class="two-grid-column">
-          <div class="select-location">
-            <form class="planRegis-form">
-                <div class="flex flex-row flex-vert-center">
-                  <label>Select Location (Filter):</label>
-                    <select name="search-location" style="">
-                          <option value="all" selected="">All</option>
-                          <option value="London">London</option>
-                          <option value="Alberta">Alberta</option>
-                          <option value="Calgary">Calgary</option>
-                      </select>
-                </div>
-            </form>
-          </div>
-          <div class="date-filter-box">
-            <p class="u-bold u-uppercase"><span>Effective date</span></p>
-            <form class="date-filter-form">
-             
-                <label for="from-date">
+
+      <div class="filter-box">
+        <form class="planRegis-form">
+          <div class="date-filter">
+            <div>
+              <p class="u-bold u-uppercase"><span>Order date</span></p>
+            </div>
+
+            <div class="flex flex-row flex-vert-center">
+             <label for="from-date">
                    <span>From</span>
                     <div class="flex flex-row flex-vert-center">
                       <i class="fa fa-calendar-alt"></i>
                       <input type="text" name="inquiry-date-from" placeholder="MM/DD/YY"> 
                   </div>
-                </label>
+              </label>
               
               <label for="from-date">
                   <span> To</span>
@@ -153,13 +144,84 @@
                       <i class="fa fa-calendar-alt"></i>
                       <input type="text" name="inquiry-date-to" placeholder="MM/DD/YY"> 
                   </div>
-                </label>
-
-              <div><button class="zuc-btn zuc-btn-secondary">Filter</button></div>
-
-            </form>
+              </label>
+            </div>
           </div>
+          <div class="flex flex-row flex-vert-center select-location">
+              <label>Select Location:</label>
+                <select name="search-retailer" style="">
+                      <option value="" selected="">All</option>
+                      <option value="Buyer">XYZ</option>
+                      <option value="Manager">ABC</option>
+                      <option value="Associate">EFG</option>
+                </select>
+          </div>
+          <div class="flex flex-hor-center">
+            <button class="zuc-btn zuc-btn-secondary">Filter</button>
+          </div>
+        </form>
       </div>
+     <div class="order-history-table-container">
+        <div class="purple-background">
+          <h2>Orders</h2>
+        </div>
+        <div class="new-planAdd-detail orders-history-table">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Order Date<a href="#/"><i class="fa fa-chevron-up"></i></a></th>
+                <th scope="col">Location</th>
+                <th scope="col">Order ID</th>
+                <th scope="col">PO Ref</th>
+                <th scope="col">Tracking #</th>
+                <th scope="col">Order Value</th>
+                <th scope="col">Ship Via</th>
+                <th scope="col">Freight</th>
+                <th scope="col">Tax</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Order Date">09/10/19</td>
+                <td data-label="Location">Westmall</td>
+                <td data-label="Order ID">ZH123456</td>
+                <td data-label="PO Ref">BPO3456</td>
+                <td data-label="Tracking #">1234556788995</td>
+                <td data-label="Order Value">$1,345.99</td>
+                <td data-label="Ship Via">0000000000</td>
+                <td data-label="Freight">$135.56</td>
+                <td data-label="Tax">$215.61</td>
+                <td data-label="Total">$1,697.16</td>
+              </tr>
+              <tr>
+                <td data-label="Order Date">09/10/19</td>
+                <td data-label="Location">Westmall</td>
+                <td data-label="Order ID">ZH123456</td>
+                <td data-label="PO Ref">BPO3456</td>
+                <td data-label="Tracking #">1234556788995</td>
+                <td data-label="Order Value">$1,345.99</td>
+                <td data-label="Ship Via">0000000000</td>
+                <td data-label="Freight">$135.56</td>
+                <td data-label="Tax">$215.61</td>
+                <td data-label="Total">$1,697.16</td>
+              </tr>
+              <tr>
+                <td data-label="Order Date">09/10/19</td>
+                <td data-label="Location">Westmall</td>
+                <td data-label="Order ID">ZH123456</td>
+                <td data-label="PO Ref">BPO3456</td>
+                <td data-label="Tracking #">1234556788995</td>
+                <td data-label="Order Value">$1,345.99</td>
+                <td data-label="Ship Via">0000000000</td>
+                <td data-label="Freight">$135.56</td>
+                <td data-label="Tax">$215.61</td>
+                <td data-label="Total">$1,697.16</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+     </div>
     </section>
     <!-- main page content ends -->
     <!-- Site Footer-->

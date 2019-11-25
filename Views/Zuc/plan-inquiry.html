@@ -124,76 +124,77 @@
       <div class="two-grid-column search-container">
         <!-- first div -->
         <div class="manual-search-container">
-          <div class="date-filter-box">
-            <p class="u-bold u-uppercase"><span>Effective date</span></p>
-            <form class="date-filter-form">
-             
-                <label for="from-date">
-                   <span>From</span>
-                    <div class="flex flex-row flex-vert-center">
-                      <i class="fa fa-calendar-alt"></i>
-                      <input type="text" name="inquiry-date-from" placeholder="MM/DD/YY"> 
-                  </div>
-                </label>
-              
-              <label for="from-date">
-                  <span> To</span>
-                    <div class="flex flex-row flex-vert-center">
-                      <i class="fa fa-calendar-alt"></i>
-                      <input type="text" name="inquiry-date-to" placeholder="MM/DD/YY"> 
-                  </div>
-                </label>
 
-              <div><button class="zuc-btn zuc-btn-secondary">Filter</button></div>
+          <div class="inquiry-date-filter">
+            <div class="dotted-line-text width-80">
+              <p class="u-bold u-uppercase"><span>Effective date</span></p>
+            </div>
+            <form class="">
+              <div class="flex flex-row flex-vert-center width-80 flex-hor-center">
+                 <label for="from-date">
+                       <span>From</span>
+                        <div class="flex flex-row flex-vert-center">
+                          <i class="fa fa-calendar-alt"></i>
+                          <input type="text" name="inquiry-date-from" placeholder="MM/DD/YY"> 
+                      </div>
+                  </label>
+                  
+                  <label for="from-date">
+                      <span> To</span>
+                        <div class="flex flex-row flex-vert-center">
+                          <i class="fa fa-calendar-alt"></i>
+                          <input type="text" name="inquiry-date-to" placeholder="MM/DD/YY"> 
+                      </div>
+                  </label>
+              </div>
+              <div class="filter-param-box">
+                    <div>
+                      <p class="u-bold">Select Plan (Filter):</p>
+                        <div class="filter-box">
+                          <a href="#"><p class="u-uppercase selected">All</p></a>
+                          <p>Submitted</p>
+                          <p>Pending</p>
+                          <p>Registered</p>
+                          <p>Canceled</p>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="u-bold">Select Location (Filter):</p>
+                        <div class="filter-box">
+                          <p class="u-uppercase selected">All</p>
+                          <p>Westmall</p>
+                          <p>Sunnyridge</p>
+                      </div>
+                    </div>
+                    <div>
+                      <p class="u-bold">Select Associate (Filter):</p>
+                        <div class="filter-box">
+                          <p class="u-uppercase selected">All</p>
+                          <p>Bob Doe</p>
+                          <p>Gary Tip</p>
+                          <p>Ken Sandler</p>
+                          <p>First last name</p>
+                          <p>First last name</p>
+                          <!-- <p>First last name</p> -->
+                      </div>
+                    </div>
+                </div>
+               <div class="flex flex-hor-end">
+                <button class="zuc-btn zuc-btn-secondary" style="margin:10px;">Filter</button>
+              </div>
 
             </form>
           </div>
-          <div class="filter-param-box">
-            <div>
-              <p class="u-bold">Select Plan (Filter):</p>
-                <div class="filter-box">
-                  <a href="#"><p class="u-uppercase selected">All</p></a>
-                  <p>Submitted</p>
-                  <p>Pending</p>
-                  <p>Registered</p>
-                  <p>Canceled</p>
-              </div>
-            </div>
-            <div>
-              <p class="u-bold">Select Location (Filter):</p>
-                <div class="filter-box">
-                  <p class="u-uppercase selected">All</p>
-                  <p>Westmall</p>
-                  <p>Sunnyridge</p>
-              </div>
-            </div>
-            <div>
-              <p class="u-bold">Select Associate (Filter):</p>
-                <div class="filter-box">
-                  <p class="u-uppercase selected">All</p>
-                  <p>Bob Doe</p>
-                  <p>Gary Tip</p>
-                  <p>Ken Sandler</p>
-              </div>
-            </div>
-          </div>
+
         </div>
         <!-- 2nd div -->
         <div class="advance-search-container">
           <div class="advance-search-form">
             <div class="purple-background">
-              <h2>Advanced Search</h2>
+              <h2>Plan Search</h2>
             </div>
             <form class="planRegis-form">
-               <div class="flex flex-row flex-vert-center">
-                  <label>Retailer:</label>
-                    <select name="search-retailer" style="">
-                          <option value="" selected="">Select Retailer</option>
-                          <option value="Buyer">XYZ</option>
-                          <option value="Manager">ABC</option>
-                          <option value="Associate">EFG</option>
-                      </select>
-                </div>
+               
                 <div class="flex flex-row flex-vert-center">
                   <label for="first-name">First Name:</label>
                   <input type="text" name="search-first-name" value="" class="" required="" placeholder="First name">
@@ -203,21 +204,19 @@
                   <input type="text" name="search-last-name" value="" class="" required="" placeholder="Last Name">
                 </div>
                 <div class="flex flex-row flex-vert-center">
-                  <label for="search-streetName">Street Name:</label>
-                  <input type="text" name="search-streetName" value="" class="" required="" placeholder="Street Name">
+                  <label for="search-email">Email:</label>
+                  <input type="text" name="search-email" value="" class="" required="" placeholder="Email Address">
                 </div>
                 <div class="flex flex-row flex-vert-center">
-                  <label for="search-city">City:</label>
-                  <input type="text" name="search-city" vaCitylue="" class="" required="" placeholder="Contact First Name">
+                  <label for="search-phone">Phone:</label>
+                  <input type="text" name="search-phone" value="" class="" required="" placeholder="Phone Number">
                 </div>
                 <div class="flex flex-row flex-vert-center">
-                  <label for="search-postalCode">Postal Code:</label>
-                  <input type="text" name="search-postalCode" vaCitylue="" class="" required="" placeholder="Contact First Name">
+                  <label for="search-orderNum">Order/Inv #:</label>
+                  <input type="text" name="search-orderNum" value="" class="" required="" placeholder="Order/In #">
                 </div>
                 <div class="flex flex-row flex-vert-center">
-                  <a href="#/" class="zuc-btn zuc-btn-secondary" type="submit">Save</a>
-
-                  <a href="#/" class="simple-link">Cancel</a>
+                  <a href="#/" class="zuc-btn zuc-btn-secondary" type="submit">Search</a>
                 </div>
             </form>
           </div>
@@ -230,9 +229,9 @@
               <h2>Protection Plans</h2>
           </div>
           <div class="flex flex-row flex-vert-center title">
-              <p class="u-bold">Plan Status: Filter paramerter selected</p>
-              <p class="u-bold">Location: By default it will be ALL</p>
-              <p class="u-bold">Associate: ALL</p>
+              <p class="u-bold">Plan Status: ALL</p>
+              <p class="u-bold">Location: ALL</p>
+              <!-- <p class="u-bold">Associate: ALL</p> -->
           </div>
           <div class="new-planAdd-detail allPlans-table">
             <table>
@@ -246,9 +245,10 @@
                   <th scope="col">SKU</th>
                   <th scope="col">Plan Price</th>
                   <th scope="col">Plan Cost</th>
-                  <th scope="col">MGM</th>
+                  <th scope="col">Margin</th>
                   <th scope="col">Status</th>
                   <th scope="col">Points</th>
+                  <th scope="col"></th>
                   <th scope="col"></th>
                 </tr>
               </thead>
@@ -262,10 +262,11 @@
                   <td data-label="SKU">ZC$500-$999</td>
                   <td data-label="Plan Price">$49.99</td>
                   <td data-label="Plan Cost">$20.00</td>
-                  <td data-label="MGM">$29.99</td>
+                  <td data-label="Margin">$29.99</td>
                   <td data-label="Status">Pending</td>
                   <td data-label="Points">0</td>
-                  <td data-label=""><a href="javascript:void(0)" class="remove-planRegis"><i class="fa fa-trash-alt"></i></a></td>
+                  <td data-label="Edit"><a href="javascript:void(0)" class="addItemModal-button"><i class="fa fa-pencil-alt"></i></a></td>
+                  <td data-label="Delete"><a href="javascript:void(0)" class="openCancelation-container"><i class="fa fa-trash-alt"></i></a></td>
                 </tr>
                 <tr>
                   <td data-label="Effective Date">09/14/19</td>
@@ -276,10 +277,11 @@
                   <td data-label="SKU">ZC$500-$999</td>
                   <td data-label="Plan Price">$49.99</td>
                   <td data-label="Plan Cost">$20.00</td>
-                  <td data-label="MGM">$29.99</td>
+                  <td data-label="Margin">$29.99</td>
                   <td data-label="Status">Pending</td>
                   <td data-label="Points">0</td>
-                  <td data-label=""><a href="javascript:void(0)" class="remove-planRegis"><i class="fa fa-trash-alt"></i></a></td>
+                  <td data-label="Edit"><a href="javascript:void(0)" class="addItemModal-button"><i class="fa fa-pencil-alt"></i></a></td>
+                  <td data-label="Delete"><a href="javascript:void(0)" class="openCancelation-container"><i class="fa fa-trash-alt"></i></a></td>
                 </tr>
                 <tr>
                   <td data-label="Effective Date">09/14/19</td>
@@ -290,10 +292,11 @@
                   <td data-label="SKU">ZC$500-$999</td>
                   <td data-label="Plan Price">$49.99</td>
                   <td data-label="Plan Cost">$20.00</td>
-                  <td data-label="MGM">$29.99</td>
-                  <td data-label="Status">Pending</td>
+                  <td data-label="Margin">$29.99</td>
+                  <td data-label="Status">Registered</td>
                   <td data-label="Points">0</td>
-                  <td data-label=""><a href="javascript:void(0)" class="remove-planRegis"><i class="fa fa-trash-alt"></i></a></td>
+                  <td data-label="Edit"><i class="fa fa-pencil-alt" style="visibility: hidden;"></i></td>
+                  <td data-label="Delete"><a href="javascript:void(0)" class="openCancelation-container"><i class="fa fa-trash-alt"></i></a></td>
                 </tr>
                 <!-- An empty data row for limeTac to add data here -->
                 <!-- <tr>
@@ -316,18 +319,206 @@
       </div>
     </section>
     <section class="popup-modals-container">
-      <div class="remove-planModal-container non-visible">
-            <div class="remove-planModal">
-               <span class="cross close-modal">X</span>
-                <h2>Caution!</h2>
-                <p>Removing Plan Registration will remove all data associated with this plan including Covered Items.</p>
-                <h3 class="purple-text">Do you wish to continue?</h3>
-                <p>**Note: Yes button should remove all the data added including in add item table and No should just close the modal not the info.</p>
-                <div class="flex flex-row flex-vert-center flex-hor-center">
-                  <a href="#/" class="zuc-btn zuc-btn-hollow" type="button">Yes</a>
-                  <a href="#/" class="zuc-btn zuc-btn-hollow close-modal" type="button">No</a>
-                </div>
+      <div class="cancelation-modal non-visible">
+        <div class="plan-cancelation-container">
+           <span class="cross close-modal">X</span>
+            <h1 class="srs-heading">Cancel Plan Registration</h1>
+
+              <div class="plan-cancelation">
+                  <!-- Left side div -->
+                  <div class="plan-search-field">
+                    <form class="search-form">
+                      <label for="search" class="profileBox-heading">Profile Registration ID:</label>
+                      <div class="flex flex-vert-end flex-hor-center">
+                        <input type="text" placeholder="Search.." name="cancelPlan-search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                      </div>
+                    </form>
+                    <!-- search params -->
+                    <div class="search-param-result margin-top-1">
+                      <h3 class="profileBox-heading">Plan Details:</h3>
+                      
+                       <div class="flex">
+                          <div class="flex-column" style="margin-right:2vw">
+                            <p class="u-bold" scope="col">Status:</p>
+                            <p class="u-bold" scope="col">Location:</p>
+                            <p class="u-bold" scope="col">Ord/Inv Ref:</p>
+                            <p class="u-bold" scope="col">Sale Date:</p>
+                            <p class="u-bold" scope="col">Est. Delivery:</p>
+                            <p class="u-bold" scope="col">Advisor:</p>
+                            <p class="u-bold" scope="col">Customer:</p>
+                            <p class="u-bold" scope="col">Phone:</p>
+                            <p class="u-bold" scope="col">Email:</p>
+                            <p class="u-bold" scope="col">Plan Type:</p>
+                            <p class="u-bold" scope="col">Plan ID:</p>
+                            <p class="u-bold" scope="col">Plan Price:</p>
+
+                          </div>
+                          <div class="flex-column">
+                            <p>Pending</p>
+                            <p>Westmall</p>
+                            <p>BB17098</p>
+                            <p>07/08/19</p>
+                            <p>12/08/19</p>
+                            <p>Bob Doe</p>
+                            <p>John Wagner</p>
+                            <p>519-896-7979</p>
+                            <p>customer@emailAddress.com</p>
+                            <p>Furniture</p>
+                            <p>ZC$1299-1599</p>
+                            <p>$199.99</p>
+
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!-- right side div -->
+                  <div class="reason-container">
+                    <h3 class="profileBox-heading">Reasons for Cancelation:</h3>
+                    <textarea name="paragraph_text" cols="50" rows="10" placeholder="Customer decided they could not wait for special order Sofa and Chair."></textarea>
+                  </div>
+                <!-- Main div Plan cancelation ends -->
+              </div>
+              <div class="search-plan-details">
+                <div class="plan-registration-box center">
+                  <div class="purple-background">
+                    <h2>Plans and Covered Items</h2>
+                  </div>
+                  <div class="new-planAdd">
+                  <div class="new-planAdd-title flex flex-row flex-vert-center flex-hor-between">
+                    <p><i class="far fa-plus-square change-icon"></i><span>Zucora Complete - Furniture ($1499 - $1999)</span> - Price: $199.99 Registration Number  Registration Number: ZH123456</p>
+                  </div>
+                  <div class="new-planAdd-detail">
+                    <table class="">
+                      <thead>
+                        <tr>
+                          <th scope="col" style="width:7%;">Item</th>
+                          <th scope="col" style="width:5%;">QTY</th>
+                          <th scope="col">Description</th>
+                          <th scope="col">SKU Number</th>
+                          <th scope="col">Brand/Model</th>
+                          <th scope="col">Serial NBR</th>
+                          <th scope="col">Unit Price</th>
+                          <th scope="col">Total</th>
+                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td data-label="Item">Sofa</td>
+                          <td data-label="QTY">1</td>
+                          <td data-label="Description">Reynolds Grey</td>
+                          <td data-label="SKU Number">731465289</td>
+                          <td data-label="Brand/Model">Reynolds</td>
+                          <td data-label="Serial NBR">STR23456790</td>
+                          <td data-label="Unit Price">$999.99</td>
+                          <td data-label="Total">$999.99</td>
+                          
+
+                        </tr>
+                         <tr>
+                          <td scope="row" data-label="Item">Chair</td>
+                          <td data-label="QTY">1</td>
+                          <td data-label="Description">Reynolds Grey</td>
+                          <td data-label="SKU Number">731465898</td>
+                          <td data-label="Brand/Model">Reynolds</td>
+                          <td data-label="Serial NBR">XYZ123456779</td>
+                          <td data-label="Unit Price">$299.99</td>
+                          <td data-label="Total">$599.98</td>
+                          
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div> <!--new-planAdd ends -->
+            </div><!--Plan-registration-box ends -->
+          </div>
+          <div class="flex-hor-center flex-vert-center margin-top-1 width-80 center margin-bottom-2" style="display: flex;">
+                <p class="warning-text">This plan cannot be cancelled due to a claim being processed by the customer under this plan. Please contact registrations@zucorahome.com for more information.</p>
+                <button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow cancelPlan-Button" type="submit">Cancel plan</button>
+              </div>
+
+
+        </div>
+      </div>
+    <!-- Plan registration modal -->
+            <div class="addItem-modal non-visible">
+          <!-- AddItem form modal  starts-->
+          <div class="addItem-form">
+            <div class="purple-background">
+              <h2>Covered Item(s)</h2>
             </div>
+            <form class="flex flex-column planRegis-form">
+              <div class="flex flex-row flex-vert-center">
+                <label>Equipment Type:</label>
+                  <select name="product-type" required>
+                    <option value="">[Furniture, Appliances, Adjustable Base]</option>
+                    <option value="Furniture">Furniture</option>                    
+                    <option value="Appliances">Appliances</option>
+                    <option value="Adjustable Base">Adjustable Base</option>
+                  </select>
+              </div>
+              <div class="flex flex-row flex-vert-center grey-field">
+                <label>Product Type:</label>
+                  <select name="product-type" required>
+                    <option value="">Product Type</option>
+                    <option value="xyz">XYZ</option>                    
+                    <option value="123">123</option>
+                    <option value="loreum ipsum">Loreum Ipsum</option>
+                  </select>
+              </div>
+               <div class="flex flex-row flex-vert-center">
+                <label>Classification:</label>
+                  <input type="text" name="classification" value="" placeholder="Text here" required>
+              </div>
+               <div class="flex flex-row flex-vert-center">
+                <label>Description:</label>
+                  <input type="text" name="description" value="" placeholder="e.g. Sofa, Chair, Lovesear (Optional)" required>
+              </div>
+               <div class="flex flex-row flex-vert-center">
+                <label>SKU Number:</label>
+                  <input type="text" name="sku-number" value="" placeholder="SKU Number (Optional)" required="">
+              </div>
+               <div class="flex flex-row flex-vert-center">
+                <label>Manufacturer:</label>
+                  <input type="text" name="planRegist-manufacturer" value="" placeholder="Manufacturer" required="">
+              </div>
+               <div class="flex flex-row flex-vert-center">
+                <label>Serial Number:</label>
+                  <input type="text" name="serial-number" value="" placeholder="Serial Number (Optional)" required="">
+              </div>
+              <div class="flex flex-row flex-vert-center mobile-column">
+                <div class="flex flex-row flex-vert-center addItem-quantity">
+                  <div class="label">Quantity:</div>
+                  <input type="button" value="-" class="button-minus" data-field="quantity">
+                  <input type="text" name="quantity" value="1" class="quantity-input">
+                  <input type="button" value="+" class="button-plus" data-field="quantity">
+                </div>
+
+                <div class="flex flex-row flex-vert-center addItem-PPI">
+                  <label>Price per item:</label>
+                  <input type="text" name="pricePer-item" value=""placeholder="$" required="">
+                </div>
+              </div>
+              <div class="flex flex-vert-center flex-hor-end margin-top-1">
+                <div><a href="javascript:void(0)" class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow margin-10">Add more</a></div>
+                <div><button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow addItem-save" type="submit">Save</button></div>
+              </div>
+            </form>
+          </div>
+        <!-- AddItem form ends -->
+        </div>
+       <div class="cancel-caution-container remove-planModal-container non-visible">
+          <div class="cancel-caution remove-planModal">
+             <span class="cross close-modal">X</span>
+              <h2>Caution!</h2>
+              <p>Plan Registration will be cancelled. A cancellation confirmation will be emailed to the customer. Any invoices or adjustments will be reflected on the next billing cycle.</p>
+              <h3 class="purple-text u-bold">Do you wish to continue?</h3>
+              <div class="flex flex-row flex-vert-center flex-hor-center">
+                <a href="#/" class="zuc-btn zuc-btn-hollow close-modal" type="button">Yes</a>
+                <a href="#/" class="zuc-btn zuc-btn-hollow close-modal" type="button">No</a>
+              </div>
+          </div>
         </div>
     </section>
     <!-- main page content ends -->

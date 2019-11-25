@@ -60,3 +60,22 @@
 	padding:1em 8%;
 }
 
+.dotted-line-text{
+      			
+	p{
+		width: 100%; 
+         text-align: center; 
+         border-bottom: 1px dashed $grey-text; 
+         line-height: 0.1em;
+         margin: 20px 0 20px; 
+        
+        span{
+          background:#fff; 
+          padding:0 10px; 
+        }
+	}
+}
+
+.warning-text{
+			color:red;
+		}

@@ -281,13 +281,21 @@
             </div>
             <form class="flex flex-column planRegis-form">
               <div class="flex flex-row flex-vert-center">
-                <label>Product Type:</label>
+                <label>Equipment Type:</label>
                   <select name="product-type" required>
-                    <option value="">Choose product type</option>
+                    <option value="">[Furniture, Appliances, Adjustable Base]</option>
                     <option value="Furniture">Furniture</option>                    
                     <option value="Appliances">Appliances</option>
                     <option value="Adjustable Base">Adjustable Base</option>
-
+                  </select>
+              </div>
+              <div class="flex flex-row flex-vert-center grey-field">
+                <label>Product Type:</label>
+                  <select name="product-type" required>
+                    <option value="">Product Type</option>
+                    <option value="xyz">XYZ</option>                    
+                    <option value="123">123</option>
+                    <option value="loreum ipsum">Loreum Ipsum</option>
                   </select>
               </div>
                <div class="flex flex-row flex-vert-center">
@@ -303,8 +311,8 @@
                   <input type="text" name="sku-number" value="" placeholder="SKU Number (Optional)" required="">
               </div>
                <div class="flex flex-row flex-vert-center">
-                <label>Brand/Model:</label>
-                  <input type="text" name="brand-model" value="" placeholder="Brand/Model (Optional)" required="">
+                <label>Manufacturer:</label>
+                  <input type="text" name="planRegist-manufacturer" value="" placeholder="Manufacturer" required="">
               </div>
                <div class="flex flex-row flex-vert-center">
                 <label>Serial Number:</label>
@@ -347,7 +355,7 @@
              <span class="cross close-modal">X</span>
               <h2>Caution!</h2>
               <p>Removing Plan Registration will remove all data associated with this plan including Covered Items.</p>
-              <h3 class="purple-text">Do you wish to continue?</h3>
+              <h3 class="purple-text u-bold">Do you wish to continue?</h3>
               <div class="flex flex-row flex-vert-center flex-hor-center">
                 <a href="#/" class="zuc-btn zuc-btn-hollow" type="button">Yes</a>
                 <a href="#/" class="zuc-btn zuc-btn-hollow close-modal" type="button">No</a>

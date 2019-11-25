@@ -10,7 +10,7 @@ $('.addPlanButton').click(function(){
 
 
 $('.new-planAdd-title p').click(function(){
-	$('.new-planAdd-detail').toggle(1000);
+	$('.new-planAdd').find('.new-planAdd-detail').toggle(1000);
 	$(this).find('.change-icon').toggleClass('fa-plus-square fa-minus-square');
 });
 
@@ -54,7 +54,7 @@ $('.remove-planModal').find('.close-modal').bind('click',{key:'.remove-planModal
 
 // Retailer Profile screen function for opening shipping location modal and closing
 $('.location-form-button').bind('click',{key:'.shipping-locations-modal'},openModal);
-//editing the shiiping location data. the form should populate with entered data
+//editing the shipping location data. the form should populate with entered data
 $('.shipping-location-edit').bind('click',{key:'.shipping-locations-modal'},openModal);
 
 let shippingCross = $('.shipping-locations-form').find('.purple-background h2');
@@ -84,5 +84,25 @@ let twoDigitMonth  = (todayDate.getMonth() >= 10) ? (todayDate.getMonth()+1) : '
 let currentDate = twoDigitMonth + '/' + todayDate.getDate() + '/' + todayDate.getFullYear();
 let apos = '&#39;';
 $('#today-date').append("Today"+apos+"s Date: "+currentDate);
+
+
+//Plan inquiry
+
+$('.openCancelation-container').click(function(){
+	$("html, body").animate({ scrollTop: 0 }, "slow");
+	$('.cancelation-modal').removeClass('non-visible');
+	// $('.cancelation-modal').show(1000);
+});
+
+$('.plan-cancelation-container').find('.cross').click(function(){
+	$('.cancelation-modal').addClass('non-visible');
+});
+
+$('.cancelPlan-Button').click(function(){
+	//add non visible class
+	$('.cancelation-modal').addClass('non-visible');
+	$('.cancel-caution-container').removeClass('non-visible');
+	
+});
 
 });

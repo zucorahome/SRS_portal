@@ -6,7 +6,7 @@
     .filter-box{
         border:2px solid $grey-text;
         height:auto;
-        width:65%;
+        width:85%;
         margin:3em auto;
 
 
@@ -63,7 +63,7 @@
 }
 
 
-@media screen and(max-width:$mobile-width){
+@media screen and(max-width:$laptop-width){
     .order-history-container{
         width:100%;
 

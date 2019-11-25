@@ -10,97 +10,87 @@
 	}
 
 	.manual-search-container{
-		width:100%;
-		max-width:100%;
-		height:auto;
-		display: grid;
-		grid-row-gap: 2em;
-		padding: 10px;
-		margin:0 auto;
-		.date-filter-box{
+		    width:100%;
+		    max-width:100%;
+		    height:auto;
+		    display: grid;
+		    grid-row-gap: 2em;
+		    padding: 10px;
+		    margin:0 auto;
+
+		.inquiry-date-filter{
 			border:2px solid $grey-text;
-			height:auto;
-			p{
-				width: 100%; 
-			   text-align: center; 
-			   border-bottom: 1px dashed $grey-text; 
-			   line-height: 0.1em;
-			   margin: 20px 0 20px; 
-				
-				span{
-					background:#fff; 
-				 	padding:0 10px; 
-				}
-			}
+      		height:auto;
 
-			.date-filter-form{
-				max-width:100%;
-				height:auto;
-				display: flex;
-				flex-flow: row;
-				justify-content: space-around;
-				align-items: center;
+      		form{
+      			color:$grey-text;
+      			font-family: $para-fonts;
+      			i{
+      				color:$zucora-purple;
+      				font-size:1.5em;
+      				padding:5px;
+      			}
 
-				div:nth-child(1){
-					width:100%;
-					height:auto;
-					/*background-color: yellow;*/
-				}
+      			/*.inquiry-search-3{
+      				width:100%;
+      				margin:2em auto;
+      				display: grid;
+      				grid-template-columns: 33% 34% 33%;
 
-				div:nth-child(2){
-					width:100%;
-					height:auto;
-					
-				}
+      				label{
+      					@extend %label;
+      				}
 
-				input{
-					margin:5px;
-				}
-				i{
-					font-size: 1.5em;
-					color:$zucora-purple;
-				}
+      				select{
+      					@extend %select;
+      				}
 
-				span{
-					font-size:18px;
-					font-weight: 700;
-					font-family: $para-fonts;
-					margin-left:2em;
-				}
-
-			}
-
-		}
+      			}*/
 
 
-		.filter-param-box{
-				display: grid;
-				grid-template-columns: auto auto auto;
-				grid-gap:1em 1em;
-				max-width:100%;
-				height:auto;
+			    .filter-param-box{
+			        display: grid;
+			        grid-template-columns: 30% 30% 30%;
+			        justify-content: center;
+			        grid-gap:1em 1em;
+			        max-width:100%;
+			        height:auto;
+			        margin-top:2em;
+			        
 
-				.filter-box{
-					border:2px solid $grey-text;
-					background-color: white;
-					min-height: 300px;
-					height:auto;
+			        .filter-box{
+			          border:2px solid $grey-text;
+			          background-color: white;
+			          /*min-height: 300px;*/
+			          height:300px;
+			          overflow-y: scroll;
 
-					p{
-						padding:10px;
-						cursor: pointer;
-						&:hover{
-							background-color: $zucora-mint-green;
-							transition: all ease-in 0.5;
-						}
+			          p{
+			            padding:10px;
+			            cursor: pointer;
+			            &:hover{
+			              background-color: $zucora-mint-green;
+			              transition: all ease-in 0.5;
+			            }
+			          }
+			        }
+
+			      .selected{
+			        background-color: $zucora-mint-green;
+			        transition: all ease-in 0.5;
+			      }
+			      ::-webkit-scrollbar-thumb{
+						border-radius:10px;
+						background:$zucora-purple;
 					}
-				}
+			    }
+      		}
 
-			.selected{
-				background-color: $zucora-mint-green;
-				transition: all ease-in 0.5;
-			}
+      		.width-80{
+      			margin:0 auto;
+      		}
 		}
+
 	}
 
 	.advance-search-container{
@@ -120,6 +110,7 @@
 				padding:1em 0;
 				div{
 					padding:0;
+					justify-content: flex-end;
 				}
 				label{
 					@extend %label;
@@ -164,4 +155,116 @@
 			}
 		}
 	}	
+}
+
+/*.popup-modal-container{*/
+	.cancelation-modal{
+		@extend %modal;
+
+		.plan-cancelation-container{
+			@extend %modal-background;
+			width:95%;
+
+			.srs-heading{
+				margin-top:2%;
+			}
+
+			.cross{
+				@extend %form-cross;
+			}
+				.plan-cancelation{
+				
+				display: grid;
+				grid-template-columns: 45% 55%;
+				justify-content: center;
+				align-items: flex-start;
+
+				.plan-search-field{
+					
+					height:auto;
+					padding:0 2em;
+					width:100%;
+
+					.search-form{
+						div{
+							margin-top:12px;
+							input{
+								margin:0;
+							}
+
+							button{
+								height: 50px;
+							    border: 2px solid $grey-text;
+							    border-radius: 10px;
+							    background: $zucora-purple;
+							    position: relative;
+							    left: -50px;
+							    width: 25%;
+
+							    i{
+						    	    font-size: 1.5em;
+    								color: white;
+							    }
+							}
+						}
+					}
+					.search-param-result{
+
+					}
+				}
+				.reason-container{
+					
+					height:auto;
+					padding:0 2em;
+					width:100%;
+
+					textarea{
+						border:2px solid $grey-text;
+						border-radius: 0;
+						height:350px;
+						font-size:16px;
+					}
+				}
+			}
+			/*Plan cenlation ends*/
+
+			.search-plan-details{
+				margin-top:3em;
+					.plan-registration-box{
+						display: block;
+						width:95%;
+						margin-bottom: 0;
+
+						.new-planAdd-detail{
+							/*display: block;*/
+						}
+					}
+				}
+		}
+	}
+
+	.cancel-caution-container{
+		@extend %modal;
+
+		.cancel-caution{
+			@extend %modal-background;
+		}
+	}
+/*}*/
+
+
+@media screen and (max-width:$mobile-width){
+.plan-inquiry-container{	
+	.manual-search-container{
+		.inquiry-date-filter{
+			form{
+				.filter-param-box{
+					display: grid;
+					grid-template-columns: 90%;
+				}
+			}
+		}
+	}
+}
+
 }

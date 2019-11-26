@@ -908,6 +908,10 @@ p {
     .planRegis-form label {
       text-align: left;
       margin-right: 10px; }
+    .planRegis-form .formField-data-controller {
+      margin-left: 0; }
+      .planRegis-form .formField-data-controller div:nth-child(2) {
+        margin-left: 0; }
 
   .new-planAdd-detail {
     border: none; }

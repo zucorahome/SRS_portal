@@ -254,6 +254,25 @@
 	}
 /*}*/
 
+.planRegistration-modal-container{
+			@extend %modal;
+
+			.planRegistration-modal{
+				@extend %modal-background;
+				width:85%;
+
+				.srs-heading{
+					margin-top:1%;
+				}
+
+				.cross{
+					@extend %form-cross;
+					padding:10px;
+					font-size: 1.5em;
+				}
+			}
+		}
+
 
 @media screen and (max-width:$mobile-width){
 .plan-inquiry-container{	

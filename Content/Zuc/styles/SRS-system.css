@@ -7,7 +7,7 @@ p {
   font-family: "aktiv-grotesk", Helvetica, sans-serif;
   font-size: 18px; }
 
-.popup-modals-container .addItem-modal, .popup-modals-container .mainSubmit-modal-container, .popup-modals-container .remove-planModal-container, .shipping-locations-modal, .contacts-form-modal, .cancelation-modal, .cancel-caution-container, .editOrder-modal-container {
+.popup-modals-container .addItem-modal, .popup-modals-container .mainSubmit-modal-container, .popup-modals-container .remove-planModal-container, .shipping-locations-modal, .contacts-form-modal, .cancelation-modal, .cancel-caution-container, .planRegistration-modal-container, .editOrder-modal-container {
   position: fixed;
   z-index: 1;
   left: 0;
@@ -17,7 +17,7 @@ p {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.4); }
 
-.popup-modals-container .addItem-modal .addItem-form, .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal, .popup-modals-container .mainSubmit-modal-container .remove-planModal, .popup-modals-container .remove-planModal-container .mainSubmit-modal, .popup-modals-container .remove-planModal-container .remove-planModal, .shipping-locations-modal .shipping-locations-form, .contacts-form-modal .contacts-form, .cancelation-modal .plan-cancelation-container, .cancel-caution-container .cancel-caution, .editOrder-modal-container .editOrder-modal {
+.popup-modals-container .addItem-modal .addItem-form, .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal, .popup-modals-container .mainSubmit-modal-container .remove-planModal, .popup-modals-container .remove-planModal-container .mainSubmit-modal, .popup-modals-container .remove-planModal-container .remove-planModal, .shipping-locations-modal .shipping-locations-form, .contacts-form-modal .contacts-form, .cancelation-modal .plan-cancelation-container, .cancel-caution-container .cancel-caution, .planRegistration-modal-container .planRegistration-modal, .editOrder-modal-container .editOrder-modal {
   border: 2px solid #36384B;
   background: white;
   width: 60%;
@@ -56,7 +56,7 @@ p {
   font-weight: 700;
   color: #36384B; }
 
-.popup-modals-container .addItem-modal .addItem-form .purple-background h2::after, .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal .cross, .popup-modals-container .mainSubmit-modal-container .remove-planModal .cross, .popup-modals-container .remove-planModal-container .mainSubmit-modal .cross, .popup-modals-container .remove-planModal-container .remove-planModal .cross, .shipping-locations-modal .shipping-locations-form .purple-background h2::after, .contacts-form-modal .contacts-form .purple-background h2::after, .cancelation-modal .plan-cancelation-container .cross, .editOrder-modal-container .editOrder-modal .purple-background h2::after {
+.popup-modals-container .addItem-modal .addItem-form .purple-background h2::after, .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal .cross, .popup-modals-container .mainSubmit-modal-container .remove-planModal .cross, .popup-modals-container .remove-planModal-container .mainSubmit-modal .cross, .popup-modals-container .remove-planModal-container .remove-planModal .cross, .shipping-locations-modal .shipping-locations-form .purple-background h2::after, .contacts-form-modal .contacts-form .purple-background h2::after, .cancelation-modal .plan-cancelation-container .cross, .planRegistration-modal-container .planRegistration-modal .cross, .editOrder-modal-container .editOrder-modal .purple-background h2::after {
   content: 'X';
   float: right;
   color: #70E9B2;
@@ -689,6 +689,14 @@ p {
         /*display: block;*/ }
 
 /*}*/
+.planRegistration-modal-container .planRegistration-modal {
+  width: 85%; }
+  .planRegistration-modal-container .planRegistration-modal .srs-heading {
+    margin-top: 1%; }
+  .planRegistration-modal-container .planRegistration-modal .cross {
+    padding: 10px;
+    font-size: 1.5em; }
+
 @media screen and (max-width: 768px) {
   .plan-inquiry-container .manual-search-container .inquiry-date-filter form .filter-param-box {
     display: grid;

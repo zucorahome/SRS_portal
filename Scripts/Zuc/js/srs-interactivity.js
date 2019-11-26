@@ -105,4 +105,10 @@ $('.cancelPlan-Button').click(function(){
 	
 });
 
+$('.open-PlanRegis').click(function(){
+	$("html, body").animate({ scrollTop: 0 }, "slow");
+	$('.planRegistration-modal-container').removeClass('non-visible');
+});
+$('.planRegistration-modal').find('.close-modal').bind('click',{key:'.planRegistration-modal-container'},closeModal);
+
 });

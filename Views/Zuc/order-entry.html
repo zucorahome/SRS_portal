@@ -143,7 +143,7 @@
               </div>
               <p class="light-grey-text u-text-right">(Required if requested by Buying Group)</p>
               <div class="flex flex-hor-end">
-                <a href="#/" class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow orderEntry-add-button" type="submit">Add Item</a>
+                <a href="#/" class="zuc-btn zuc-btn-secondary u-soft-shadow orderEntry-add-button" type="submit">Add Item</a>
               </div>
             </form>
           </div>
@@ -305,7 +305,7 @@
         <div>
           <p>Final order confirmation including shipping costs and taxes will be emailed once the order has been finalized.</p>
           <div class="flex flex-hor-end">
-          <button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow planRegis-mainSubmit-button" type="submit">Submit</button></div>
+          <button class="zuc-btn zuc-btn-secondary u-soft-shadow planRegis-mainSubmit-button" type="submit">Submit</button></div>
         </div>
       </div>
 
@@ -315,9 +315,9 @@
           <div class="remove-planModal">
              <span class="cross close-modal">X</span>
               <h2>Caution!</h2>
-              <p>Removing Plan Registration will remove all data associated with this plan including Covered Items.</p>
+              <p>Removing Order will remove all data associated with this order including selected Items.</p>
               <h3 class="purple-text">Do you wish to continue?</h3>
-              <p>**Note: Yes button should remove all the data added including in add item table and No should just close the modal not the info.</p>
+             
               <div class="flex flex-row flex-vert-center flex-hor-center">
                 <a href="#/" class="zuc-btn zuc-btn-hollow" type="button">Yes</a>
                 <a href="#/" class="zuc-btn zuc-btn-hollow close-modal" type="button">No</a>
@@ -334,14 +334,14 @@
                     <label>Item*:</label>
                       <input type="text" name=""editOrder-item placeholder="Seach the item" id="search-tem">
                   </div>
-                  <div class="flex flex-column item-found">
+                  <div class="flex flex-column item-found u-hidden">
 
                     <p>Note: When search happens then only shows up this box.</p>
                     <p>Item no: Description</p>
                     <p>Item no: Description</p>
                     <p></p>
                   </div>
-                  <div class="flex flex-row flex-vert-center mobile-column">
+                  <div class="two-grid-column flex-vert-center mobile-column">
                     <div class="flex flex-row flex-vert-center addItem-quantity">
                       <div class="label">Quantity:</div>
                       <input type="button" value="-" class="button-minus" data-field="quantity">
@@ -354,9 +354,9 @@
                       <p>$0.00</p>
                     </div>
                   </div>
-                  <div class="flex flex-vert-center flex-row">
-                    <div><button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow" type="submit">Add More</button></div>
-                    <div><button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow" type="submit">Add</button></div>
+                  <div class="flex-vert-center two-grid-column mobile-column">
+                    <div class="flex"><button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow" type="submit">Add More</button></div>
+                    <div class="flex"><button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow" type="submit">Add</button></div>
                   </div>
               </form>
             </div>

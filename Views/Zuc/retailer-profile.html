@@ -40,7 +40,7 @@
                   <div class="zuc-dropdown-column">
                     <a href="plan-registration.html" title="Plan Registration" aria-role="menu-item">Plan Registration</a>
                     <a href="plan-inquiry.html" title="Plan Registration Inquiry" aria-role="menu-item">Plan Inquiry</a>
-                    <a href="plan-cancelation.html" title="Plan Cancelation" aria-role="menu-item">Cancel Plan</a>
+                    
                     <a href="plan-pending-registrations.html" title="Plan Reporting(Pending Registrations)" aria-role="menu-item">Plan Reporting</a>
                   </div>
                 </div>
@@ -93,7 +93,7 @@
               <div class="zuc-accordion-hidden" aria-hidden="true">
                 <a class="zuc-accordion-link" href="plan-registration.html" title="Plan Registration" aria-role="menuitem">Plan Registration</a>
                 <a class="zuc-accordion-link" href="plan-inquiry.html" title="Plan Registration Inquiry" aria-role="menuitem">Plan Registration Inquiry</a>
-                <a class="zuc-accordion-link" href="plan-cancelation.html" title="Plan Cancelation" aria-role="menuitem">Plan Cancelation</a>
+                
                 <a class="zuc-accordion-link" href="plan-reporting.html" title="Plan Reporting(Pending Registrations)" aria-role="menuitem">Plan Reporting</a>
               </div>
             </div>
@@ -121,16 +121,23 @@
     <!-- Main page content-->
     <section class="retailer-profile-container">
       <h1 class="srs-heading">Retailer Profile</h1>
-      <div class="two-grid-column mobile-column">
+      <div class="two-grid-column mobile-column flex-hor-start">
         <div class="margin-10">
           <h3 class="profileBox-heading">Retailer</h3>
           <form class="retailer-name-form">
-            <input type="text" name="retailer-store-name" placeholder="Store Name">**note: should come from data
+            <input type="text" name="retailer-store-name" placeholder="Store Name">
           </form>
         </div>
         <div class="margin-10">
           <form class="retailer-info-form">
             <!-- Adding planRegis-form class for styling only -->
+            <div class="flex flex-row flex-vert-center">
+              <label for="Lang-pref">Language Pref:&nbsp;</label>
+              <select name="lang-pref">
+                <option value="English">English</option>
+                <option value="French">French</option>
+              </select>
+            </div>
             <div class="flex flex-row flex-vert-center">
               <label for="hst-gst">HST/GST:</label>
               <input type="text" required="" name="hst-gst" placeholder="HST/GST Number" value="" id="">
@@ -139,22 +146,17 @@
               <label for="Buying Group">Buying Group:</label>
               <p>Cantrex | Nationwide &nbsp; CX-1256768-TRK</p>
             </div>
-            <!-- <div class="flex flex-row flex-vert-center">
-              <label for="Lang-pref">Language Pref:&nbsp;</label>
-              <select name="lang-pref">
-                <option value="English">English</option>
-                <option value="French">French</option>
-              </select>
-            </div> -->
+            
           </form>
         </div>
       </div>
       <!-- 1st Two grid columns ends-->
       <div class="two-grid-column mobile-column">
-        <div class="address-location-container">
-          <div class="billingAddress-container margin-10">
-            <h3 class="profileBox-heading" style="margin-bottom:10px;">Billing Address:</h3>
-            <div class="profile-boxStyle">
+        <!-- <div class="address-location-container"> -->
+
+          <div class="billingAddress-container ">
+            <h3 class="profileBox-heading margin-10">Billing Address:</h3>
+            <div class="profile-boxStyle margin-10">
               <form class="profile-address">
                   <div class="flex flex-row flex-vert-center">
                     <label for="profile-address-1">Address-1:</label>
@@ -193,7 +195,9 @@
               </form>
             </div>
           </div>
-          <div class="locations-container margin-top-1">
+        <!-- </div> -->
+<!--  -->
+            <div class="locations-container">
             <h3 class="profileBox-heading margin-10">Our Locations<a href="#/" class="profileBox-heading location-form-button">+</a></h3>
             <div class="profile-boxStyle new-planAdd-detail">
               <table class="">
@@ -203,7 +207,7 @@
                     <th scope="col">Location Name</th>
                     <th scope="col">Address</th>
                     <th scope="col">Phone</th>
-                    <th scope="col">Status</th>
+                    <!-- <th scope="col">Status</th> -->
                   </tr>
                 </thead>
 
@@ -213,22 +217,30 @@
                     <td data-label="Location Name">Westmall <a href="javascript:void(0)" class="shipping-location-edit"><i class="fa fa-pencil-alt"></i></a></td>
                     <td data-label="Address"> #3-220 Wyland Rd, Maple, ON M5L 4K9</td>
                     <td data-label="Phone">519-889-0224</td>
-                    <td data-label="Status">Active</td>
+                    <!-- <td data-label="Status">Active</td> -->
                   </tr>
                   <tr>
                     <td data-label="CODE">102</td>
                     <td data-label="Location Name">Sunnyridge  <a href="javascript:void(0)" class="shipping-location-edit"><i class="fa fa-pencil-alt"></i></a></td>
-                    <td data-label="Address">9834 Garvin Street, Maple, ON</td>
+                    <td data-label="Address">9834 Garvin Street, Maple, ON N34 JKL</td>
                     <td data-label="Phone">519-889-0224</td>
-                    <td data-label="Status">Inactive</td>
+                    <!-- <td data-label="Status">Inactive</td> -->
+                  </tr>
+                  <tr>
+                    <td data-label="CODE">103</td>
+                    <td data-label="Location Name">London,North <a href="javascript:void(0)" class="shipping-location-edit"><i class="fa fa-pencil-alt"></i></a></td>
+                    <td data-label="Address">123 Some street, London, ON N34 JKL</td>
+                    <td data-label="Phone">519-889-0224</td>
+                    <!-- <td data-label="Status">Inactive</td> -->
                   </tr>
                 </tbody>
 
               </table>
             </div>
-            <div class="flex flex-row margin-top-1">
+            <!-- <div class="flex flex-row margin-top-1">
               <a href="#/" class="simple-link u-uppercase" style="margin-left:10px;">Change password</a>&nbsp;<i class="fa fa-pencil-alt purple-text"></i>
-            </div>
+
+            </div> -->
           </div>
         </div>
         <div class="contacts-container">
@@ -238,123 +250,139 @@
               <thead>
                 <tr>
                   <th scope="col">Name</th>
-                  <th scope="col">Role</th>
                   <th scope="col">Status</th>
+                  <th scope="col">Role</th>
+                  <th scope="col" colspan="1">Order Product</th>
                   <th scope="col" colspan="3">
-                    Plans                    
+                    Protection Plans                    
                   </th>
-                  <th scope="col" colspan="1">Orders</th>
-                  <th scope="col" colspan="1" class="grey">SLP</th>
-                  <th scope="col"></th>
+                  <th scope="col" colspan="1" class="grey">Smarter Living Plans</th>
+                  <th scope="col" colspan="3">Inquiry/Reporting</th>
+                  <th scope="col">Edit</th>
                 </tr>
                 <tr>
                   <th></th>
                   <th></th>
                   <th></th>
-                  <th>Add</th>
-                  <th>Mod</th>
-                  <th>Inq</th>
-                  <th>Add</th>
-                  <th class="grey">Reg</th>
+                  <th class="u-light">Products</th>
+                  <th>Register</th>
+                  <th>Modify</th>
+                  <th>Cancel</th>
+                  <th class="grey">Enrol</th>
+                  <th>Orders</th>
+                  <th>Plans</th>
+                  <th class="grey">Success Tracker</th>
                   <th></th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td data-label="Name" class="u-underline">Bob Joe</td>
-                  <td data-label="Role">Buyer</td>
                   <td data-label="Status">Active</td>
-                  
-                  <td data-label="Plans: Add"><i class="fa fa-check grey-text"></i></td>
-                  <td data-label="Mod"><p class="u-transparent">none</p></td> 
+                  <td data-label="Role">Buyer</td>
+                  <td data-label="Order Products"><i class="fa fa-check"></i></td>
+                  <td data-label="Plans: Register"><i class="fa fa-check"></i></td>
+                  <td data-label="Plans:Modify"><p class="u-transparent">none</p></td> 
+                  <td data-label="Plans:Cancel"><i class="fa fa-check"></i></td> 
                   <!-- Should add  "<p class="u-transparent">none</p>" whenever there is no data so that it does look as table.-->
-                  <td data-label="Inq"><i class="fas fa-check grey-text"></i></td>
-                  
-                  <td data-label="Orders: Add"><i class="fa fa-check grey-text"></i></td>
-                  
-                  <td data-label="SLP: Reg"><i class="fa fa-check grey"></i></td>
-                  <td data-label="Edit:"><a href="#/" class="contact-form-edit"><i class="fa fa-pencil-alt"></i></a></td>
+                  <td data-label="Smarter Living Plans: Enrol"><i class="fas fa-check u-transparent"></i></td>
+                  <td data-label="Inquiry/Reporting: Orders"><i class="fa fa-check"></i></td>
+                  <td data-label="Inquiry/Reporting: Plans"><i class="fa fa-check"></i></td>
+                  <td data-label="Inquiry/Reporting: Succes Tracker"><p class="u-transparent">none</p></td>
+                  <td data-label="Edit"><a href="#/" class="contact-form-edit"><i class="fa fa-pencil-alt"></i></a></td>
+                </tr>
+                <tr>
+                  <td data-label="Name" class="u-underline">Jaden Gap</td>
+                  <td data-label="Status">Active</td>
+                  <td data-label="Role">Manager</td>
+                  <td data-label="Order Products"><i class="fa fa-check"></i></td>
+                  <td data-label="Plans: Register"><i class="fa fa-check"></i></td>
+                  <td data-label="Plans:Modify"><i class="fa fa-check"></i></td> 
+                  <td data-label="Plans:Cancel"><p class="u-transparent">none</p></td> 
+                  <td data-label="Smarter Living Plans: Enrol"><i class="fas fa-check u-transparent"></i></td>
+                  <td data-label="Inquiry/Reporting: Orders"><i class="fa fa-check"></i></td>
+                  <td data-label="Inquiry/Reporting: Plans"><i class="fa fa-check"></i></td>
+                  <td data-label="Inquiry/Reporting: Succes Tracker"><p class="u-transparent">none</p></td>
+                  <td data-label="Edit"><a href="#/" class="contact-form-edit"><i class="fa fa-pencil-alt"></i></a></td>
+                </tr>
+                <tr>
+                  <td data-label="Name" class="u-underline">Jane Doe</td>
+                  <td data-label="Status">Inactive</td>
+                  <td data-label="Role">Sales person</td>
+                  <td data-label="Order Products"><p class="u-transparent">none</p></td>
+                  <td data-label="Plans: Register"><i class="fa fa-check"></i></td>
+                  <td data-label="Plans:Modify"><i class="fa fa-check"></i></td> 
+                  <td data-label="Plans:Cancel"><p class="u-transparent">none</p></td> 
+                  <td data-label="Smarter Living Plans: Enrol"><i class="fas fa-check u-transparent"></i></td>
+                  <td data-label="Inquiry/Reporting: Orders"><i class="fa fa-check"></i></td>
+                  <td data-label="Inquiry/Reporting: Plans"><i class="fa fa-check"></i></td>
+                  <td data-label="Inquiry/Reporting: Succes Tracker"><p class="u-transparent">none</p></td>
+                  <td data-label="Edit"><a href="#/" class="contact-form-edit"><i class="fa fa-pencil-alt"></i></a></td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
-      </div>
+      <!-- last controllers -->
+      <div class="flex flex-vert-center flex-hor-between orderEntry-controls mobile-column margin-bottom-2">
+              <div class="margin-top-1">
+              <a href="#/" class="simple-link u-uppercase" style="margin-left:10px;">Change password</a>&nbsp;<i class="fa fa-pencil-alt purple-text"></i>
+              </div>
+        
+              <div class="flex flex-vert-center flex-hor-center margin-top-1">
+                <button class="zuc-btn zuc-btn-secondary u-soft-shadow" type="submit">Save</button></div>
+            </div>
+
     </section>
     <section class="popup-modals-container">
+
       <div class="shipping-locations-modal non-visible">
         <div class="shipping-locations-form">
           <div class="purple-background">
-              <h2>Store or Shipping Locations</h2>
+              <h2>Location</h2>
           </div>
-          <form class="flex flex-column planRegis-form">
-            <div class="flex flex-row flex-vert-center">
+          <form class="planRegis-form">
+            <div class="flex-vert-center new-formDiv">
               <label for="location-name">Name*:</label>
               <input type="text" name="location-name" value="" placeholder="Location name" required>
             </div>
-            <div class="flex flex-row flex-vert-center">
+            <div class="flex-vert-center new-formDiv">
               <label for="address-type">Address Type*:</label>
-              <input type="text" name="address-type" value="" placeholder="Address Type" required>
+              <select name="address-type">
+                <option value="none">Select Address Type</option>
+                <option value="Residential">Residential</option>
+                <option value="Business">Business</option>
+              </select>
             </div>
-            
-              <h3 class="purple-text">Contact:</h3>
-          
-            <!-- 50 50 input -->
-            <div class="flex flex-row flex-vert-center mobile-column">
-                <div class="flex flex-row flex-vert-center">
-                  <label for="first-name">First Name*:</label>
-                  <input type="text" name="shippingLocation-name" value="" class="" required="" placeholder="Contact First Name">
-                </div>
-
-                <div class="flex flex-row flex-vert-center">
-                  <label for="last-name">Last Name*:</label>
-                  <input type="text" name="shippingLocation-lastname" value=""placeholder="Contact Last Name" required="">
-                </div>
+            <div class="flex flex-row map-field">
+              <div class="flex-vert-center new-formDiv">
+                <label for="contact-map">Map:</label>
+                <input type="text" name="googleMap-map" placeholder="Type your address">
               </div>
-              <!-- next 50 50 forms -->
-                  <div class="flex flex-row flex-vert-center mobile-column">
-                    <div class="flex flex-row flex-vert-center">
-                      <label for="contact-phone">Phone*:</label>
-                      <input type="text" name="shippingLocation-phone" placeholder="Contact Phone Number">
-                    </div>
-
-                    <div class="flex flex-row flex-vert-center">
-                      <label for="email-id">Email*:</label>
-                      <input type="text" name="shippingLocation-email" value="" placeholder="Contact Email" required="">
-                    </div>
+              <div class="flex-vert-center custom-checkmark">
+                <label class="srs-checkmark">Manual Address Entry</label>
+                  <input type="checkbox" class="">
+                  <span class="green-checkmark"></span>
               </div>
-              <!-- 3rd like 60 40-->
-                  <div class="flex flex-row flex-vert-center mobile-column">
-                    <div class="flex flex-row flex-vert-center">
-                      <label for="contact-map">Map:</label>
-                      <input type="text" name="googleMap-map" placeholder="Type your address">
-                    </div>
-
-                    <div class="flex flex-row flex-vert-center">
-                      <label class="srs-checkmark">Manual Address Entry</label>
-                      <input type="checkbox" class="">
-                      <span class="green-checkmark"></span>
-                    </div>
-                </div>
-                <!-- single input -->
-                <div class="flex flex-row flex-vert-center">
+            </div>
+             <div class="flex-vert-center new-formDiv">
                   <label>Adress Line 1*:</label>
                   <input type="text" name="contact-address-one" value="" placeholder="Address line 1" required>
                 </div>
-              <div class="flex flex-row flex-vert-center">
+              <div class="flex-vert-center new-formDiv">
                 <label>Address Line 2*:</label>
                   <input type="text" name="contact-address-two" value="" placeholder="Address line 2" required>
               </div>
-              <!-- 50 50 form inouts -->
-              <div class="flex flex-row flex-vert-center mobile-column">
-                 <div class="flex flex-row flex-vert-center">
+              <!--  -->
+              <div class="flex-vert-center map-field">
+                 <div class="flex-vert-center new-formDiv">
                   <label>City*:</label>
                   <input type="text" name="SRSContact-city" value="" placeholder="City" required>
                 </div>
-                 <div class="flex flex-row flex-vert-center">
-                  <label>Prov/State*:</label>
+                 <div class="new-formDiv flex-vert-center">
+                  <label>Province or State*:</label>
                     <select name="province" style="margin-bottom: 0;margin-top:6px;">
-                          <option value="" disabled="" selected="">Choose your province</option>
+                          <option value="" disabled="" selected="">Province/State</option>
                           <option value="AB">Alberta</option>
                           <option value="BC">British Columbia</option>
                           <option value="MB">Manitoba</option>
@@ -371,30 +399,21 @@
                       </select>
                 </div>
               </div>
-              <!--  Make 50% width only-->
-             
-              <div class="flex flex-row flex-vert-center">
-                <div class="flex flex-row flex-vert-center">
-                  <label>Phone*:</label>
-                  <input type="text" name="shippingLocation-phone" value="" placeholder="Phone Number" required>
+               <div class="flex-vert-center map-field">
+                <div class="new-formDiv flex-vert-center">
+                  <label>Postal Code*:</label>
+                  <input type="text" name="shippingLocation-postCode" value="" placeholder="Postal Code" required>
                 </div> 
-                <div class="flex flex-row flex-vert-center u-transparent">
-                  <label>Phone*:</label>
-                  <input type="text" name="" value="" placeholder="Phone Number" disabled="">
-                </div>                 
-            </div>
-
-              <div class="flex flex-row flex-vert-center mobile-column">
-                <div class="flex flex-row flex-vert-center">
-                  <label>Status*:</label>
-                  <input type="text" name="SRSContact-status" value="" placeholder="Active or Inactive" required>
-                </div>
-
-                <div class="center"><button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow center" type="submit">Save</button>
+               </div>
+               <div class="flex-vert-center map-field">
+                   <div class="new-formDiv flex-vert-center">
+                    <label>Phone*:</label>
+                    <input type="text" name="shippingLocation-phone" value="" placeholder="Phone Number" required>
+                  </div> 
+                  <div class="flex flex-row flex-hor-center">
+                    <a href="#/" class="zuc-btn zuc-btn-secondary u-soft-shadow" type="submit">Save</a>
                   </div>
-              </div>
-            <p>**Note: After validating only this button should close the modal.</p>
-
+               </div>
           </form>
         </div>
       </div>
@@ -404,9 +423,9 @@
            <div class="purple-background">
               <h2>People</h2>
           </div>
-          <form class="flex flex-column planRegis-form">
-            <div class="flex flex-row flex-vert-center mobile-column">
-                <div class="flex flex-row flex-vert-center">
+          <form class="planRegis-form flex flex-column">
+            <div class="flex-vert-center flex flex-row mobile-column">
+              <div class="flex flex-row flex-vert-center">
                   <label for="first-name">First Name*:</label>
                   <input type="text" name="SRScontact-name" value="" class="" required="" placeholder="Contact First Name">
                 </div>
@@ -415,8 +434,26 @@
                   <label for="last-name">Last Name*:</label>
                   <input type="text" name="SRScontact-lastname" value=""placeholder="Contact Last Name" required="">
                 </div>
+            </div>
+            <div class="flex-vert-center div-sixty-forty">
+              <div class="flex flex-row flex-vert-center" style="width:100%;">
+                  <label>Location:</label>
+                    <select name="person-location">
+                          <option value="" disabled="" selected="">Location</option>
+                          <option value="Location 1">Location 1</option>
+                          <option value="Location 2">Location 2</option>
+                          <option value="Location 3">Location 3</option>
+                    </select>
               </div>
-               <div class="flex flex-row flex-vert-center">
+              <div class="flex flex-row flex-vert-center">
+                <label>Status:</label>
+                  <select name="person-status">
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                  </select>
+              </div>
+            </div>
+             <div class="flex flex-row flex-vert-center">
                   <label>Role:</label>
                     <select name="contact-role" style="margin-bottom: 0;margin-top:6px;">
                           <option value="" disabled="" selected="">Select role</option>
@@ -424,45 +461,74 @@
                           <option value="Manager">Manager</option>
                           <option value="Associate">Associate</option>
                       </select>
+              </div>
+              <div class="flex flex-row flex-vert-center">
+                  <label for="Email-address">Email*:</label>
+                  <input type="text" name="person-email" value=""placeholder="Email Address" required="">
+              </div>
+              <div class="flex flex-row flex-vert-center">
+                  <label for="phone">Phone*:</label>
+                  <input type="text" name="person-phoneNumber" value=""placeholder="Phone Number" required="">
+              </div>
+              <div class="flex flex-row flex-vert-center">
+                  <label for="Language-pref">Language*:</label>
+                  <input type="text" name="person-language" value=""placeholder="Language Preference" required="">
+              </div>
+              <!-- permission table -->
+               <p class="margin-top-1 purple-text" style="font-size:24px;">Permissions</p>
+              <div class="permissions">
+                <div>
+                  <p class="purple-text u-bold">Other Product</p>
+                  <div class="flex flex-column flex-vert-center">
+                    <label>Products</label>
+                    <input type="checkbox" name="permission-products">
+                  </div>
                 </div>
-                <div class="flex flex-row flex-vert-center">
-                      <label for="email-id">Email*:</label>
-                      <input type="text" name="SRSContact-email" value="" placeholder="Contact Email" required="">
-                </div>
-                <div class="flex flex-row flex-vert-center">
-                  <label>Phone*:</label>
-                  <input type="text" name="SRSContact-phone" value="" placeholder="Phone Number" required="">
-                </div> 
-                <!-- <div class="flex flex-row flex-vert-center">
-                  <label for="SRSContact-Lang-pref">Language Pref:&nbsp;</label>
-                  <select name="SRSContact-lang-pref">
-                    <option value="English">English</option>
-                    <option value="French">French</option>
-                  </select>
-                </div> -->
-                <div class="flex flex-row flex-vert-start">
-                  <label for="SRSContact-permission">Permissions:&nbsp;</label>
-                  <div class="flex-column">
-                      <div class="contact-radio flex flex-row flex-vert-center">
-                        <span>Add Plans</span>
-                        <input type="radio" name="AddPlans-perm" value="yes" checked><span>Yes</span>
-                        <input type="radio" name="AddPlans-perm" value="no" placeholder=""><span>No</span>
+                <div>
+                  <p class="purple-text u-bold">Protection Plan</p>
+                    <div class="flex flex-row flex-hor-center flex-vert-center">
+                      <div class="flex flex-column flex-vert-center">
+                        <label>Register</label>
+                        <input type="checkbox" name="permission-products">
                       </div>
-                      <div class="contact-radio flex flex-row flex-vert-center">
-                        <span>Modify/Cancel Plans</span>
-                        <input type="radio" name="ModifyPlan-perm" value="yes" checked>Yes
-                        <input type="radio" name="ModifyPlan-perm" value="no" placeholder="">No
+                      <div class="flex flex-column flex-vert-center">
+                        <label>Modify</label>
+                        <input type="checkbox" name="permission-products">
                       </div>
-                      <div class="contact-radio flex flex-row flex-vert-center">
-                        <span>View Success Trackers</span>
-                        <input type="radio" name="successTracker-perm" value="yes" checked>Yes
-                        <input type="radio" name="successTracker-perm" value="no" placeholder="">No
+                      <div class="flex flex-column flex-vert-center">
+                        <label>Cancel</label>
+                        <input type="checkbox" name="permission-products">
                       </div>
                     </div>
                 </div>
-                 <div class="flex flex-row flex-hor-end">
-                  <button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow center" type="submit">Save</button>
+                <div>
+                  <p class="purple-text u-bold">Smarter Living Plans</p>
+                  <div class="flex flex-column flex-vert-center flex-hor-center">
+                    <label>Enrol</label>
+                    <input type="checkbox" name="permission-products">
                   </div>
+                </div>
+                <div>
+                  <p class="purple-text">Inquiry/Reporting</p>
+                   <div class="flex flex-row flex-hor-center flex-vert-end">
+                       <div class="flex flex-column flex-vert-center">
+                        <label>Orders</label>
+                        <input type="checkbox" name="permission-products">
+                      </div>
+                      <div class="flex flex-column flex-vert-center">
+                        <label>Plans</label>
+                        <input type="checkbox" name="permission-products">
+                      </div>
+                      <div class="flex flex-column flex-vert-center">
+                        <label>Success Tracker</label>
+                        <input type="checkbox" name="permission-products">
+                      </div>
+                   </div>
+                </div>
+              </div>
+              <div class="flex flex-hor-center flex-row">
+                <a href="#/" class="zuc-btn zuc-btn-secondary u-soft-shadow" type="submit">Send Email to confirm updates</a>
+              </div>
           </form>
         </div>
       </div>

@@ -91,6 +91,11 @@
 			    justify-content: space-around;
 			    margin: 0 auto;
 			}
+
+			input[type="checkbox"]{
+				width:50px;
+				height:50px;
+			}
 	}
 
 .plan-registration-box{
@@ -211,8 +216,7 @@
 				h2::after{
 					@extend %form-cross;
 					padding:0;
-					font-size:14px;
-					font-family:$para-fonts;
+					
 					font-weight:700;
 				}
 			}
@@ -290,6 +294,8 @@
 			}
 			.cross{
 					@extend %form-cross;
+					font-size: 1.5em;
+					padding: 10px;
 				}
 
 				p{

@@ -62,9 +62,7 @@ p {
   color: #70E9B2;
   font-weight: 300;
   cursor: pointer;
-  font-family: cursive;
-  font-size: 1.5em;
-  padding: 10px; }
+  font-family: cursive; }
 
 /*Common classes*/
 .purple-background {
@@ -215,6 +213,9 @@ p {
     display: flex;
     justify-content: space-around;
     margin: 0 auto; }
+  .planRegis-form input[type="checkbox"] {
+    width: 50px;
+    height: 50px; }
 
 .plan-registration-box {
   height: auto;
@@ -299,8 +300,6 @@ p {
     /*This is all modal div class*/ }
     .popup-modals-container .addItem-modal .addItem-form .purple-background h2::after {
       padding: 0;
-      font-size: 14px;
-      font-family: "aktiv-grotesk", Helvetica, sans-serif;
       font-weight: 700; }
     .popup-modals-container .addItem-modal .addItem-form .planRegis-form {
       width: 90%; }
@@ -343,6 +342,9 @@ p {
     color: #434DA0;
     text-align: center;
     padding: 1em; }
+  .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal .cross, .popup-modals-container .mainSubmit-modal-container .remove-planModal .cross, .popup-modals-container .remove-planModal-container .mainSubmit-modal .cross, .popup-modals-container .remove-planModal-container .remove-planModal .cross {
+    font-size: 1.5em;
+    padding: 10px; }
   .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal p, .popup-modals-container .mainSubmit-modal-container .remove-planModal p, .popup-modals-container .remove-planModal-container .mainSubmit-modal p, .popup-modals-container .remove-planModal-container .remove-planModal p {
     width: 75%;
     text-align: center;
@@ -369,16 +371,24 @@ p {
     	padding:0 10px;
     }*/ }
     .retailer-profile-container .two-grid-column .retailer-info-form div {
-      padding: 5px 0;
+      /*padding:5px 0;*/
       justify-content: flex-end; }
       .retailer-profile-container .two-grid-column .retailer-info-form div p {
         width: 70%;
         font-weight: bold; }
+    .retailer-profile-container .two-grid-column .retailer-info-form select {
+      margin-bottom: 0; }
   .retailer-profile-container .profile-boxStyle {
     border: 2px solid #36384B;
-    /*padding:10px;*/ }
+    /*padding:10px;*/
+    /*min-height: 200px;*/
+    height: auto; }
   .retailer-profile-container .profile-address {
     padding: 10px; }
+    .retailer-profile-container .profile-address div {
+      padding: 5px; }
+    .retailer-profile-container .profile-address label {
+      word-break: break-word; }
   .retailer-profile-container .locations-container .new-planAdd-detail {
     display: block;
     /*margin:0 auto;*/
@@ -394,55 +404,129 @@ p {
     .retailer-profile-container .locations-container .new-planAdd-detail table thead tr th:nth-child(4) {
       width: 20%; }
   .retailer-profile-container .contacts-container {
+    margin-top: 3%;
     padding: 0; }
     .retailer-profile-container .contacts-container .grey {
       color: grey; }
     .retailer-profile-container .contacts-container .new-planAdd-detail {
       display: block; }
-    .retailer-profile-container .contacts-container table thead tr th {
-      border-right: 1px solid #d3d3df; }
-    .retailer-profile-container .contacts-container table tbody tr td {
-      border-right: 1px solid #d3d3df; }
+      .retailer-profile-container .contacts-container .new-planAdd-detail table thead tr th {
+        border-right: 1px solid #d3d3df;
+        text-align: center; }
+      .retailer-profile-container .contacts-container .new-planAdd-detail table tbody tr td {
+        border-right: 1px solid #d3d3df;
+        text-align: center; }
 
 .shipping-locations-modal .shipping-locations-form .planRegis-form {
   width: 100%;
   padding: 1em; }
   .shipping-locations-modal .shipping-locations-form .planRegis-form div {
-    justify-content: space-between;
-    width: 90%;
     margin: 0 auto; }
+  .shipping-locations-modal .shipping-locations-form .planRegis-form .new-formDiv {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    width: 95%; }
+  .shipping-locations-modal .shipping-locations-form .planRegis-form .map-field {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-left: 19%; }
+    .shipping-locations-modal .shipping-locations-form .planRegis-form .map-field .custom-checkmark {
+      display: grid;
+      grid-template-columns: 90% 10%;
+      width: 100%; }
+      .shipping-locations-modal .shipping-locations-form .planRegis-form .map-field .custom-checkmark label {
+        text-align: center;
+        margin-right: 0; }
   .shipping-locations-modal .shipping-locations-form .planRegis-form label {
-    padding: 0 5px;
-    text-align: left;
-    margin: 0; }
-  .shipping-locations-modal .shipping-locations-form .planRegis-form h3 {
-    font-family: "aktiv-grotesk", Helvetica, sans-serif;
-    margin-bottom: 0;
-    font-weight: 700;
-    padding-left: 5%; }
+    word-break: unset; }
+  .shipping-locations-modal .shipping-locations-form .planRegis-form input {
+    width: 100%; }
+  .shipping-locations-modal .shipping-locations-form .planRegis-form select {
+    width: 100%; }
 .shipping-locations-modal .shipping-locations-form .width-45 {
   width: 45%; }
 
 .contacts-form-modal .contacts-form .planRegis-form {
   width: 100%;
   padding: 1em; }
+  .contacts-form-modal .contacts-form .planRegis-form .div-sixty-forty {
+    display: grid;
+    grid-template-columns: 60% 40%; }
   .contacts-form-modal .contacts-form .planRegis-form div {
-    justify-content: space-between;
+    justify-content: center;
     width: 90%;
     margin: 0 auto; }
   .contacts-form-modal .contacts-form .planRegis-form label {
     padding: 0 5px;
     text-align: left;
-    margin: 0; }
-.contacts-form-modal .contacts-form .contact-radio {
-  display: grid;
-  grid-template-columns: 30% 7% 10% 7% 10%;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 5px; }
-  .contacts-form-modal .contacts-form .contact-radio input[type="radio"] {
-    height: 30px; }
+    margin: 0;
+    width: 30%;
+    word-break: unset; }
+  .contacts-form-modal .contacts-form .planRegis-form input {
+    width: 100%; }
+  .contacts-form-modal .contacts-form .planRegis-form select {
+    width: 100%; }
+  .contacts-form-modal .contacts-form .planRegis-form .purple-text {
+    font-weight: 700; }
+  .contacts-form-modal .contacts-form .planRegis-form .permissions {
+    width: 100%;
+    border: 2px solid #36384B;
+    display: grid;
+    grid-template-columns: 20% 30% 20% 30%;
+    justify-content: center;
+    align-items: flex-start; }
+    .contacts-form-modal .contacts-form .planRegis-form .permissions label {
+      color: #434DA0;
+      font-size: 14px;
+      font-weight: 300;
+      font-family: "aktiv-grotesk", Helvetica, sans-serif;
+      text-align: center;
+      width: 100%; }
+    .contacts-form-modal .contacts-form .planRegis-form .permissions input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin: 0 auto; }
+    .contacts-form-modal .contacts-form .planRegis-form .permissions p {
+      font-size: 16px;
+      text-align: center;
+      min-height: 40px; }
 
+@media screen and (max-width: 768px) {
+  .retailer-profile-container .contacts-container .new-planAdd-detail table tbody tr td {
+    border-bottom: 1px solid #d3d3df; }
+
+  .shipping-locations-modal .shipping-locations-form .planRegis-form .map-field {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    margin-left: 0; }
+    .shipping-locations-modal .shipping-locations-form .planRegis-form .map-field .custom-checkmark {
+      display: grid;
+      grid-template-columns: 90% 10%;
+      width: 70%; }
+      .shipping-locations-modal .shipping-locations-form .planRegis-form .map-field .custom-checkmark label {
+        text-align: center;
+        margin-right: 0;
+        word-break: break-word; }
+
+  .contacts-form-modal .contacts-form .planRegis-form div {
+    width: 100%; }
+  .contacts-form-modal .contacts-form .planRegis-form label {
+    /*word-break: break-word;*/ }
+  .contacts-form-modal .contacts-form .planRegis-form .div-sixty-forty {
+    grid-template-columns: 100%; }
+  .contacts-form-modal .contacts-form .planRegis-form .permissions {
+    grid-template-columns: 100%; } }
+@media screen and (max-width: 980px) {
+  .contacts-form-modal .contacts-form .planRegis-form div {
+    width: 100%; }
+  .contacts-form-modal .contacts-form .planRegis-form label {
+    /*word-break: break-word;*/ }
+  .contacts-form-modal .contacts-form .planRegis-form .div-sixty-forty {
+    grid-template-columns: 100%; }
+  .contacts-form-modal .contacts-form .planRegis-form .permissions {
+    grid-template-columns: 100%; } }
 /*Plan inquiry screen*/
 .plan-inquiry-container {
   width: 85%;
@@ -548,6 +632,9 @@ p {
   /*Plan cenlation ends*/ }
   .cancelation-modal .plan-cancelation-container .srs-heading {
     margin-top: 2%; }
+  .cancelation-modal .plan-cancelation-container .cross {
+    font-size: 1.5em;
+    padding: 10px; }
   .cancelation-modal .plan-cancelation-container .plan-cancelation {
     display: grid;
     grid-template-columns: 45% 55%;
@@ -649,7 +736,7 @@ p {
 .editOrder-modal-container .editOrder-modal .planRegis-form {
   width: 90%; }
   .editOrder-modal-container .editOrder-modal .planRegis-form div {
-    justify-content: space-evenly; }
+    justify-content: center; }
   .editOrder-modal-container .editOrder-modal .planRegis-form input {
     width: 80%; }
   .editOrder-modal-container .editOrder-modal .planRegis-form .addItem-quantity .label {

@@ -72,6 +72,19 @@
 			}
 		}
 
+		.info-grid{
+			display: grid;
+			grid-template-columns: 30% 70% 0%;
+
+			i{
+				margin-left: 1em;
+			}
+
+			input{
+				width:100%;
+			}
+		}
+
 		label{
 			@extend %label;
 		}
@@ -87,9 +100,15 @@
 
 			.formField-data-controller{
 				width: 100%;
-			    display: flex;
+			    display: grid;
 			    justify-content: space-around;
-			    margin: 0 auto;
+			    align-items: center;
+			    grid-template-columns: 50% 50%;
+			    margin-left:15%;
+
+			    div:nth-child(2){
+			    	margin-left:3em;
+			    }
 			}
 
 			input[type="checkbox"]{

@@ -13,7 +13,7 @@
 		width:90%;
 
 		div{
-			justify-content: space-between;
+			// justify-content: space-between;
 
 			.info-text-container{
 				width:100%;
@@ -22,18 +22,55 @@
 			}
 		}
 
+		.planRegis-divStyle{
+			grid-template-columns: 35% 65%;
+			display: grid;
+			input{
+				width:100%;
+			}
+
+			select{
+				width:100%;
+			}
+		}
+		.info-grid{
+			display: grid;
+			grid-template-columns: 35% 56% 0%;
+		}
 		label{
 			text-align: left;
 			margin-right: 10px;
 		}
 
 		.formField-data-controller{
-			margin-left:0;
-
+			width:100%;
+			div:nth-child(1){
+				margin-left:0;
+			}
 			div:nth-child(2){
 				margin-left:0;
 			}
 		}
+
+		.twoInput-fields{
+			grid-template-columns: 35% 65%;
+
+			input:nth-of-type(1){
+				margin-left:0;
+			}
+				input:nth-of-type(2){
+				margin-left:0;
+			}
+			input{
+				width:100%;
+			}
+		}
+		.planRegis-button{
+			width:100%;
+			justify-content: center;
+			align-items: center;
+		}
+
 	}
 
 	.new-planAdd-detail{
@@ -85,7 +122,7 @@
 					}
 				}
 			}
-		}	
+		}
 	}
 	.mobile-column{
 		flex-direction: column;
@@ -121,12 +158,12 @@
 		.manual-search-container{
 				.date-filter-box{
 					.date-filter-form{
-						flex-flow: column; 
-					}	
+						flex-flow: column;
+					}
 				}
 			}
 		}
-		
+
 			.plan-cancelation-container{
 				width:100%;
 				max-width:100%;
@@ -137,17 +174,17 @@
 					display: grid;
 					grid-template-columns: 100%;
 					justify-content: center;
-					
+
 					.plan-search-field{
-						
-					
+
+
 
 						.search-param-result{
 
 						}
 					}
 					.reason-container{
-						
+
 						margin-top:2em;
 
 						textarea{
@@ -158,12 +195,12 @@
 					}
 				}
 			}
-		} 
+		}
 
 		.popup-modals-container .addItem-modal .addItem-form, .popup-modals-container .mainSubmit-modal-container .mainSubmit-modal, .popup-modals-container .mainSubmit-modal-container .remove-planModal, .popup-modals-container .remove-planModal-container .mainSubmit-modal, .popup-modals-container .remove-planModal-container .remove-planModal, .shipping-locations-modal .shipping-locations-form, .contacts-form-modal .contacts-form{
 			width:100%;
 			margin:50% auto;
-		} 
+		}
 }
 
 @media screen and (min-width:$tablet-width){
@@ -172,7 +209,7 @@
 			.zuc-nav-brand{
 			width:15vw;
 			max-width:100%;
-			}	
+			}
 		}
 	}
 
@@ -187,7 +224,7 @@
 	.search-container{
 		margin-top:7%;
 		grid-template-columns: 100%;
-		
+
 	}
 
 	.manual-search-container{
@@ -211,7 +248,7 @@
 
 		.allPlans-container{
 			width:100%;
-		}	
+		}
 	}
 
 }

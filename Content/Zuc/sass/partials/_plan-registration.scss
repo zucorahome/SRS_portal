@@ -1,152 +1,174 @@
-
 /*Plan registration styling*/
-
-.plan-registration-container{
-	border:2px solid #36384B;
-	height:auto;
-
+.plan-registration-container {
+	border: 2px solid #36384B;
+	height: auto;
 }
 
-.planRegis-form{
-		width:60%;
-		display: block;
-		margin: 0 auto;
-		padding:2em 0;
+.planRegis-form {
+	width: 60%;
+	// display: block;
+	margin: 0 auto;
+	padding: 2em 0;
 
-		div{
-			padding:5px 0;
-			justify-content: flex-end;
-			i{
-				font-size: 1.5em;
-				color: $zucora-purple;
-				margin-right: 10px;
-				
-			}
+	div {
+		i {
+			font-size: 1.5em;
+			color: $zucora-purple;
+			margin-right: 10px;
 		}
-
-		.info-circle{
-				color:#70E9B2;
-				margin-left:10px;
-				cursor: pointer;
-			}
-			.info-text-container{
-				display: none;
-				position: absolute;
-				background-color: #E2FBF0;
-				padding:10px 15px;
-				top:42%;
-				left:81%;
-				width:30%;
-				z-index: 1000;
-				p{
-					font-size:13px;
-					color:$grey-text;
-				}
-
-				i{
-					position: absolute;
-					color: #E2FBF0;
-					left:50%;
-					top:-30px;
-					font-size:3em;
-				}
-			}
-
-		.twoInput-fields 
-		{
-			input{
-				width:33%;
-			}
-
-			input:first-of-type{
-					
-					margin-right:4%;
-				}
-		}
-
-		.grey-field{
-			color: #898A8D;
-			padding-top:10px;
-			select{
-				background-color: #C8C8C8;
-			}
-		}
-
-		.info-grid{
-			display: grid;
-			grid-template-columns: 30% 70% 0%;
-
-			i{
-				margin-left: 1em;
-			}
-
-			input{
-				width:100%;
-			}
-		}
-
-		label{
-			@extend %label;
-		}
-
-		select{
-			@extend %select;
-			margin-bottom:0;
-		}
-
-		input{
-				@extend %input;
-			}
-
-			.formField-data-controller{
-				width: 100%;
-			    display: grid;
-			    justify-content: space-around;
-			    align-items: center;
-			    grid-template-columns: 50% 50%;
-			    margin-left:15%;
-
-			    div:nth-child(2){
-			    	margin-left:3em;
-			    }
-			}
-
-			input[type="checkbox"]{
-				width:50px;
-				height:50px;
-			}
 	}
 
-.plan-registration-box{
-	height:auto;
-	border:2px solid #36384B;
-	width:90%;
-	margin-bottom:2em;
+	.planRegis-divStyle {
+		padding: 5px 0;
+		display: grid;
+		grid-template-columns: 20% 80%;
+
+	}
+
+	.info-circle {
+		color: #70E9B2;
+		margin:1em 0 0 10px;
+		cursor: pointer;
+	}
+
+	.info-text-container {
+		display: none;
+		position: absolute;
+		background-color: #E2FBF0;
+		padding: 10px 15px;
+		top: 42%;
+		left: 81%;
+		width: 30%;
+		z-index: 1000;
+
+		p {
+			font-size: 13px;
+			color: $grey-text;
+		}
+
+		i {
+			position: absolute;
+			color: #E2FBF0;
+			left: 50%;
+			top: -30px;
+			font-size: 3em;
+		}
+	}
+
+	.twoInput-fields {
+		display: grid;
+		grid-template-columns: 20% 40% 40%;
+		input {
+			width: 60%;
+		}
+
+		input:nth-of-type(2) {
+			margin-left:-5em;
+		}
+	}
+
+	.grey-field {
+		color: #898A8D;
+		padding-top: 10px;
+
+		select {
+			background-color: #C8C8C8;
+		}
+	}
+
+	.info-grid {
+		display: grid;
+		grid-template-columns: 20% 56% 0;
+
+		i {
+			// margin-left: 1em;
+		}
+
+		input {
+			width:100%;
+		}
+	}
+
+	label {
+		@extend %label;
+	}
+
+	select {
+		@extend %select;
+		margin-bottom: 0;
+	}
+
+	input {
+		@extend %input;
+	}
+
+	.formField-data-controller {
+		width: 80%;
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		grid-template-columns: 50% 50%;
+		margin:0 auto;
+
+		div:nth-child(1){
+			grid-template-columns: auto;
+			justify-content: flex-start;
+			margin-left:-20px;
+		}
+
+		div:nth-child(2){
+			grid-template-columns: auto;
+			justify-content: center;
+			margin-left:5em;
+		}
+	}
+
+	input[type="checkbox"] {
+		width: 50px;
+		height: 50px;
+	}
+
+	.planRegis-button{
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		width:75%;
+		margin:1em 0;
+	}
+}
+
+.plan-registration-box {
+	height: auto;
+	border: 2px solid #36384B;
+	width: 90%;
+	margin-bottom: 2em;
 	display: none;
-	.purple-background{
+
+	.purple-background {
 		background-color: $zucora-purple;
 
-		h2{
+		h2 {
 			color: white;
 			font-size: 18px;
-			padding:1em;
+			padding: 1em;
 			font-family: $para-fonts;
 		}
 	}
 
 	.new-planAdd-title {
-		padding:0 10px 14px 10px;
+		padding: 0 10px 14px;
 		transition: all ease-in 0.5s;
-		-webkit-transition:all ease-in 0.5s;
-		p{
+		-webkit-transition: all ease-in 0.5s;
+
+		p {
 			font-family: $para-fonts;
 			font-weight: 700;
 			cursor: pointer;
-		 span{
-				text-transform: uppercase;
-				padding-left:5px;
-			}
 
+			span {
+				text-transform: uppercase;
+				padding-left: 5px;
+			}
 			/*::before{
 				//content: "\2212";
 				content:'\002B';
@@ -159,198 +181,198 @@
 			    //display: none;
 			    cursor: pointer;
 			}*/
-			i{
-				font-size:1.5em;
-				color:$grey-text;
+			i {
+				font-size: 1.5em;
+				color: $grey-text;
 			}
 		}
 	}
 }
 
-
-.new-planAdd-detail{
+.new-planAdd-detail {
 	display: none;
 	border: 1px solid $grey-text;
 	margin: 10px;
-	table{
+
+	table {
 		border-collapse: collapse;
-		margin:0;
-		padding:0;
-		width:100%;
+		margin: 0;
+		padding: 0;
+		width: 100%;
 		table-layout: fixed;
 
-		tr{
-				text-align: center;
-				font-family: $para-fonts;
+		tr {
+			text-align: center;
+			font-family: $para-fonts;
 
-				&:hover{
-					background-color:$zucora-mint-green;
-					transition: background-color ease-in 0.5s;
-				}
+			&:hover {
+				background-color: $zucora-mint-green;
+				transition: background-color ease-in 0.5s;
 			}
-		th,td{
+		}
+
+		td,
+		th {
 			padding: 5px;
-			line-height:22px;
+			line-height: 22px;
 			//overflow: hidden;
 			word-break: break-word;
 			text-align: left;
-			i{
-				color: $zucora-purple;
 
+			i {
+				color: $zucora-purple;
 			}
 		}
-		 th{
+
+		th {
 			color: $zucora-purple;
 			font-weight: 700;
 		}
 	}
 }
-.planRegis-controls{
+
+.planRegis-controls {
 	visibility: hidden;
 	display: flex;
-	width:80%;
+	width: 80%;
 	margin: 0 auto;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2em 0;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2em 0;
 
-    div{
-    	a{
-    		@extend %simple-link;
-    	}
-    }
+	div {
+		a {
+			@extend %simple-link;
+		}
+	}
 }
 
-
-
-.popup-modals-container{
+.popup-modals-container {
 	/*This is pop up section class*/
-	.addItem-modal{
+	.addItem-modal {
 		@extend %modal;
 		/*This is all modal div class*/
-		.addItem-form{
+		.addItem-form {
 			@extend %modal-background;
-			
-			.purple-background{
-				h2::after{
+
+			.purple-background {
+				h2::after {
 					@extend %form-cross;
-					padding:0;
-					
-					font-weight:700;
+					padding: 0;
+					font-weight: 700;
 				}
 			}
 
-			.planRegis-form{
-				width:90%;
-					div{
-						/*padding:0;*/
+			.planRegis-form {
+				width: 90%;
 
+				div {
+					/*padding:0;*/
+				}
+
+				.addItem-quantity {
+					.label {
+						font-family: $para-fonts;
+						font-weight: bold;
+						font-size: 18px;
+						line-height: 22px;
+						background: none;
+						color: $grey-text;
+						text-shadow: none;
+						margin-right: 1em;
 					}
 
-					.addItem-quantity{
-						
-						.label{
-							font-family: $para-fonts;
-							font-weight: bold;
-							font-size: 18px;
-							line-height: 22px;
-							background: none;
-							color: $grey-text;
-							text-shadow: none;
-							margin-right:1em;
-						}
-
-						.button-minus, .button-plus{
-						    border-radius: 50%;
-						    width: auto;
-						    margin: 5px;
-						    font-size: 2em;
-						    vertical-align: middle;
-						    text-align: center;
-						    
-						}
-						.button-minus{
-							padding:2px 8px 8px 8px;
-						}
-						.button-plus{
-							padding:5px;
-						}
-
-						.quantity-input{
-							width:15%;
-							text-align: center;
-							color: $grey-text;
-							border-radius: 0;
-							border: 2px solid #C8C8C8;
-							//color: #898A8D;
-							padding:0;
-							margin:0;
-						}
+					.button-minus,
+					.button-plus {
+						border-radius: 50%;
+						width: auto;
+						margin: 5px;
+						font-size: 2em;
+						vertical-align: middle;
+						text-align: center;
 					}
 
-					.margin-10{
-						@include margin(10px);
+					.button-minus {
+						padding: 2px 8px 8px;
+					}
+
+					.button-plus {
+						padding: 5px;
+					}
+
+					.quantity-input {
+						width: 15%;
+						text-align: center;
+						color: $grey-text;
+						border-radius: 0;
+						border: 2px solid #C8C8C8;
+						//color: #898A8D;
+						padding: 0;
+						margin: 0;
 					}
 				}
+
+				.margin-10 {
+					@include margin(10px);
+				}
+			}
 		}
 	}
-
-
 	/*Congratulation modal*/
-	.mainSubmit-modal-container,.remove-planModal-container{
+	.mainSubmit-modal-container,
+	.remove-planModal-container {
 		@extend %modal;
 
-		.mainSubmit-modal,.remove-planModal{
+		.mainSubmit-modal,
+		.remove-planModal {
 			@extend %modal-background;
 
-			h2{
+			h2 {
 				font-family: $header-fonts;
 				font-weight: 900;
-				font-size:3em;
+				font-size: 3em;
 				color: $zucora-purple;
 				text-align: center;
 				padding: 1em;
 			}
-			.cross{
-					@extend %form-cross;
-					font-size: 1.5em;
-					padding: 10px;
+
+			.cross {
+				@extend %form-cross;
+				font-size: 1.5em;
+				padding: 10px;
+			}
+
+			p {
+				width: 75%;
+				text-align: center;
+				margin: 0 auto;
+				font-size: 1.75em;
+			}
+
+			div {
+				text-align: center;
+				padding: 1em;
+			}
+		}
+	}
+
+	.remove-planModal-container {
+		.remove-planModal {
+			h3 {
+				text-align: center;
+				margin-top: 1em;
+			}
+
+			div {
+				a {
+					margin: 0 10px;
 				}
 
-				p{
-					width: 75%;
-				    text-align: center;
-				    margin: 0 auto;
-				    font-size: 1.75em;
-				}
-
-				div{
-					text-align: center;
-					padding:1em;
-				}
-			} 
-		} 
-
-		.remove-planModal-container{
-		
-			.remove-planModal{
-				h3{
-					text-align: center;
-					margin-top:1em;
-				}
-
-				div{
-					a{
-						margin:0 10px;
-					}
-
-					.zuc-btn-hollow{
-						border:2px solid $zucora-purple;
-						color:$zucora-purple;
-					}
+				.zuc-btn-hollow {
+					border: 2px solid $zucora-purple;
+					color: $zucora-purple;
 				}
 			}
 		}
-
-		
+	}
 }

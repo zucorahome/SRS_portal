@@ -4,10 +4,10 @@
 		margin:0 auto;
 
 		.two-grid-column{
-
+			align-items: center;
 		/*div{
 			padding:0 10px;
-		}*/	
+		}*/
 		.retailer-info-form{
 			div{
 				/*padding:5px 0;*/
@@ -48,7 +48,7 @@
 			label{
 				@extend %label;
 				word-break: break-word;
-			
+
 			}
 
 			input{
@@ -74,7 +74,7 @@
 						tr{
 							th:nth-child(1){
 								width:10%;
-								
+
 							}
 							th:nth-child(2){
 								width:20%;
@@ -98,7 +98,7 @@
 			padding:0;
 			.new-planAdd-detail{
 				display: block;
-				
+
 			table{
 				thead{
 					tr{
@@ -118,11 +118,11 @@
 					}
 				}
 			}
-		}		
+		}
 	}
 	.shipping-locations-modal{
 		@extend %modal;
-		
+
 		.shipping-locations-form{
 			@extend %modal-background;
 
@@ -135,9 +135,9 @@
 			.planRegis-form{
 					width:100%;
 					padding:1em;
-					
+
 					div{
-						
+
 						margin:0 auto;
 					}
 
@@ -168,7 +168,7 @@
 					label{
 						@extend %label;
 						word-break: unset;
-						
+
 					}
 
 					input{
@@ -180,7 +180,7 @@
 						@extend %select;
 						width:100%;
 					}
-			
+
 					.srs-checkmark{
 
 					}
@@ -270,7 +270,7 @@
 
 	          }
 			}
-		
+
 		}
 	}
 

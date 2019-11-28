@@ -63,7 +63,7 @@
 		}
 
 		input:nth-of-type(2) {
-			margin-left:-5em;
+			// margin-left:-5em;
 		}
 	}
 
@@ -78,7 +78,7 @@
 
 	.info-grid {
 		display: grid;
-		grid-template-columns: 20% 56% 0;
+		grid-template-columns: 20% 64% 0;
 
 		i {
 			// margin-left: 1em;
@@ -96,12 +96,29 @@
 	select {
 		@extend %select;
 		margin-bottom: 0;
+		width:80%;
+		&:focus{
+			color:inherit;
+			border-color: #a3acff;
+			background-color: white;
+		}
 	}
 
 	input {
 		@extend %input;
+		width:80%;
+		&:focus{
+			color:inherit;
+			border-color: #a3acff;
+			background-color: white;
+		}
 	}
 
+input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:focus{
+		color:inherit;
+		border-color: #a3acff;
+		background-color: white;
+}
 	.formField-data-controller {
 		width: 80%;
 		display: grid;
@@ -113,13 +130,14 @@
 		div:nth-child(1){
 			grid-template-columns: auto;
 			justify-content: flex-start;
-			margin-left:-20px;
+			// margin-left:-20px;
 		}
 
 		div:nth-child(2){
 			grid-template-columns: auto;
 			justify-content: center;
 			margin-left:5em;
+			display: grid;
 		}
 	}
 
@@ -132,8 +150,12 @@
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
-		width:75%;
+		width:85%;
 		margin:1em 0;
+	}
+
+	.hidden-field{
+		display: none;
 	}
 }
 
@@ -169,18 +191,7 @@
 				text-transform: uppercase;
 				padding-left: 5px;
 			}
-			/*::before{
-				//content: "\2212";
-				content:'\002B';
-			    color: $grey-text;
-			    font-size: 16px;
-			    float: left;
-			    font-weight: bold;
-			    border:2px solid $grey-text;
-			    padding:0 6px;
-			    //display: none;
-			    cursor: pointer;
-			}*/
+
 			i {
 				font-size: 1.5em;
 				color: $grey-text;
@@ -204,11 +215,6 @@
 		tr {
 			text-align: center;
 			font-family: $para-fonts;
-
-			&:hover {
-				background-color: $zucora-mint-green;
-				transition: background-color ease-in 0.5s;
-			}
 		}
 
 		td,
@@ -228,6 +234,14 @@
 			color: $zucora-purple;
 			font-weight: 700;
 		}
+
+tbody{
+		tr:hover{
+			background-color: $zucora-mint-green;
+			transition: background-color ease-in 0.5s;
+			cursor: pointer;
+		}
+	}
 	}
 }
 

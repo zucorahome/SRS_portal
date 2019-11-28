@@ -40,7 +40,7 @@
                   <div class="zuc-dropdown-column">
                     <a href="plan-registration.html" title="Plan Registration" aria-role="menu-item">Plan Registration</a>
                     <a href="plan-inquiry.html" title="Plan Registration Inquiry" aria-role="menu-item">Plan Inquiry</a>
-                    Registration History
+                    
                     <a href="plan-pending-registrations.html" title="Registration History" aria-role="menu-item">Registration History</a>
                   </div>
                 </div>
@@ -93,7 +93,7 @@
               <div class="zuc-accordion-hidden" aria-hidden="true">
                 <a class="zuc-accordion-link" href="plan-registration.html" title="Plan Registration" aria-role="menuitem">Plan Registration</a>
                 <a class="zuc-accordion-link" href="plan-inquiry.html" title="Plan Registration Inquiry" aria-role="menuitem">Plan Registration Inquiry</a>
-                
+
                 <a class="zuc-accordion-link" href="plan-reporting.html" title="Registration History" aria-role="menuitem">Registration History</a>
               </div>
             </div>
@@ -126,6 +126,7 @@
           <h3 class="profileBox-heading">Partner</h3>
           <form class="retailer-name-form">
             <input type="text" name="retailer-store-name" placeholder="Store Name">
+            <input type="text" name="retailer-business-name" placeholder="Business Legal Name">
           </form>
         </div>
         <div class="margin-10">
@@ -146,7 +147,7 @@
               <label for="Buying Group">Buying Group:</label>
               <p>Cantrex | Nationwide &nbsp; CX-1256768-TRK</p>
             </div>
-            
+
           </form>
         </div>
       </div>
@@ -254,7 +255,7 @@
                   <th scope="col">Role</th>
                   <th scope="col" colspan="1">Order Product</th>
                   <th scope="col" colspan="3">
-                    Protection Plans                    
+                    Protection Plans
                   </th>
                   <th scope="col" colspan="1" class="grey">Smarter Living Plans</th>
                   <th scope="col" colspan="3">Inquiry/Reporting</th>
@@ -282,8 +283,8 @@
                   <td data-label="Role">Buyer</td>
                   <td data-label="Order Products"><i class="fa fa-check"></i></td>
                   <td data-label="Plans: Register"><i class="fa fa-check"></i></td>
-                  <td data-label="Plans:Modify"><p class="u-transparent">none</p></td> 
-                  <td data-label="Plans:Cancel"><i class="fa fa-check"></i></td> 
+                  <td data-label="Plans:Modify"><p class="u-transparent">none</p></td>
+                  <td data-label="Plans:Cancel"><i class="fa fa-check"></i></td>
                   <!-- Should add  "<p class="u-transparent">none</p>" whenever there is no data so that it does look as table.-->
                   <td data-label="Smarter Living Plans: Enrol"><i class="fas fa-check u-transparent"></i></td>
                   <td data-label="Inquiry/Reporting: Orders"><i class="fa fa-check"></i></td>
@@ -297,8 +298,8 @@
                   <td data-label="Role">Manager</td>
                   <td data-label="Order Products"><i class="fa fa-check"></i></td>
                   <td data-label="Plans: Register"><i class="fa fa-check"></i></td>
-                  <td data-label="Plans:Modify"><i class="fa fa-check"></i></td> 
-                  <td data-label="Plans:Cancel"><p class="u-transparent">none</p></td> 
+                  <td data-label="Plans:Modify"><i class="fa fa-check"></i></td>
+                  <td data-label="Plans:Cancel"><p class="u-transparent">none</p></td>
                   <td data-label="Smarter Living Plans: Enrol"><i class="fas fa-check u-transparent"></i></td>
                   <td data-label="Inquiry/Reporting: Orders"><i class="fa fa-check"></i></td>
                   <td data-label="Inquiry/Reporting: Plans"><i class="fa fa-check"></i></td>
@@ -311,8 +312,8 @@
                   <td data-label="Role">Sales person</td>
                   <td data-label="Order Products"><p class="u-transparent">none</p></td>
                   <td data-label="Plans: Register"><i class="fa fa-check"></i></td>
-                  <td data-label="Plans:Modify"><i class="fa fa-check"></i></td> 
-                  <td data-label="Plans:Cancel"><p class="u-transparent">none</p></td> 
+                  <td data-label="Plans:Modify"><i class="fa fa-check"></i></td>
+                  <td data-label="Plans:Cancel"><p class="u-transparent">none</p></td>
                   <td data-label="Smarter Living Plans: Enrol"><i class="fas fa-check u-transparent"></i></td>
                   <td data-label="Inquiry/Reporting: Orders"><i class="fa fa-check"></i></td>
                   <td data-label="Inquiry/Reporting: Plans"><i class="fa fa-check"></i></td>
@@ -328,7 +329,7 @@
               <div class="margin-top-1">
               <a href="#/" class="simple-link u-uppercase" style="margin-left:10px;">Change password</a>&nbsp;<i class="fa fa-pencil-alt purple-text"></i>
               </div>
-        
+
               <div class="flex flex-vert-center flex-hor-center margin-top-1">
                 <button class="zuc-btn zuc-btn-secondary u-soft-shadow" type="submit">Save</button></div>
             </div>
@@ -403,13 +404,13 @@
                 <div class="new-formDiv flex-vert-center">
                   <label>Postal Code*:</label>
                   <input type="text" name="shippingLocation-postCode" value="" placeholder="Postal Code" required>
-                </div> 
+                </div>
                </div>
                <div class="flex-vert-center map-field">
                    <div class="new-formDiv flex-vert-center">
                     <label>Phone*:</label>
                     <input type="text" name="shippingLocation-phone" value="" placeholder="Phone Number" required>
-                  </div> 
+                  </div>
                   <div class="flex flex-row flex-hor-center">
                     <a href="#/" class="zuc-btn zuc-btn-secondary u-soft-shadow" type="submit">Save</a>
                   </div>
@@ -502,10 +503,10 @@
                     </div>
                 </div>
                 <div>
-                  <p class="purple-text u-bold">Smarter Living Plans</p>
+                  <p class="purple-text u-bold grey">Smarter Living Plans</p>
                   <div class="flex flex-column flex-vert-center flex-hor-center">
-                    <label>Enrol</label>
-                    <input type="checkbox" name="permission-products">
+                    <label style="color:grey;">Enrol</label>
+                    <input type="checkbox" name="permission-products" disabled>
                   </div>
                 </div>
                 <div>
@@ -520,8 +521,8 @@
                         <input type="checkbox" name="permission-products">
                       </div>
                       <div class="flex flex-column flex-vert-center">
-                        <label>Success Tracker</label>
-                        <input type="checkbox" name="permission-products">
+                        <label style="color:grey;">Success Tracker</label>
+                        <input type="checkbox" name="permission-products" disabled>
                       </div>
                    </div>
                 </div>
@@ -536,11 +537,11 @@
     <!-- main page content ends -->
          <!-- Site Footer-->
     <footer class="">
-     
+
     </footer>
-    
+
    <!--  @*@if (LoadModal) { Html.RenderAction("ProductsServicesAvailabilityModal", "Zuc"); }*@ -->
-    
+
     <script type="text/javascript" src="../../Content/Zuc/js/build9d66868d59cc90dfcd5c.js"></script></body>
     <script type="text/javascript" src="../../Scripts/Zuc/js/srs-interactivity.js"></script>
   </body>

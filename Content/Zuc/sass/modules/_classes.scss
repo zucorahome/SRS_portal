@@ -61,17 +61,17 @@
 }
 
 .dotted-line-text{
-      			
+
 	p{
-		width: 100%; 
-         text-align: center; 
-         border-bottom: 1px dashed $grey-text; 
+		width: 100%;
+         text-align: center;
+         border-bottom: 1px dashed $grey-text;
          line-height: 0.1em;
-         margin: 20px 0 20px; 
-        
+         margin: 20px 0 20px;
+
         span{
-          background:#fff; 
-          padding:0 10px; 
+          background:#fff;
+          padding:0 10px;
         }
 	}
 }
@@ -81,4 +81,10 @@
 
 }
 
+.grey{
+	color:grey;
+}
 
+.width-80{
+	margin:0 auto;
+}

@@ -49,6 +49,7 @@
 			}
 			div:nth-child(2){
 				margin-left:0;
+				justify-content: flex-end;
 			}
 		}
 
@@ -70,7 +71,10 @@
 			justify-content: center;
 			align-items: center;
 		}
-
+		.hidden-field{
+			display: block;
+			visibility: hidden;
+		}
 	}
 
 	.new-planAdd-detail{
@@ -118,7 +122,7 @@
 
 			.mobile-column{
 					div{
-						justify-content: space-around;
+						// justify-content: space-around;
 					}
 				}
 			}

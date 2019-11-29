@@ -311,21 +311,24 @@
 }
 
 .planRegistration-modal-container{
-	.addItem-form{
-		// margin-bottom: 2em;
-			.planRegis-form {
-				.formField-data-controller{
-					grid-template-columns: 100%;
-					div:nth-child(1){
-						justify-content: space-between;
-					}
-					div:nth-child(2){
-						display: grid;
-						grid-template-columns: 35% 65%;
+	.planRegistration-modal{
+		width:100%;
+			.addItem-form{
+				// margin-bottom: 2em;
+					.planRegis-form {
+						.formField-data-controller{
+							grid-template-columns: 100%;
+							div:nth-child(1){
+								justify-content: space-between;
+							}
+							div:nth-child(2){
+								display: grid;
+								grid-template-columns: 35% 65%;
+							}
+						}
 					}
 				}
 			}
-		}
 }
 
 }

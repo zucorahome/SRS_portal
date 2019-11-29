@@ -285,8 +285,8 @@
         <div class="purple-background">
           <h2>Covered Item(s)</h2>
         </div>
-        <form class="flex flex-column planRegis-form">
-          <div class="flex flex-row flex-vert-center">
+        <form class="planRegis-form">
+          <div class="planRegis-divStyle flex-vert-center flex-hor-center">
             <label>Equipment Type:</label>
             <select name="product-type" required>
               <option value="">[Furniture, Appliances, Adjustable Base]</option>
@@ -295,7 +295,7 @@
               <option value="Adjustable Base">Adjustable Base</option>
             </select>
           </div>
-          <div class="flex flex-row flex-vert-center grey-field">
+          <div class="planRegis-divStyle flex-vert-center flex-hor-center grey-field">
             <label>Product Type:</label>
             <select name="product-type" required>
               <option value="">Product Type</option>
@@ -304,27 +304,27 @@
               <option value="loreum ipsum">Loreum Ipsum</option>
             </select>
           </div>
-          <div class="flex flex-row flex-vert-center">
+          <div class="planRegis-divStyle flex-vert-center flex-hor-center">
             <label>Classification:</label>
             <input type="text" name="classification" value="" placeholder="Text here" required>
           </div>
-          <div class="flex flex-row flex-vert-center">
+          <div class="planRegis-divStyle flex-vert-center flex-hor-center">
             <label>Description:</label>
             <input type="text" name="description" value="" placeholder="e.g. Sofa, Chair, Lovesear (Optional)" required>
           </div>
-          <div class="flex flex-row flex-vert-center">
+          <div class="planRegis-divStyle flex-vert-center flex-hor-center">
             <label>SKU Number:</label>
             <input type="text" name="sku-number" value="" placeholder="SKU Number (Optional)" required="">
           </div>
-          <div class="flex flex-row flex-vert-center">
+          <div class="planRegis-divStyle flex-vert-center flex-hor-center">
             <label>Manufacturer:</label>
             <input type="text" name="planRegist-manufacturer" value="" placeholder="Manufacturer" required="">
           </div>
-          <div class="flex flex-row flex-vert-center">
+          <div class="planRegis-divStyle flex-vert-center flex-hor-center">
             <label>Serial Number:</label>
             <input type="text" name="serial-number" value="" placeholder="Serial Number (Optional)" required="">
           </div>
-          <div class="flex flex-row flex-vert-center mobile-column">
+          <div class="formField-data-controller mobile-column">
             <div class="flex flex-row flex-vert-center addItem-quantity">
               <div class="label">Quantity:</div>
               <input type="button" value="-" class="button-minus" data-field="quantity">
@@ -332,19 +332,19 @@
               <input type="button" value="+" class="button-plus" data-field="quantity">
             </div>
 
-            <div class="flex flex-row flex-vert-center addItem-PPI">
+            <div class="addItem-PPI">
               <label>Price per item:</label>
               <input type="text" name="pricePer-item" value="" placeholder="$" required="">
             </div>
           </div>
-          <div class="flex flex-vert-center flex-hor-end margin-top-1">
-            <div><a href="javascript:void(0)" class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow margin-10">Add more</a></div>
-            <div><button class="zuc-btn zuc-btn-secondary zuc-btn-xpad u-soft-shadow addItem-save" type="submit">Save</button></div>
+          <div class="flex flex-vert-center flex-hor-end margin-top-1 width-80">
+            <div><a href="javascript:void(0)" class="zuc-btn zuc-btn-secondary u-soft-shadow margin-10">Add more</a></div>
+            <div><button class="zuc-btn zuc-btn-secondary u-soft-shadow addItem-save" type="submit">Save</button></div>
           </div>
         </form>
       </div>
-      <!-- AddItem form ends -->
-    </div>
+    <!-- AddItem form ends -->
+</div>
     <!-- Congratulations modal -->
     <div class="mainSubmit-modal-container non-visible">
       <div class="mainSubmit-modal">

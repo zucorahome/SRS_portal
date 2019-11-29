@@ -9,6 +9,12 @@ p {
   font-size: 18px;
 }
 
+input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:focus, select:focus {
+  color: inherit;
+  border-color: #a3acff;
+  background-color: white;
+}
+
 .editOrder-modal-container, .planRegistration-modal-container, .cancel-caution-container, .cancelation-modal, .contacts-form-modal, .shipping-locations-modal, .popup-modals-container .mainSubmit-modal-container,
 .popup-modals-container .remove-planModal-container, .popup-modals-container .addItem-modal {
   position: fixed;
@@ -459,6 +465,11 @@ p {
   padding: 0;
   margin: 0;
 }
+.popup-modals-container .addItem-modal .addItem-form .planRegis-form .formField-data-controller div:nth-child(2) {
+  display: grid;
+  grid-template-columns: 30% 65%;
+  margin-left: 0;
+}
 .popup-modals-container .addItem-modal .addItem-form .planRegis-form .margin-10 {
   margin: 10px;
 }
@@ -545,6 +556,11 @@ p {
 .retailer-profile-container .profile-address label {
   word-break: break-word;
 }
+.retailer-profile-container .profile-address select:focus {
+  color: inherit;
+  border-color: #a3acff;
+  background-color: white;
+}
 .retailer-profile-container .locations-container .new-planAdd-detail {
   display: block;
   /*margin:0 auto;*/
@@ -586,7 +602,6 @@ p {
 
 .shipping-locations-modal .shipping-locations-form .planRegis-form {
   width: 100%;
-  padding: 1em;
 }
 .shipping-locations-modal .shipping-locations-form .planRegis-form div {
   margin: 0 auto;
@@ -594,7 +609,6 @@ p {
 .shipping-locations-modal .shipping-locations-form .planRegis-form .new-formDiv {
   display: grid;
   grid-template-columns: 30% 70%;
-  width: 95%;
 }
 .shipping-locations-modal .shipping-locations-form .planRegis-form .map-field {
   width: 80%;
@@ -613,12 +627,6 @@ p {
 }
 .shipping-locations-modal .shipping-locations-form .planRegis-form label {
   word-break: unset;
-}
-.shipping-locations-modal .shipping-locations-form .planRegis-form input {
-  width: 100%;
-}
-.shipping-locations-modal .shipping-locations-form .planRegis-form select {
-  width: 100%;
 }
 .shipping-locations-modal .shipping-locations-form .width-45 {
   width: 45%;
@@ -951,13 +959,16 @@ p {
     grid-template-columns: 90%;
   }
 
-  .planRegistration-modal-container .addItem-form .planRegis-form .formField-data-controller {
+  .planRegistration-modal-container .planRegistration-modal {
+    width: 100%;
+  }
+  .planRegistration-modal-container .planRegistration-modal .addItem-form .planRegis-form .formField-data-controller {
     grid-template-columns: 100%;
   }
-  .planRegistration-modal-container .addItem-form .planRegis-form .formField-data-controller div:nth-child(1) {
+  .planRegistration-modal-container .planRegistration-modal .addItem-form .planRegis-form .formField-data-controller div:nth-child(1) {
     justify-content: space-between;
   }
-  .planRegistration-modal-container .addItem-form .planRegis-form .formField-data-controller div:nth-child(2) {
+  .planRegistration-modal-container .planRegistration-modal .addItem-form .planRegis-form .formField-data-controller div:nth-child(2) {
     display: grid;
     grid-template-columns: 35% 65%;
   }
@@ -1179,7 +1190,7 @@ p {
   text-align: center;
   border-bottom: 1px dashed #36384B;
   line-height: 0.1px;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 .order-history-container .filter-box .planRegis-form .date-filter div:nth-child(1) p span {
   background: #fff;
@@ -1328,6 +1339,20 @@ p {
     width: 90%;
     margin: 30% auto;
   }
+  .popup-modals-container .addItem-modal .addItem-form .planRegis-form .formField-data-controller {
+    grid-template-columns: 100%;
+  }
+  .popup-modals-container .addItem-modal .addItem-form .planRegis-form .formField-data-controller div:nth-child(1) {
+    justify-content: space-between;
+  }
+  .popup-modals-container .addItem-modal .addItem-form .planRegis-form .formField-data-controller div:nth-child(2) {
+    display: grid;
+    grid-template-columns: 35% 65%;
+  }
+  .popup-modals-container .addItem-modal .addItem-form .planRegis-form .formField-data-controller div:nth-child(2) input {
+    width: 100%;
+  }
+
   .mobile-column {
     flex-direction: column;
     grid-template-columns: 100%;

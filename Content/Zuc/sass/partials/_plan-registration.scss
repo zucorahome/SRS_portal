@@ -326,6 +326,14 @@ tbody{
 					}
 				}
 
+				.formField-data-controller{
+					div:nth-child(2){
+					display: grid;
+					grid-template-columns: 30% 65%;
+					margin-left:0;
+				}
+			}
+
 				.margin-10 {
 					@include margin(10px);
 				}

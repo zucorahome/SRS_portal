@@ -125,6 +125,22 @@
 						// justify-content: space-around;
 					}
 				}
+				.planRegis-form {
+					.formField-data-controller{
+						grid-template-columns: 100%;
+						div:nth-child(1){
+							justify-content: space-between;
+						}
+						div:nth-child(2){
+							display: grid;
+							grid-template-columns: 35% 65%;
+
+							input{
+								width:100%;
+							}
+						}
+					}
+				}
 			}
 		}
 	}

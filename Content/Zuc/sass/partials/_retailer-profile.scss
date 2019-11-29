@@ -57,7 +57,13 @@
 
 			select{
 				@extend %select;
+				&:focus{
+					color:inherit;
+					border-color: #a3acff;
+					background-color: white;
+				}
 			}
+
 		}
 		.locations-container{
 			.new-planAdd-detail{
@@ -134,7 +140,7 @@
 
 			.planRegis-form{
 					width:100%;
-					padding:1em;
+					// padding:1em;
 
 					div{
 
@@ -144,7 +150,7 @@
 					.new-formDiv{
 						display: grid;
 						grid-template-columns: 30% 70%;
-						width:95%;
+						// width:95%;
 					}
 
 					.map-field{
@@ -173,12 +179,12 @@
 
 					input{
 						@extend %input;
-						width:100%;
+						// width:100%;
 					}
 
 					select{
 						@extend %select;
-						width:100%;
+						// width:100%;
 					}
 
 					.srs-checkmark{

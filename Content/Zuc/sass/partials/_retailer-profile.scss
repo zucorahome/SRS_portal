@@ -35,8 +35,6 @@
 
 		.profile-boxStyle{
 			border:2px solid $grey-text;
-			/*padding:10px;*/
-			/*min-height: 200px;*/
 			height:auto;
 		}
 
@@ -139,65 +137,39 @@
 			}
 
 			.planRegis-form{
+				width: 85%;
+				margin:0 auto;
+
+				input{
 					width:100%;
-					// padding:1em;
+				}
 
-					div{
+				select{
+					width:100%;
+				}
 
-						margin:0 auto;
-					}
+				.formField-data-controller{
+					
+					
+				}
 
-					.new-formDiv{
-						display: grid;
-						grid-template-columns: 30% 70%;
-						// width:95%;
-					}
+				input[type="checkbox"]{
+					width:30px;
+					height:30px;
+				}
 
-					.map-field{
-					    width: 80%;
-					    display: grid;
-					    grid-template-columns: 50% 50%;
-					    margin-left: 19%;
-
-					    .custom-checkmark{
-					    	display: grid;
-    						grid-template-columns: 90% 10%;
-    						width: 100%;
-
-    						label{
-    							text-align: center;
-    							margin-right:0;
-    						}
-					    }
-					}
-
-					label{
-						@extend %label;
-						word-break: unset;
-
-					}
-
-					input{
-						@extend %input;
-						// width:100%;
-					}
+				.profileLocation-province{
+					margin-left:4em;
 
 					select{
-						@extend %select;
-						// width:100%;
-					}
-
-					.srs-checkmark{
-
+						width:150px;
 					}
 				}
 
-				.width-45{
-					width:45%;
-				}
-		}
+
+			}
 	}
-
+}
 	.contacts-form-modal{
 		@extend %modal;
 
@@ -241,6 +213,7 @@
 		          select{
 		            @extend %select;
 		            width:100%;
+		            margin-top:10px;
 		          }
 
 		          .purple-text{
@@ -261,17 +234,18 @@
 	  				font-family: $para-fonts;
 	  				text-align: center;
 	  				width:100%;
+	  				min-height: 40px;
 	  			}
 
 	  			input[type="checkbox"]{
 	  				width:20px;
 	  				height:20px;
-	  				margin:0 auto;
+	  				margin:10px auto;
 	  			}
 	  			p{
 	  				font-size:16px;
 	  				text-align: center;
-	  				min-height:40px;
+	  				min-height:50px;
 	  			}
 
 	          }
@@ -303,29 +277,48 @@
 		}
 
 		.shipping-locations-modal{
+						
+
 			.shipping-locations-form{
-				.planRegis-form{
-					.map-field{
-						    width: 100%;
-						    display: grid;
-						    grid-template-columns: 100%;
-						    margin-left: 0;
 
-						    .custom-checkmark{
-						    	display: grid;
-	    						grid-template-columns: 90% 10%;
-	    						width: 70%;
+			.planRegis-form{
+				width: 85%;
+				margin:0 auto;
 
-	    						label{
-	    							text-align: center;
-	    							margin-right:0;
-	    							word-break: break-word;
-	    						}
-						    }
+				input{
+					width:100%;
+				}
+
+				select{
+					width:100%;
+				}
+
+				.formField-data-controller{
+					grid-template-columns: 100%;	
+					
+				}
+
+				input[type="checkbox"]{
+					width:30px;
+					height:30px;
+				}
+
+				.profileLocation-province{
+					margin-left:0;
+
+						select{
+							width:100%;
 						}
 					}
+
+
 				}
 			}
+			
+		}
+
+
+
 			.contacts-form-modal{
 				.contacts-form{
 					.planRegis-form{
@@ -336,8 +329,11 @@
 						label{
 							/*word-break: break-word;*/
 						}
+						select{
+							margin-top:10px;
+						}
 
-						.div-sixty-forty{
+						.div-sixty-forty, .formField-data-controller{
 							grid-template-columns: 100%;
 						}
 

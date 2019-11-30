@@ -337,17 +337,19 @@
     </section>
     <section class="popup-modals-container">
 
-      <div class="shipping-locations-modal">
+      <div class="shipping-locations-modal non-visible">
         <div class="shipping-locations-form">
           <div class="purple-background">
               <h2>Location</h2>
           </div>
           <form class="planRegis-form">
-            <div class="new-formDiv flex-vert-center flex-hor-center ">
+
+             <div class="planRegis-divStyle flex-vert-center flex-hor-center">
               <label for="location-name">Name*:</label>
               <input type="text" name="location-name" value="" placeholder="Location name" required>
             </div>
-            <div class="flex-vert-center new-formDiv">
+
+            <div class="planRegis-divStyle flex-vert-center flex-hor-center">
               <label for="address-type">Address Type*:</label>
               <select name="address-type">
                 <option value="none">Select Address Type</option>
@@ -355,34 +357,36 @@
                 <option value="Business">Business</option>
               </select>
             </div>
-            <div class="flex flex-row map-field">
-              <div class="flex-vert-center new-formDiv">
-                <label for="contact-map">Map:</label>
+
+            <div class="formField-data-controller mobile-column">
+              <div class="flex flex-vert-center">
+                 <label for="contact-map">Map:</label>
                 <input type="text" name="googleMap-map" placeholder="Type your address">
               </div>
-              <div class="flex-vert-center custom-checkmark">
+              <div class="flex flex-vert-center flex-row flex-hor-center">
                 <label class="srs-checkmark">Manual Address Entry</label>
-                  <input type="checkbox" class="">
-                  <span class="green-checkmark"></span>
+                <input type="checkbox" name="manual-address-check">
+                <span class="green-checkmark"></span>
               </div>
             </div>
-             <div class="flex-vert-center new-formDiv">
+
+             <div class="planRegis-divStyle flex-vert-center flex-hor-center">
                   <label>Adress Line 1*:</label>
                   <input type="text" name="contact-address-one" value="" placeholder="Address line 1" required>
-                </div>
-              <div class="flex-vert-center new-formDiv">
+              </div>
+
+              <div class="planRegis-divStyle flex-vert-center flex-hor-center">
                 <label>Address Line 2*:</label>
                   <input type="text" name="contact-address-two" value="" placeholder="Address line 2" required>
               </div>
-              <!--  -->
-              <div class="flex-vert-center map-field">
-                 <div class="flex-vert-center new-formDiv">
+              <div class="formField-data-controller">
+                <div class="flex flex-vert-center">
                   <label>City*:</label>
                   <input type="text" name="SRSContact-city" value="" placeholder="City" required>
                 </div>
-                 <div class="new-formDiv flex-vert-center">
+                <div class="flex flex-vert-center flex-hor-center profileLocation-province">
                   <label>Province or State*:</label>
-                    <select name="province" style="margin-bottom: 0;margin-top:6px;">
+                    <select name="province" class="">
                           <option value="" disabled="" selected="">Province/State</option>
                           <option value="AB">Alberta</option>
                           <option value="BC">British Columbia</option>
@@ -400,21 +404,24 @@
                       </select>
                 </div>
               </div>
-               <div class="flex-vert-center map-field">
-                <div class="new-formDiv flex-vert-center">
+              <div class="formField-data-controller ">
+                 <div class="flex flex-vert-center">
                   <label>Postal Code*:</label>
                   <input type="text" name="shippingLocation-postCode" value="" placeholder="Postal Code" required>
                 </div>
-               </div>
-               <div class="flex-vert-center map-field">
-                   <div class="new-formDiv flex-vert-center">
-                    <label>Phone*:</label>
+              </div>
+
+              <div class="formField-data-controller ">
+                 <div class="flex flex-vert-center">
+                  <label>Phone*:</label>
                     <input type="text" name="shippingLocation-phone" value="" placeholder="Phone Number" required>
-                  </div>
-                  <div class="flex flex-row flex-hor-center">
+                </div>
+                <div class="flex flex-row flex-hor-end">
                     <a href="#/" class="zuc-btn zuc-btn-secondary u-soft-shadow" type="submit">Save</a>
                   </div>
-               </div>
+
+              </div>
+
           </form>
         </div>
       </div>
@@ -436,8 +443,8 @@
                   <input type="text" name="SRScontact-lastname" value=""placeholder="Contact Last Name" required="">
                 </div>
             </div>
-            <div class="flex-vert-center div-sixty-forty">
-              <div class="flex flex-row flex-vert-center" style="width:100%;">
+            <div class="formField-data-controller" style="width:95%;">
+              <div class="flex flex-row flex-vert-center">
                   <label>Location:</label>
                     <select name="person-location">
                           <option value="" disabled="" selected="">Location</option>
@@ -528,7 +535,7 @@
                 </div>
               </div>
               <div class="flex flex-hor-center flex-row">
-                <a href="#/" class="zuc-btn zuc-btn-secondary u-soft-shadow" type="submit">Send Email to confirm updates</a>
+                <a href="#/" class="zuc-btn zuc-btn-secondary u-soft-shadow margin-top-1 margin-bottom-1" type="submit">Send Email to confirm updates</a>
               </div>
           </form>
         </div>

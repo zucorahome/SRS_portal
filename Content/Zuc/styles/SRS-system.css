@@ -32,7 +32,7 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
   width: 60%;
   margin: 15% auto; }
 
-.planRegis-form label, .retailer-profile-container .two-grid-column .retailer-info-form label, .retailer-profile-container .profile-address label, .contacts-form-modal .contacts-form .planRegis-form label, .plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form label {
+.planRegis-form label, .retailer-profile-container .two-grid-column .retailer-info-form label, .retailer-profile-container .profile-address label, .shipping-locations-modal .shipping-locations-form .planRegis-form label, .contacts-form-modal .contacts-form .planRegis-form label, .plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form label {
   font-family: "aktiv-grotesk", Helvetica, sans-serif;
   font-weight: bold;
   font-size: 18px;
@@ -40,7 +40,7 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
   text-align: right;
   margin-right: 1em; }
 
-.planRegis-form select, .retailer-profile-container .two-grid-column .retailer-info-form select, .retailer-profile-container .profile-address select, .contacts-form-modal .contacts-form .planRegis-form select, .plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form select {
+.planRegis-form select, .retailer-profile-container .two-grid-column .retailer-info-form select, .retailer-profile-container .profile-address select, .shipping-locations-modal .shipping-locations-form .planRegis-form select, .contacts-form-modal .contacts-form .planRegis-form select, .plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form select {
   width: 70%;
   height: 50px;
   border: 2px solid #36384B;
@@ -50,7 +50,7 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
   font-size: 16px;
   font-family: "aktiv-grotesk", Helvetica, sans-serif; }
 
-.planRegis-form input, .retailer-profile-container .two-grid-column .retailer-info-form input, .retailer-profile-container .profile-address input, .contacts-form-modal .contacts-form .planRegis-form input, .plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form input {
+.planRegis-form input, .retailer-profile-container .two-grid-column .retailer-info-form input, .retailer-profile-container .profile-address input, .shipping-locations-modal .shipping-locations-form .planRegis-form input, .contacts-form-modal .contacts-form .planRegis-form input, .plan-inquiry-container .advance-search-container .advance-search-form .planRegis-form input {
   background-color: #FFFFFF;
   border: 2px solid #36384B;
   width: 70%;
@@ -263,8 +263,8 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
       /*margin-left:5em;*/
       display: grid; }
   .planRegis-form input[type="checkbox"] {
-    width: 50px;
-    height: 50px; }
+    width: 30px;
+    height: 30px; }
   .planRegis-form .planRegis-button {
     display: flex;
     justify-content: flex-end;
@@ -337,7 +337,7 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
   display: flex;
   width: 80%;
   margin: 0 auto;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   padding: 2em 0; }
 
@@ -606,7 +606,7 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
     .plan-inquiry-container .manual-search-container .inquiry-date-filter {
       border: 2px solid #36384B;
       height: auto; }
-      .plan-inquiry-container .manual-search-container .inquiry-date-filter form {
+      .plan-inquiry-container .manual-search-container .inquiry-date-filter div {
         color: #36384B;
         font-family: "aktiv-grotesk", Helvetica, sans-serif;
       			/*.inquiry-search-3{
@@ -624,13 +624,13 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
       				}
 
       			}*/ }
-        .plan-inquiry-container .manual-search-container .inquiry-date-filter form i {
+        .plan-inquiry-container .manual-search-container .inquiry-date-filter div i {
           color: #434DA0;
           font-size: 1.5em;
           padding: 5px; }
-        .plan-inquiry-container .manual-search-container .inquiry-date-filter form input {
+        .plan-inquiry-container .manual-search-container .inquiry-date-filter div input {
           width: 90%; }
-        .plan-inquiry-container .manual-search-container .inquiry-date-filter form .filter-param-box {
+        .plan-inquiry-container .manual-search-container .inquiry-date-filter div .filter-param-box {
           display: grid;
           grid-template-columns: 30% 30% 30%;
           justify-content: center;
@@ -638,24 +638,24 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
           max-width: 100%;
           height: auto;
           margin-top: 1em; }
-          .plan-inquiry-container .manual-search-container .inquiry-date-filter form .filter-param-box .filter-box {
+          .plan-inquiry-container .manual-search-container .inquiry-date-filter div .filter-param-box .filter-box {
             margin-top: 10px;
             border: 2px solid #36384B;
             background-color: white;
             min-height: 210px;
             height: auto;
             overflow-y: scroll; }
-            .plan-inquiry-container .manual-search-container .inquiry-date-filter form .filter-param-box .filter-box p {
+            .plan-inquiry-container .manual-search-container .inquiry-date-filter div .filter-param-box .filter-box p {
               padding: 5px;
               cursor: pointer;
               font-size: 16px; }
-              .plan-inquiry-container .manual-search-container .inquiry-date-filter form .filter-param-box .filter-box p:hover {
+              .plan-inquiry-container .manual-search-container .inquiry-date-filter div .filter-param-box .filter-box p:hover {
                 background-color: #70E9B2;
                 transition: all ease-in 0.5; }
-          .plan-inquiry-container .manual-search-container .inquiry-date-filter form .filter-param-box .selected {
+          .plan-inquiry-container .manual-search-container .inquiry-date-filter div .filter-param-box .selected {
             background-color: #70E9B2;
             transition: all ease-in 0.5; }
-          .plan-inquiry-container .manual-search-container .inquiry-date-filter form .filter-param-box ::-webkit-scrollbar-thumb {
+          .plan-inquiry-container .manual-search-container .inquiry-date-filter div .filter-param-box ::-webkit-scrollbar-thumb {
             border-radius: 10px;
             background: #434DA0; }
       .plan-inquiry-container .manual-search-container .inquiry-date-filter .width-80 {
@@ -744,7 +744,7 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
       width: 95%;
       margin-bottom: 0; }
       .cancelation-modal .plan-cancelation-container .search-plan-details .plan-registration-box .new-planAdd-detail {
-        /*display: block;*/ }
+        display: block; }
 
 /*}*/
 .planRegistration-modal-container .planRegistration-modal {
@@ -760,7 +760,7 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
     margin-left: 0; }
 
 @media screen and (max-width: 768px) {
-  .plan-inquiry-container .manual-search-container .inquiry-date-filter form .filter-param-box {
+  .plan-inquiry-container .manual-search-container .inquiry-date-filter div .filter-param-box {
     display: grid;
     grid-template-columns: 90%; }
 
@@ -968,6 +968,45 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
         grid-template-columns: auto; }
         .order-history-container .filter-box .planRegis-form .select-location {
           margin: 1em 0; } }
+.videos-container .video-grid {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 3em 1.5em; }
+
+.rep-landingPage-container {
+  width: 85%;
+  margin: 0 auto;
+  padding: 0;
+  margin-top: 15%; }
+  .rep-landingPage-container .rw-promo-graphic {
+    width: 100%; }
+  .rep-landingPage-container .two-grid-column {
+    justify-content: center;
+    align-content: flex-start;
+    grid-gap: 1.5em 1.5em; }
+  .rep-landingPage-container .new-planAdd-detail {
+    display: block;
+    margin: 0;
+    padding: 10px;
+    border: 2px solid #36384B; }
+  .rep-landingPage-container .border-box {
+    width: 100%;
+    height: auto;
+    border: 2px solid #36384B;
+    padding: 10px; }
+  .rep-landingPage-container dl dt {
+    color: #434DA0;
+    font-family: "aktiv-grotesk", Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    /*margin-bottom:5px;*/
+    line-height: 32px; }
+
+@media screen and (max-width: 768px) {
+  .rep-landingPage-container {
+    margin-top: 20%; } }
 /*Media queries */
 @media screen and (max-width: 768px) {
   .srs-login-container {
@@ -975,7 +1014,7 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
     margin-top: 20%; }
 
   .srs-heading {
-    margin-top: 10%; }
+    margin-top: 20%; }
 
   .planRegis-form {
     width: 90%; }
@@ -1105,7 +1144,7 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
     margin: 50% auto; } }
 @media screen and (min-width: 769px) {
   .srs-nav-container .zuc-main-nav .zuc-nav-brand {
-    width: 15vw;
+    width: 22vw;
     max-width: 100%; } }
 @media screen and (max-width: 1200px) {
   .plan-inquiry-container {
@@ -1133,5 +1172,15 @@ input:focus:invalid:focus, textarea:focus:invalid:focus, select:focus:invalid:fo
     width: 100%;
     top: 40%;
     left: 0; } }
+.welcome-message-container {
+  position: relative; }
+
+.employer-full-name {
+  color: #36384b;
+  font-size: 20px;
+  position: absolute;
+  top: calc(50% - 12.5px);
+  margin: 0;
+  right: 10%; }
 
 /*# sourceMappingURL=SRS-system.css.map */

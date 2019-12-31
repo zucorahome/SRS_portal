@@ -6,7 +6,7 @@
 		margin-top:20%;
 	}
 	.srs-heading{
-		margin-top:10%;
+		margin-top:20%;
 	}
 
 	.planRegis-form{
@@ -227,7 +227,7 @@
 	.srs-nav-container{
 		.zuc-main-nav{
 			.zuc-nav-brand{
-			width:15vw;
+			width:22vw;
 			max-width:100%;
 			}
 		}
@@ -283,5 +283,15 @@
 			}
 		}
 	}
-
 }
+
+	.welcome-message-container { position: relative; }
+	.employer-full-name {
+		color: #36384b;
+		font-size: 20px;
+		position: absolute;
+		top: calc(50% - 12.5px);
+		margin: 0;
+		right: 10%;
+	}
+
